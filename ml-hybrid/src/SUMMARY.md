@@ -20,6 +20,19 @@
 - [Day 14: Retrieval: chunking, embedding, ranking](days/day-014.md)
 - [Day 15: Why machine learning systems fail](days/day-015.md)
 - [Day 16: Build and optimise one model end to end](days/day-016.md)
+- [Day 17: Why nobody agrees on what AGI means](days/day-017.md)
+- [Day 18: A brief history of superhuman narrow machines](days/day-018.md)
+- [Day 19: Intelligence (natural): the measurement before the machine](days/day-019.md)
+- [Day 20: Intelligence (artificial): how to score a machine fairly](days/day-020.md)
+- [Day 21: Varieties of AGI: the taxonomy that ends most arguments](days/day-021.md)
+- [Day 22: Practical AGI development: what you would build this week](days/day-022.md)
+- [Day 23: Self-supervised learning of foundation models](days/day-023.md)
+- [Day 24: Open-ended learning in virtual worlds](days/day-024.md)
+- [Day 25: Consciousness, superintelligence, and what any of it owes you](days/day-025.md)
+- [Day 26: Cognitive architectures: the survey that predates the hype](days/day-026.md)
+- [Day 27: From prompts to context: engineering what the agent is shown](days/day-027.md)
+- [Day 28: Agentic coding: a teammate who still needs review](days/day-028.md)
+- [Day 29: Trust and governance as architecture: the closing gate](days/day-029.md)
 
 ## Book maps
 
@@ -30,3 +43,8 @@
 - [Deep Learning Interviews](maps/deep-learning-interviews.md)
 - [Python for Large Language Models](maps/python-for-large-language-models-2025.md)
 - [MIT 6.042 Mathematics of CS](maps/mit6-042js15-textbook.md)
+- [Artificial General Intelligence (MIT Press Essential Knowledge)](maps/artificial-general-intelligence-the-mit-press-essential-juli.md)
+- [Building Better Minds (OpenCog)](maps/building-better-minds-artificial-general-intelligence-via-be.md)
+- [Context Engineering for Multi-Agent Systems](maps/context-engineering-for-multi-agent-systems-move-beyond-deni.md)
+- [Modern Software Engineering with Codex](maps/modern-software-engineering-with-codex-implementing-derrick-.md)
+- [Unified Agentic Trust and Governance Architecture](maps/unified-agentic-trust-and-governance-architecture.md)

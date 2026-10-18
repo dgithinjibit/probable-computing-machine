@@ -6,12 +6,23 @@ EPUBs into an **ordered day path** — each day names the book, the exact pages,
 the author's own words at bite size, one local exercise, and an automatic
 spaced review of the days you already completed.
 
-Currently built: **ML Hybrid Course** — 16 days from `~/Desktop/ML`;
+Currently built: **ML Hybrid Course** — 29 days from `~/Desktop/ML` (16 ML foundations + 13 AGI);
 **Hacking Hybrid Course** — 12 defensive days from `~/Desktop/Hakin`, in
 [`../hakin-hybrid/`](../hakin-hybrid/); and **Blockchain Hybrid Course** — 14 days from
 `~/Desktop/blck` wired into the Sui Move, Scrypto, Cairo and starklings courses, in
 [`../blck-hybrid/`](../blck-hybrid/). Education and robotics already have their own
 books, so the same engine is the only thing they would need to become day paths.
+
+### The AGI track (Days 17-29)
+
+Page anchors were located rather than guessed, because printed chapter numbers in these
+files do not line up with physical pages: Togelius is printed + 12 (ch1 p.13, ch2 p.23,
+ch3 p.43, ch4 p.63, ch5 p.79, ch6 p.93, ch7 p.113, ch8 p.139, ch9 p.155, ch10 p.165,
+ch11 p.177), the OpenCog architecture survey opens at physical p.93 of _Building Better
+Minds_, Rothman is printed + 27, and the Codex book opens its introduction at p.15.
+Day 29 reads a 1,737-word DOCX through the paragraph mode of `read_source_text`, which is
+how the five EPUBs in `~/Desktop/ML` would also be taught - still untested for section
+mode, so no EPUB day exists yet.
 
 ## Open it
 
