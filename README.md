@@ -1,116 +1,80 @@
-# Hybrid book courses (build system)
+# Local offline developer path
 
-One course on this laptop was **messy and thin**: too many books, no order, no
-memory of where you stopped. This folder fixes that by turning owned PDFs and
-EPUBs into an **ordered day path** — each day names the book, the exact pages,
-the author's own words at bite size, one local exercise, and an automatic
-spaced review of the days you already completed.
+This workspace is a self-paced, offline-first route toward five complementary
+skills: JavaScript/web development, defensive source-code review, AI
+engineering, IoT development, and Rust-based Web3. It uses small daily
+assignments, mastery checks, and review before advancing. This is a personal
+Kumon-inspired study routine, not an official Kumon program or credential.
 
-Currently built: **ML Hybrid Course** — 16 days from `~/Desktop/ML`.
-The same machinery makes the hacking, IoT, blockchain and Rust branches (below).
+## Run the course portal
 
-## Open it
+From this folder, run:
 
-```bash
-cd ~/Desktop/ex
-./exercises/serve-site.sh          # then http://127.0.0.1:8000/
+```sh
+./serve-site.sh
 ```
 
-Course page: <http://127.0.0.1:8000/ml-hybrid/hybrid-course.html>
-Book pages (same content, mdBook form): `book/index.html` after a build.
+The homepage opens automatically at [http://127.0.0.1:8000](http://127.0.0.1:8000)
+as soon as the local server is ready; book rebuilds continue afterward. Keep
+that terminal open while studying. Press `Ctrl+C` there to stop the server.
+The page link itself does not start the server.
 
-## The two files that matter
+The portal and guided-course lessons are served from this computer and do not
+need an internet connection. Offline access still requires this script to be
+running, and any optional external links or unavailable hosted services will
+not work without internet.
 
-| File | Role |
-|---|---|
-| `hybrid-curriculum.json` | The spine. Hand-curated order, page ranges, and the teaching fields per day. Everything else is generated from it. |
-| `build_course.py` | Splits books into lessons. Stdlib + poppler only, so it runs offline. |
+## Start the developer path
 
-Generated, never hand-edited: `src/days/*.md`, `src/SUMMARY.md`, `src/index.md`,
-`src/maps/*.md`, `hybrid-course-data.json`, `book/`.
+The [421-session guided course](developer-path/guided-course.html) begins with
+Python, then builds through web development, defensive code review, AI, IoT,
+robotics, Rust/Web3, education technology, and a final project. Complete one
+session at a time; the browser saves progress locally and unlocks the next
+session. Open the [developer-path reference books](developer-path/book/index.html)
+for deeper reading alongside the guided course.
 
-## Commands
+For a live preview of only this mdBook, first run `source ../offline-env.sh`
+from this folder, then:
 
-```bash
-python3 build_course.py inventory --library ~/Desktop/ML     # chapter maps for every book
-python3 build_course.py inventory --library ~/Desktop/Hakin --filter 'Kali|CEH'
-python3 build_course.py plan                                 # show the spine, no writes
-python3 build_course.py build                                # emit all lesson pages
-python3 build_course.py build --from-day 1 --to-day 10
+```sh
+mdbook serve developer-path --hostname 127.0.0.1 --port 3000 --open
 ```
 
-`inventory` writes `src/maps/<book>.md`: detected chapter openings with page
-ranges, extent, and word count. That is the answer to "which book, which
-chapter, where was I?" without reading anything.
+The combined portal at port 8000 is recommended because it also exposes the
+companion exercise folders. The bundled mdBook is used by `serve-site.sh`;
+there is no need to install it separately.
 
-## Adding a day
+This folder contains separate courses; start with a book, then solve its
+matching exercises:
 
-Append to `days` in `hybrid-curriculum.json`:
+| Course | Learn | Practice | Check |
+| --- | --- | --- | --- |
+| Developer Path → Syncsenta | [421-session guided course](developer-path/guided-course.html) · [Full roadmap](developer-path/book/roadmap.html) | [Math foundations](developer-path/book/math-foundations.html) · [Quantum computing](developer-path/book/quantum-computing.html) · [Web4 systems](developer-path/book/web4-systems.html) · [Education leadership course](developer-path/book/education-leadership.html) · [Readiness hardening plan](developer-path/book/readiness-hardening.html) · [AI-track syllabus (draft)](developer-path/book/syncsenta-ai-syllabus.html) · [Final Syncsenta project](developer-path/book/syncsenta-capstone.html) · [Progress log](developer-path/src/progress-log.md) | `./serve-site.sh` |
+| Education Leadership & Higher Education | [Course overview](developer-path/book/education-leadership.html) | [Full chapter-based book](education-book/book/index.html) | `mdbook build education-book` |
+| Parallel project ladder | [Five project briefs](developer-path/book/project-ladder.html) | [Python, AI evaluation, defensive audit, MeTTa policy, Syncsenta rehearsal](project-labs/README.md) | See project-labs README |
+| Game-style challenges and prompt engineering | [Challenge arena](developer-path/book/challenge-arena.html) and [prompt workshop](developer-path/book/prompt-engineering.html) | MeTTa/Scrypto analogies and solution map for local languages | `./serve-site.sh` |
+| JavaScript / Web | [Track guide](javascript-exercises/README.md) | [Sum sensor readings](javascript-exercises/exercises/01_sum_readings.js) | `node javascript-exercises/run-tests.js solutions/01_sum_readings.js` |
+| Rust | [Read the Rust Book](rust-book/book/index.html) | [`rustlings/exercises/`](rustlings/exercises/) | `cd rustlings && cargo run --offline -- run` (the first incomplete exercise should fail to compile until you solve it) |
+| Rust / Web3 | [Track guide](rust-web3/README.md) | [Local transfer exercise](rust-web3/exercises/01_transfer.rs) | `rustc --edition=2021 --test rust-web3/solutions/01_transfer.rs -o /tmp/rust-web3-transfer && /tmp/rust-web3-transfer` |
+| MeTTa | [Read the MeTTa Book](metta-book/book/index.html) | [`metta-exercises/exercises/`](metta-exercises/exercises/) | `bash metta-exercises/check-solutions.sh` |
+| Python | [Python exercise guide](python-exercises/README.md) | [`python-exercises/exercises/`](python-exercises/exercises/) | `python3 python-exercises/run_tests.py` |
+| AI engineering / ML | [AI/ML exercise guide](ml-exercises/README.md) | [`ml-exercises/exercises/`](ml-exercises/exercises/) | `python3 ml-exercises/run_tests.py` |
+| HCyberSec / code review | [Code-review path](hcybersec/README.md) and [defensive security exercises](security-exercises/README.md) | [Review worksheet](hcybersec/review-template.md) | Review local code; record evidence and tests |
+| IoT development | [IoT exercise guide](iot-exercises/README.md) | [Sensor-validation starter](iot-exercises/exercises/01_validate_sensor.py) | `python3 iot-exercises/run_tests.py` |
+| Robotics | [Full robotics reference book](robotics-book/book/index.html) | Simulation-first projects in the book; physical hardware is optional | `mdbook build robotics-book` |
+| Free offline resources | [Catalog and download notes](resources/README.md) | [Resource guide in mdBook](developer-path/book/free-resources.html) | Save official materials with source and license notes |
+| Cairo | [Read the Cairo Book](cairo-book/book/html/index.html) | [`starklings/exercises/`](starklings/exercises/) | `scarb --version`; `cd cairo-book/listings/... && scarb build` |
+| Move | [Read the Move Book](move-book/site/build/index.html) | [`sui-move-intro-course/README.md`](sui-move-intro-course/README.md) | Requires the Sui CLI for compiling Move packages |
+| Scrypto | [`scrypto-challenges/README.md`](scrypto-challenges/README.md) | Historical Radix challenge archive | Legacy archive; not an active MeTTa exercise course |
+| Wolfram Language | [Read the Wolfram course](wolfram-book/book/index.html) | [`wolfram-exercises/README.md`](wolfram-exercises/README.md) | Requires licensed Wolfram Engine/Mathematica and `wolframscript` |
 
-```json
-{
-  "day": 17, "track": "Sequencing", "book": "homl", "from": 30, "to": 42,
-  "title": "…", "idea": "one-sentence learning outcome",
-  "recall": "what to say from memory before reading",
-  "misconception": "the predictable wrong belief this day breaks",
-  "practice": "path to a local exercise",
-  "check": "the evidence you must be able to point at",
-  "gate": "the mastery test"
-}
-```
+See [exercise platform readiness](developer-path/book/exercise-platform-readiness.html)
+for an honest Exercism/LeetCode status by track and the packaging work needed
+before publishing there.
 
-Then `python3 build_course.py build`. Marked-complete progress is keyed by day
-number in the browser, so re-running the build never resets your progress.
-Deleting or renumbering a day does — append instead.
-
-## Where each field comes from
-
-`idea` / `misconception` / `check` are the teacher fields of the local
-SyncSenta curriculum schema (`Sync-0.0.2/data/ai_curriculum.json`: learning
-outcomes, prerequisites, expected misconceptions, assessment evidence), applied
-to an adult learner. The daily rhythm is the Kumon-style method already used by
-`exercises/developer-path/src/study-method.md`. Nothing here is KICD/CBC-aligned
-or officially endorsed; it is a personal adaptation.
-
-## Spaced repetition
-
-`RECALL_OFFSETS = (1, 3, 7, 21)` in `build_course.py`. Each lesson page lists
-the one-sentence idea of the day that many lessons back, and the course page
-turns those into buttons: **I remembered it** or **It went blank**. Blank ones
-join a retry queue that stays visible until you re-answer them — that is the
-mechanism that stops a new book from feeling like a restart.
-
-## Other branches (same engine)
-
-Already inventoried in `src/maps/`: every book in `~/Desktop/ML`, including
-*Hands-On Deep Learning for IoT* (215 sections) and the blockchain titles.
-For hacking, run `inventory --library ~/Desktop/Hakin`. For Rust, your GitHub
-repos `teach-rs`, `RustTraining`, `rust-learning` and `teach-rs` exercises are
-better sources than any PDF; `git clone --depth 1` the one you want and point
-`inventory` at its markdown.
-
-Suggested spine order for the next branch (hacking, 12 days): *The Basics of
-Hacking and Penetration Testing* first four chapters → CEH study-guide domains →
-Kali Linux Penetration Testing Bible labs → `exercises/security-exercises`
-(`00_scope`, `01_detection`, `02_access`, `03_response`) as the practice arm →
-*The Psychology of Cybersecurity* as the closing day.
-
-## Publishing this folder
-
-The git remote for this course is **public**, so `.gitignore` keeps the
-generated extracts (`src/days/`, `hybrid-course-data.json`, `book/`) out of it —
-those files hold other authors' paragraphs and are for personal study only.
-What is published is the machinery, the syllabus and the chapter maps, which is
-everything needed to rebuild the course against your own local books.
-
-## Limits, honestly
-
-- Text-layer PDFs only. A scanned book yields nothing until it is OCR'd; `plan`
-  and `build` print `0 extracted words` for such a range instead of inventing text.
-- Chapter detection reads the first line of a page; books that print headings as
-  graphics (Géron's *Hands-On ML*) map poorly, so their days cite ranges you
-  found in `plan` or the ToC by hand.
-- Page ranges are physical PDF pages, which drift between editions. The footer of
-  every lesson names the file it came from, so a wrong range is checkable.
-- Extracted passages are the authors' words, for your personal study. Do not
-  publish this folder's `src/days/` contents as if they were yours.
+Read the practice folder's README for its learning path and solution policy.
+Run MeTTa commands from this folder so local file paths are predictable. The
+separate Scrypto challenge archive contains historical project submissions;
+it is not a MeTTa exercise track. Python, JavaScript, ML/GenAI,
+defensive-security, IoT, and Rust/Web3 tracks use original offline starter
+exercises; they do not reproduce book text or require API credentials.

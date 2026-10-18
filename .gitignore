@@ -1,9 +1,8 @@
-# Generated lesson pages contain verbatim passages from books this repo does not
-# hold the rights to publish. They rebuild locally from your own PDFs:
-#     python3 build_course.py build
-book/
-src/http*/
-src/days/
-hybrid-course-data.json
-__pycache__/
-*.pyc
+# This repository publishes only the hybrid book-course branches and the
+# exercises they point at. The rest of this local learning lab (vendored tools,
+# other people's book sources, cloned course repos) stays out.
+/*
+!/ml-hybrid
+!/hakin-hybrid
+!/security-exercises
+!/portal-index.md

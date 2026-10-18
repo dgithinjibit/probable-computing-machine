@@ -1,0 +1,2565 @@
+[
+  {
+    "slug": "agents-and-multi-agent-systems-formalisms-methodologies-wobc",
+    "name": "Agents and multi-agent systems _ formalisms, methodologies, -- Wobcke, Wayne, 1963-; Pagnucco, Maurice; Zhang, Chengqi, -- Lecture notes in computer -- isbn13 9783540647690 -- 9f032db58a3a708ad9e700f0f8f435e0 -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Agents and multi-agent systems _ formalisms, methodologies, -- Wobcke, Wayne, 1963-; Pagnucco, Maurice; Zhang, Chengqi, -- Lecture notes in computer -- isbn13 9783540647690 -- 9f032db58a3a708ad9e700f0f8f435e0 -- Anna’s Archive.pdf",
+    "pages": 260,
+    "words": 108001,
+    "chapters": [
+      {
+        "number": "5",
+        "title": "ConGolog",
+        "page": 22,
+        "end": 82
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "artificial-general-intelligence-the-mit-press-essential-juli",
+    "name": "Artificial General Intelligence (The MIT Press Essential -- Julian Togelius -- US, 2024 -- The MIT Press -- isbn13 9780262549349 -- 37f7d6979546dff941b5bb6d7cf1d1c1 -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Artificial General Intelligence (The MIT Press Essential -- Julian Togelius -- US, 2024 -- The MIT Press -- isbn13 9780262549349 -- 37f7d6979546dff941b5bb6d7cf1d1c1 -- Anna’s Archive.pdf",
+    "pages": 238,
+    "words": 47811,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "artificial-general-intelligence-principles-and-practices-t-s",
+    "name": "Artificial General Intelligence_ Principles and Practices -- T_ Saravanan & P_ Preethi & Sumaya Sanober & N_ Thillaiarasu -- 1, 2026 -- isbn13 9781394422678 -- 0c1010dd0a4ab7e5f959a88ecb3aeea4 -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Artificial General Intelligence_ Principles and Practices -- T_ Saravanan & P_ Preethi & Sumaya Sanober & N_ Thillaiarasu -- 1, 2026 -- isbn13 9781394422678 -- 0c1010dd0a4ab7e5f959a88ecb3aeea4 -- Anna’s Archive.epub",
+    "pages": 27,
+    "words": 124344,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "Artificial General Intelligence",
+        "page": 1,
+        "end": 1
+      },
+      {
+        "number": "2",
+        "title": "Artificial General Intelligence",
+        "page": 2,
+        "end": 2
+      },
+      {
+        "number": "3",
+        "title": "Artificial General Intelligence",
+        "page": 3,
+        "end": 3
+      },
+      {
+        "number": "4",
+        "title": "Artificial General Intelligence",
+        "page": 4,
+        "end": 4
+      },
+      {
+        "number": "5",
+        "title": "Artificial General Intelligence",
+        "page": 5,
+        "end": 5
+      },
+      {
+        "number": "6",
+        "title": "Artificial General Intelligence",
+        "page": 6,
+        "end": 6
+      },
+      {
+        "number": "7",
+        "title": "Artificial General Intelligence",
+        "page": 7,
+        "end": 7
+      },
+      {
+        "number": "8",
+        "title": "Artificial General Intelligence",
+        "page": 8,
+        "end": 8
+      },
+      {
+        "number": "9",
+        "title": "Artificial General Intelligence",
+        "page": 9,
+        "end": 9
+      },
+      {
+        "number": "10",
+        "title": "Artificial General Intelligence",
+        "page": 10,
+        "end": 10
+      },
+      {
+        "number": "11",
+        "title": "Artificial General Intelligence",
+        "page": 11,
+        "end": 11
+      },
+      {
+        "number": "12",
+        "title": "Artificial General Intelligence",
+        "page": 12,
+        "end": 12
+      },
+      {
+        "number": "13",
+        "title": "Artificial General Intelligence",
+        "page": 13,
+        "end": 13
+      },
+      {
+        "number": "14",
+        "title": "Artificial General Intelligence",
+        "page": 14,
+        "end": 14
+      },
+      {
+        "number": "15",
+        "title": "Artificial General Intelligence",
+        "page": 15,
+        "end": 15
+      },
+      {
+        "number": "16",
+        "title": "Artificial General Intelligence",
+        "page": 16,
+        "end": 16
+      },
+      {
+        "number": "17",
+        "title": "Artificial General Intelligence",
+        "page": 17,
+        "end": 17
+      },
+      {
+        "number": "18",
+        "title": "Artificial General Intelligence",
+        "page": 18,
+        "end": 18
+      },
+      {
+        "number": "19",
+        "title": "Artificial General Intelligence",
+        "page": 19,
+        "end": 19
+      },
+      {
+        "number": "20",
+        "title": "Artificial General Intelligence",
+        "page": 20,
+        "end": 20
+      },
+      {
+        "number": "21",
+        "title": "Artificial General Intelligence",
+        "page": 21,
+        "end": 21
+      },
+      {
+        "number": "22",
+        "title": "Artificial General Intelligence",
+        "page": 22,
+        "end": 22
+      },
+      {
+        "number": "23",
+        "title": "Artificial General Intelligence",
+        "page": 23,
+        "end": 23
+      },
+      {
+        "number": "24",
+        "title": "Artificial General Intelligence",
+        "page": 24,
+        "end": 24
+      },
+      {
+        "number": "25",
+        "title": "Artificial General Intelligence",
+        "page": 25,
+        "end": 25
+      },
+      {
+        "number": "26",
+        "title": "Artificial General Intelligence",
+        "page": 26,
+        "end": 26
+      },
+      {
+        "number": "27",
+        "title": "Artificial General Intelligence",
+        "page": 27,
+        "end": 27
+      }
+    ],
+    "unit": "sections"
+  },
+  {
+    "slug": "artificial-intelligence-for-communications-and-networks-shua",
+    "name": "Artificial Intelligence for Communications and Networks_ -- Shuai Han, Liang Ye, Weixiao Meng -- Lecture Notes of the Institute for Computer Sciences, -- isbn13 9783030229672 -- 1309c9ab48dfdeb48c0d831c4d14511a -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Artificial Intelligence for Communications and Networks_ -- Shuai Han, Liang Ye, Weixiao Meng -- Lecture Notes of the Institute for Computer Sciences, -- isbn13 9783030229672 -- 1309c9ab48dfdeb48c0d831c4d14511a -- Anna’s Archive.pdf",
+    "pages": 525,
+    "words": 187249,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "bitcoin-why-believe-in-it-ranger-ned",
+    "name": "Bitcoin & Why believe in it - Ranger Ned - ",
+    "path": "/home/skware/Desktop/blck/Bitcoin & Why believe in it - Ranger Ned - .pdf",
+    "pages": 7,
+    "words": 3591,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "bitcoin-and-cryptocurrencies-technologies-princeton-universi",
+    "name": "Bitcoin and Cryptocurrencies Technologies Princeton University Press",
+    "path": "/home/skware/Desktop/blck/Bitcoin and Cryptocurrencies Technologies Princeton University Press.pdf",
+    "pages": 26,
+    "words": 12371,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "bitcoin-programming-konstantinos-karasavvas",
+    "name": "Bitcoin Programming Konstantinos Karasavvas",
+    "path": "/home/skware/Desktop/blck/Bitcoin Programming Konstantinos Karasavvas.pdf",
+    "pages": 96,
+    "words": 27511,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "How Bitcoin Works",
+        "page": 8,
+        "end": 29
+      },
+      {
+        "number": "3",
+        "title": "Forking in a nutshell",
+        "page": 30,
+        "end": 37
+      },
+      {
+        "number": "4",
+        "title": "Technical Fundamentals",
+        "page": 38,
+        "end": 42
+      },
+      {
+        "number": "5",
+        "title": "Keys and Addresses",
+        "page": 43,
+        "end": 92
+      },
+      {
+        "number": "8",
+        "title": "Advanced Topics",
+        "page": 93,
+        "end": 96
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "blockchain-the-comprehensiv-z-library",
+    "name": "Blockchain The Comprehensiv_ (Z-Library)",
+    "path": "/home/skware/Desktop/blck/Blockchain The Comprehensiv_ (Z-Library).pdf",
+    "pages": 1290,
+    "words": 230244,
+    "chapters": [
+      {
+        "number": "6",
+        "title": "Implementing a Peer-to-",
+        "page": 12,
+        "end": 19
+      },
+      {
+        "number": "14",
+        "title": "Understanding and",
+        "page": 20,
+        "end": 25
+      },
+      {
+        "number": "20",
+        "title": "Upgrading Your First",
+        "page": 26,
+        "end": 40
+      },
+      {
+        "number": "1",
+        "title": "Introduction",
+        "page": 41,
+        "end": 101
+      },
+      {
+        "number": "2",
+        "title": "The Basics: How",
+        "page": 113,
+        "end": 173
+      },
+      {
+        "number": "2",
+        "title": "The initialization process then returns the source code of",
+        "page": 268,
+        "end": 312
+      },
+      {
+        "number": "4",
+        "title": "Fundamentals of Creating",
+        "page": 313,
+        "end": 345
+      },
+      {
+        "number": "5",
+        "title": "Implementing a Web API",
+        "page": 346,
+        "end": 406
+      },
+      {
+        "number": "7",
+        "title": "Introducing Accounts and",
+        "page": 408,
+        "end": 435
+      },
+      {
+        "number": "8",
+        "title": "Implementing Verification",
+        "page": 436,
+        "end": 463
+      },
+      {
+        "number": "9",
+        "title": "Smart Contract",
+        "page": 464,
+        "end": 513
+      },
+      {
+        "number": "10",
+        "title": "Integrated Development",
+        "page": 514,
+        "end": 547
+      },
+      {
+        "number": "11",
+        "title": "An Introduction to",
+        "page": 548,
+        "end": 608
+      },
+      {
+        "number": "12",
+        "title": "Digging Deeper into",
+        "page": 622,
+        "end": 659
+      },
+      {
+        "number": "13",
+        "title": "Testing and Debugging",
+        "page": 660,
+        "end": 720
+      },
+      {
+        "number": "15",
+        "title": "Protecting and Securing",
+        "page": 739,
+        "end": 784
+      },
+      {
+        "number": "16",
+        "title": "Deploying and Managing",
+        "page": 785,
+        "end": 820
+      },
+      {
+        "number": "17",
+        "title": "Standards, Libraries, and",
+        "page": 821,
+        "end": 862
+      },
+      {
+        "number": "18",
+        "title": "Upgrading Smart",
+        "page": 863,
+        "end": 903
+      },
+      {
+        "number": "19",
+        "title": "Developing",
+        "page": 904,
+        "end": 964
+      },
+      {
+        "number": "21",
+        "title": "Reverse Engineering",
+        "page": 980,
+        "end": 989
+      },
+      {
+        "number": "41",
+        "title": "JUMPDEST",
+        "page": 990,
+        "end": 1015
+      },
+      {
+        "number": "22",
+        "title": "Additional Contract-",
+        "page": 1016,
+        "end": 1050
+      },
+      {
+        "number": "23",
+        "title": "Applying Blockchain",
+        "page": 1051,
+        "end": 1111
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "building-better-minds-artificial-general-intelligence-via-be",
+    "name": "Building Better Minds_ Artificial General Intelligence via -- Ben Goertzel;  Cassio Pennachin; Nil Geisweiller; OpenCog -- 2012 -- f2f471b9522dc872e2f3ef3d00563be5 -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Building Better Minds_ Artificial General Intelligence via -- Ben Goertzel;  Cassio Pennachin; Nil Geisweiller; OpenCog -- 2012 -- f2f471b9522dc872e2f3ef3d00563be5 -- Anna’s Archive.pdf",
+    "pages": 1110,
+    "words": 404430,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "certified-ethical-hacker-ceh-study-guide-matt-walker",
+    "name": "Certified_Ethical_Hacker_CEH_Study_Guide_-_Matt_Walker",
+    "path": "/home/skware/Desktop/Hakin/Certified_Ethical_Hacker_CEH_Study_Guide_-_Matt_Walker.pdf",
+    "pages": 780,
+    "words": 181127,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "Getting Started:",
+        "page": 21,
+        "end": 78
+      },
+      {
+        "number": "2",
+        "title": "Information",
+        "page": 79,
+        "end": 123
+      },
+      {
+        "number": "3",
+        "title": "Scanning and",
+        "page": 124,
+        "end": 184
+      },
+      {
+        "number": "4",
+        "title": "Sniffing and Evasion",
+        "page": 192,
+        "end": 249
+      },
+      {
+        "number": "5",
+        "title": "Attacking a System",
+        "page": 250,
+        "end": 310
+      },
+      {
+        "number": "6",
+        "title": "Web-Based Hacking:",
+        "page": 313,
+        "end": 368
+      },
+      {
+        "number": "7",
+        "title": "Wireless Network",
+        "page": 369,
+        "end": 399
+      },
+      {
+        "number": "8",
+        "title": "Mobile",
+        "page": 400,
+        "end": 447
+      },
+      {
+        "number": "9",
+        "title": "Security in Cloud",
+        "page": 448,
+        "end": 475
+      },
+      {
+        "number": "10",
+        "title": "Trojans and Other",
+        "page": 476,
+        "end": 515
+      },
+      {
+        "number": "11",
+        "title": "Cryptography",
+        "page": 516,
+        "end": 542
+      },
+      {
+        "number": "3",
+        "title": "When the page information appears, as shown in the following",
+        "page": 543,
+        "end": 562
+      },
+      {
+        "number": "12",
+        "title": "Low Tech: Social",
+        "page": 563,
+        "end": 600
+      },
+      {
+        "number": "13",
+        "title": "Artificial",
+        "page": 601,
+        "end": 625
+      },
+      {
+        "number": "14",
+        "title": "The Pen Test:",
+        "page": 626,
+        "end": 652
+      },
+      {
+        "number": "37",
+        "title": "Which of the following is a recommended practice for malware",
+        "page": 653,
+        "end": 713
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "context-engineering-for-multi-agent-systems-move-beyond-deni",
+    "name": "Context Engineering for Multi-Agent Systems_ Move beyond -- Denis Rothman -- Expert Insight, 1, 2025 -- Packt Publishing -- c9f69ac3fb58ab0dee89a12c2578a735 -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Context Engineering for Multi-Agent Systems_ Move beyond -- Denis Rothman -- Expert Insight, 1, 2025 -- Packt Publishing -- c9f69ac3fb58ab0dee89a12c2578a735 -- Anna’s Archive.pdf",
+    "pages": 396,
+    "words": 99390,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "data-science-with-rust-a-comprehensive-guide-data-analysis-m",
+    "name": "Data Science With Rust_ A Comprehensive Guide - Data Analysis, Machine Learning, Data Visualization & ",
+    "path": "/home/skware/Desktop/ML/Data Science With Rust_ A Comprehensive Guide - Data Analysis, Machine Learning, Data Visualization & .pdf",
+    "pages": 355,
+    "words": 76371,
+    "chapters": [
+      {
+        "number": "2",
+        "title": "SETTING UP",
+        "page": 55,
+        "end": 91
+      },
+      {
+        "number": "3",
+        "title": "ADVANCED",
+        "page": 92,
+        "end": 147
+      },
+      {
+        "number": "4",
+        "title": "RUST FOR",
+        "page": 148,
+        "end": 177
+      },
+      {
+        "number": "2",
+        "title": "Structured Logging for Precise Observability",
+        "page": 178,
+        "end": 211
+      },
+      {
+        "number": "5",
+        "title": "DATA",
+        "page": 212,
+        "end": 272
+      },
+      {
+        "number": "7",
+        "title": "BIG DATA",
+        "page": 309,
+        "end": 355
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "deep-learning-interviews",
+    "name": "Deep Learning Interviews",
+    "path": "/home/skware/Desktop/ML/Deep Learning Interviews.pdf",
+    "pages": 401,
+    "words": 96371,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "HOW-TO USE THIS BOOK",
+        "page": 22,
+        "end": 29
+      },
+      {
+        "number": "2",
+        "title": "LOGISTIC REGRESSION",
+        "page": 30,
+        "end": 59
+      },
+      {
+        "number": "3",
+        "title": "PROBABILISTIC PROGRAMMING & BAYESIAN DL",
+        "page": 60,
+        "end": 103
+      },
+      {
+        "number": "4",
+        "title": "INFORMATION THEORY",
+        "page": 104,
+        "end": 139
+      },
+      {
+        "number": "5",
+        "title": "DEEP LEARNING: CALCULUS, ALGORITHMIC DIFFERENTIATION",
+        "page": 140,
+        "end": 200
+      },
+      {
+        "number": "6",
+        "title": "DEEP LEARNING: NN ENSEMBLES",
+        "page": 204,
+        "end": 223
+      },
+      {
+        "number": "7",
+        "title": "DEEP LEARNING: CNN FEATURE EXTRACTION",
+        "page": 224,
+        "end": 245
+      },
+      {
+        "number": "8",
+        "title": "DEEP LEARNING",
+        "page": 246,
+        "end": 306
+      },
+      {
+        "number": "9",
+        "title": "JOB INTERVIEW MOCK EXAM",
+        "page": 360,
+        "end": 377
+      },
+      {
+        "number": "10",
+        "title": "VOLUME TWO - PLAN",
+        "page": 378,
+        "end": 383
+      },
+      {
+        "number": "10",
+        "title": "LIST OF FIGURES",
+        "page": 384,
+        "end": 391
+      },
+      {
+        "number": "10",
+        "title": "ALPHABETICAL INDEX",
+        "page": 392,
+        "end": 401
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "designing-machine-learning-z-library",
+    "name": "Designing Machine Learning_ (Z-Library)",
+    "path": "/home/skware/Desktop/ML/Designing Machine Learning_ (Z-Library).pdf",
+    "pages": 339,
+    "words": 80973,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "Machine Learning",
+        "page": 5,
+        "end": 53
+      },
+      {
+        "number": "2",
+        "title": "Data Engineering",
+        "page": 54,
+        "end": 98
+      },
+      {
+        "number": "3",
+        "title": "Training Data",
+        "page": 99,
+        "end": 142
+      },
+      {
+        "number": "4",
+        "title": "Feature Engineering",
+        "page": 143,
+        "end": 171
+      },
+      {
+        "number": "5",
+        "title": "Model Development",
+        "page": 172,
+        "end": 232
+      },
+      {
+        "number": "6",
+        "title": "Model Deployment",
+        "page": 261,
+        "end": 316
+      },
+      {
+        "number": "7",
+        "title": "Why Machine Learning Systems Fail",
+        "page": 317,
+        "end": 339
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "example-how-to-use-the-worksheet",
+    "name": "Example_How to use the Worksheet",
+    "path": "/home/skware/Desktop/etc/Example_How to use the Worksheet.pdf",
+    "pages": 1,
+    "words": 71,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "find-your-focus-3-3",
+    "name": "Find-Your-Focus-3-3",
+    "path": "/home/skware/Desktop/etc/Find-Your-Focus-3-3.pdf",
+    "pages": 4,
+    "words": 308,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "focused-silence-a-path-to-deep-work-4",
+    "name": "Focused-Silence-A-Path-to-Deep-Work-4",
+    "path": "/home/skware/Desktop/ML/Focused-Silence-A-Path-to-Deep-Work-4.pdf",
+    "pages": 2,
+    "words": 361,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "focused-silence-a-path-to-deep-work-4",
+    "name": "Focused-Silence-A-Path-to-Deep-Work-4",
+    "path": "/home/skware/Desktop/etc/Focused-Silence-A-Path-to-Deep-Work-4.pdf",
+    "pages": 2,
+    "words": 361,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "generative-ai-navigating-the-course-to-the-artificial-martin",
+    "name": "Generative AI_ Navigating the Course to the Artificial -- Martin Musiol -- 2024 -- b351363953cb2a8261d9b0c0bb6fa13b -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Generative AI_ Navigating the Course to the Artificial -- Martin Musiol -- 2024 -- b351363953cb2a8261d9b0c0bb6fa13b -- Anna’s Archive.pdf",
+    "pages": 435,
+    "words": 111136,
+    "chapters": [
+      {
+        "number": "2",
+        "title": "GENERATIVE AI",
+        "page": 16,
+        "end": 76
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "hands-on-artificial-intelligence-for-android-understand-vasc",
+    "name": "HANDS-ON ARTIFICIAL INTELLIGENCE FOR ANDROID understand -- Vasco Correia Veloso -- BPB Online LLP, [N_p_], 2022 -- BPB Publications -- isbn13 9789355510242 -- 1c7908ff26332060c8066346ed9945f5 -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/HANDS-ON ARTIFICIAL INTELLIGENCE FOR ANDROID understand -- Vasco Correia Veloso -- BPB Online LLP, [N_p_], 2022 -- BPB Publications -- isbn13 9789355510242 -- 1c7908ff26332060c8066346ed9945f5 -- Anna’s Archive.epub",
+    "pages": 243,
+    "words": 77567,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "Unknown",
+        "page": 1,
+        "end": 1
+      },
+      {
+        "number": "2",
+        "title": "Unknown",
+        "page": 2,
+        "end": 2
+      },
+      {
+        "number": "3",
+        "title": "Unknown",
+        "page": 3,
+        "end": 3
+      },
+      {
+        "number": "4",
+        "title": "Unknown",
+        "page": 4,
+        "end": 4
+      },
+      {
+        "number": "5",
+        "title": "Unknown",
+        "page": 5,
+        "end": 5
+      },
+      {
+        "number": "6",
+        "title": "Unknown",
+        "page": 6,
+        "end": 6
+      },
+      {
+        "number": "7",
+        "title": "Unknown",
+        "page": 7,
+        "end": 7
+      },
+      {
+        "number": "8",
+        "title": "Unknown",
+        "page": 8,
+        "end": 8
+      },
+      {
+        "number": "9",
+        "title": "Unknown",
+        "page": 9,
+        "end": 9
+      },
+      {
+        "number": "10",
+        "title": "Unknown",
+        "page": 10,
+        "end": 10
+      },
+      {
+        "number": "11",
+        "title": "Unknown",
+        "page": 11,
+        "end": 11
+      },
+      {
+        "number": "12",
+        "title": "Unknown",
+        "page": 12,
+        "end": 12
+      },
+      {
+        "number": "13",
+        "title": "Unknown",
+        "page": 13,
+        "end": 13
+      },
+      {
+        "number": "14",
+        "title": "Unknown",
+        "page": 14,
+        "end": 14
+      },
+      {
+        "number": "15",
+        "title": "Unknown",
+        "page": 15,
+        "end": 15
+      },
+      {
+        "number": "16",
+        "title": "Unknown",
+        "page": 16,
+        "end": 16
+      },
+      {
+        "number": "17",
+        "title": "Unknown",
+        "page": 17,
+        "end": 17
+      },
+      {
+        "number": "18",
+        "title": "Unknown",
+        "page": 18,
+        "end": 18
+      },
+      {
+        "number": "19",
+        "title": "Unknown",
+        "page": 19,
+        "end": 19
+      },
+      {
+        "number": "20",
+        "title": "Unknown",
+        "page": 20,
+        "end": 20
+      },
+      {
+        "number": "21",
+        "title": "Unknown",
+        "page": 21,
+        "end": 21
+      },
+      {
+        "number": "22",
+        "title": "Unknown",
+        "page": 22,
+        "end": 22
+      },
+      {
+        "number": "23",
+        "title": "Unknown",
+        "page": 23,
+        "end": 23
+      },
+      {
+        "number": "24",
+        "title": "Unknown",
+        "page": 24,
+        "end": 24
+      },
+      {
+        "number": "25",
+        "title": "Unknown",
+        "page": 25,
+        "end": 25
+      },
+      {
+        "number": "26",
+        "title": "Unknown",
+        "page": 26,
+        "end": 26
+      },
+      {
+        "number": "27",
+        "title": "Unknown",
+        "page": 27,
+        "end": 27
+      },
+      {
+        "number": "28",
+        "title": "Unknown",
+        "page": 28,
+        "end": 28
+      },
+      {
+        "number": "29",
+        "title": "Unknown",
+        "page": 29,
+        "end": 29
+      },
+      {
+        "number": "30",
+        "title": "Unknown",
+        "page": 30,
+        "end": 30
+      },
+      {
+        "number": "31",
+        "title": "Unknown",
+        "page": 31,
+        "end": 31
+      },
+      {
+        "number": "32",
+        "title": "Unknown",
+        "page": 32,
+        "end": 32
+      },
+      {
+        "number": "33",
+        "title": "Unknown",
+        "page": 33,
+        "end": 33
+      },
+      {
+        "number": "34",
+        "title": "Unknown",
+        "page": 34,
+        "end": 34
+      },
+      {
+        "number": "35",
+        "title": "Unknown",
+        "page": 35,
+        "end": 35
+      },
+      {
+        "number": "36",
+        "title": "Unknown",
+        "page": 36,
+        "end": 36
+      },
+      {
+        "number": "37",
+        "title": "Unknown",
+        "page": 37,
+        "end": 37
+      },
+      {
+        "number": "38",
+        "title": "Unknown",
+        "page": 38,
+        "end": 38
+      },
+      {
+        "number": "39",
+        "title": "Unknown",
+        "page": 39,
+        "end": 39
+      },
+      {
+        "number": "40",
+        "title": "Unknown",
+        "page": 40,
+        "end": 40
+      },
+      {
+        "number": "41",
+        "title": "Unknown",
+        "page": 41,
+        "end": 41
+      },
+      {
+        "number": "42",
+        "title": "Unknown",
+        "page": 42,
+        "end": 42
+      },
+      {
+        "number": "43",
+        "title": "Unknown",
+        "page": 43,
+        "end": 43
+      },
+      {
+        "number": "44",
+        "title": "Unknown",
+        "page": 44,
+        "end": 44
+      },
+      {
+        "number": "45",
+        "title": "Unknown",
+        "page": 45,
+        "end": 45
+      },
+      {
+        "number": "46",
+        "title": "Unknown",
+        "page": 46,
+        "end": 46
+      },
+      {
+        "number": "47",
+        "title": "Unknown",
+        "page": 47,
+        "end": 47
+      },
+      {
+        "number": "48",
+        "title": "Unknown",
+        "page": 48,
+        "end": 48
+      },
+      {
+        "number": "49",
+        "title": "Unknown",
+        "page": 49,
+        "end": 49
+      },
+      {
+        "number": "50",
+        "title": "Unknown",
+        "page": 50,
+        "end": 50
+      },
+      {
+        "number": "51",
+        "title": "Unknown",
+        "page": 51,
+        "end": 51
+      },
+      {
+        "number": "52",
+        "title": "Unknown",
+        "page": 52,
+        "end": 52
+      },
+      {
+        "number": "53",
+        "title": "Unknown",
+        "page": 53,
+        "end": 53
+      },
+      {
+        "number": "54",
+        "title": "Unknown",
+        "page": 54,
+        "end": 54
+      },
+      {
+        "number": "55",
+        "title": "Unknown",
+        "page": 55,
+        "end": 55
+      },
+      {
+        "number": "56",
+        "title": "Unknown",
+        "page": 56,
+        "end": 56
+      },
+      {
+        "number": "57",
+        "title": "Unknown",
+        "page": 57,
+        "end": 57
+      },
+      {
+        "number": "58",
+        "title": "Unknown",
+        "page": 58,
+        "end": 58
+      },
+      {
+        "number": "59",
+        "title": "Unknown",
+        "page": 59,
+        "end": 59
+      },
+      {
+        "number": "60",
+        "title": "Unknown",
+        "page": 60,
+        "end": 60
+      }
+    ],
+    "unit": "sections"
+  },
+  {
+    "slug": "hands-on-artificial-intelligence-for-beginners-an-patrick-d-",
+    "name": "Hands-On Artificial Intelligence for Beginners _ An -- Patrick D_ Smith -- Packt Publishing, Birmingham, 2018 -- Packt Publishing Limited -- isbn13 9781788991063 -- 37fbc550400c731d74245ef4af8ae84c -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Hands-On Artificial Intelligence for Beginners _ An -- Patrick D_ Smith -- Packt Publishing, Birmingham, 2018 -- Packt Publishing Limited -- isbn13 9781788991063 -- 37fbc550400c731d74245ef4af8ae84c -- Anna’s Archive.pdf",
+    "pages": 349,
+    "words": 96530,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "hands-on-deep-learning-for-iot-train-neural-network-models-k",
+    "name": "Hands-On Deep Learning for IoT _ Train Neural Network Models -- Karim, Md_ Rezaul; Razzaque, Mohammad Abdur -- Packt Publishing, Birmingham, 2019 -- isbn13 9781789616064 -- 9eb464a9230fb72e00ae7e4b2cf3c73a -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Hands-On Deep Learning for IoT _ Train Neural Network Models -- Karim, Md_ Rezaul; Razzaque, Mohammad Abdur -- Packt Publishing, Birmingham, 2019 -- isbn13 9781789616064 -- 9eb464a9230fb72e00ae7e4b2cf3c73a -- Anna’s Archive.epub",
+    "pages": 215,
+    "words": 56119,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "Evaluating models",
+        "page": 1,
+        "end": 1
+      },
+      {
+        "number": "2",
+        "title": "IoT Security",
+        "page": 2,
+        "end": 2
+      },
+      {
+        "number": "3",
+        "title": "Example – Indoor localization with Wi-Fi fingerprinting",
+        "page": 3,
+        "end": 3
+      },
+      {
+        "number": "4",
+        "title": "Download the example code files",
+        "page": 4,
+        "end": 4
+      },
+      {
+        "number": "5",
+        "title": "IoT-based human physiological and psychological state detection",
+        "page": 5,
+        "end": 5
+      },
+      {
+        "number": "6",
+        "title": "Features extraction in ASR",
+        "page": 6,
+        "end": 6
+      },
+      {
+        "number": "7",
+        "title": "References",
+        "page": 7,
+        "end": 7
+      },
+      {
+        "number": "8",
+        "title": "Model performance (use case one)",
+        "page": 8,
+        "end": 8
+      },
+      {
+        "number": "9",
+        "title": "Implementing use case one",
+        "page": 9,
+        "end": 9
+      },
+      {
+        "number": "10",
+        "title": "Collecting IoT data in an industrial setting",
+        "page": 10,
+        "end": 10
+      },
+      {
+        "number": "11",
+        "title": "Deployment techniques",
+        "page": 11,
+        "end": 11
+      },
+      {
+        "number": "12",
+        "title": "Summary",
+        "page": 12,
+        "end": 12
+      },
+      {
+        "number": "13",
+        "title": "Speech/voice recognition for IoT",
+        "page": 13,
+        "end": 13
+      },
+      {
+        "number": "14",
+        "title": "Activation functions",
+        "page": 14,
+        "end": 14
+      },
+      {
+        "number": "15",
+        "title": "Data preprocessing",
+        "page": 15,
+        "end": 15
+      },
+      {
+        "number": "16",
+        "title": "Improving MAE with LSTM",
+        "page": 16,
+        "end": 16
+      },
+      {
+        "number": "17",
+        "title": "Hands-On Deep Learning for IoT",
+        "page": 17,
+        "end": 17
+      },
+      {
+        "number": "18",
+        "title": "Data preprocessing",
+        "page": 18,
+        "end": 18
+      },
+      {
+        "number": "19",
+        "title": "References",
+        "page": 19,
+        "end": 19
+      },
+      {
+        "number": "20",
+        "title": "About the reviewers",
+        "page": 20,
+        "end": 20
+      },
+      {
+        "number": "21",
+        "title": "To get the most out of this book",
+        "page": 21,
+        "end": 21
+      },
+      {
+        "number": "22",
+        "title": "Summary",
+        "page": 22,
+        "end": 22
+      },
+      {
+        "number": "23",
+        "title": "Weight and bias initialization",
+        "page": 23,
+        "end": 23
+      },
+      {
+        "number": "24",
+        "title": "Data collection",
+        "page": 24,
+        "end": 24
+      },
+      {
+        "number": "25",
+        "title": "IoT application domains",
+        "page": 25,
+        "end": 25
+      },
+      {
+        "number": "26",
+        "title": "Section 3: Advanced Aspects and Analytics in IoT",
+        "page": 26,
+        "end": 26
+      },
+      {
+        "number": "27",
+        "title": "Potential future solutions",
+        "page": 27,
+        "end": 27
+      },
+      {
+        "number": "28",
+        "title": "AE classifier",
+        "page": 28,
+        "end": 28
+      },
+      {
+        "number": "29",
+        "title": "Generative adversarial networks",
+        "page": 29,
+        "end": 29
+      },
+      {
+        "number": "30",
+        "title": "Use case two",
+        "page": 30,
+        "end": 30
+      },
+      {
+        "number": "31",
+        "title": "Predictive Maintenance for IoT",
+        "page": 31,
+        "end": 31
+      },
+      {
+        "number": "32",
+        "title": "Fingerprinting",
+        "page": 32,
+        "end": 32
+      },
+      {
+        "number": "33",
+        "title": "Implementing use case two",
+        "page": 33,
+        "end": 33
+      },
+      {
+        "number": "34",
+        "title": "Indoor Localization in IoT",
+        "page": 34,
+        "end": 34
+      },
+      {
+        "number": "35",
+        "title": "Neural network architectures",
+        "page": 35,
+        "end": 35
+      },
+      {
+        "number": "36",
+        "title": "Data exploration",
+        "page": 36,
+        "end": 36
+      },
+      {
+        "number": "37",
+        "title": "Capsule networks",
+        "page": 37,
+        "end": 37
+      },
+      {
+        "number": "38",
+        "title": "A soft introduction to ML",
+        "page": 38,
+        "end": 38
+      },
+      {
+        "number": "39",
+        "title": "Use case two",
+        "page": 39,
+        "end": 39
+      },
+      {
+        "number": "40",
+        "title": "DL for predicting RLU",
+        "page": 40,
+        "end": 40
+      },
+      {
+        "number": "41",
+        "title": "Reviews",
+        "page": 41,
+        "end": 41
+      },
+      {
+        "number": "42",
+        "title": "Inspecting failure modes",
+        "page": 42,
+        "end": 42
+      },
+      {
+        "number": "43",
+        "title": "Implementation of use case two",
+        "page": 43,
+        "end": 43
+      },
+      {
+        "number": "44",
+        "title": "References",
+        "page": 44,
+        "end": 44
+      },
+      {
+        "number": "45",
+        "title": "Use case one – remote management of chronic disease",
+        "page": 45,
+        "end": 45
+      },
+      {
+        "number": "46",
+        "title": "Collecting data for use case two",
+        "page": 46,
+        "end": 46
+      },
+      {
+        "number": "47",
+        "title": "General ML rule of thumb",
+        "page": 47,
+        "end": 47
+      },
+      {
+        "number": "48",
+        "title": "References",
+        "page": 48,
+        "end": 48
+      },
+      {
+        "number": "49",
+        "title": "Calculating cut-off times",
+        "page": 49,
+        "end": 49
+      },
+      {
+        "number": "50",
+        "title": "ANN and the human brain",
+        "page": 50,
+        "end": 50
+      },
+      {
+        "number": "51",
+        "title": "Use case one",
+        "page": 51,
+        "end": 51
+      },
+      {
+        "number": "52",
+        "title": "Exploratory analysis",
+        "page": 52,
+        "end": 52
+      },
+      {
+        "number": "53",
+        "title": "What this book covers",
+        "page": 53,
+        "end": 53
+      },
+      {
+        "number": "54",
+        "title": "Deep feature synthesis",
+        "page": 54,
+        "end": 54
+      },
+      {
+        "number": "55",
+        "title": "ML baselines",
+        "page": 55,
+        "end": 55
+      },
+      {
+        "number": "56",
+        "title": "Use case two",
+        "page": 56,
+        "end": 56
+      },
+      {
+        "number": "57",
+        "title": "Automated human emotion detection system",
+        "page": 57,
+        "end": 57
+      },
+      {
+        "number": "58",
+        "title": "Unsupervised learning",
+        "page": 58,
+        "end": 58
+      },
+      {
+        "number": "59",
+        "title": "Deep learning models for HAR and emotion detection",
+        "page": 59,
+        "end": 59
+      },
+      {
+        "number": "60",
+        "title": "Use case two",
+        "page": 60,
+        "end": 60
+      }
+    ],
+    "unit": "sections"
+  },
+  {
+    "slug": "hands-on-machine-learning-with-scikit-learn-and-tensorflow-c",
+    "name": "Hands_On_Machine_Learning_with_Scikit_Learn_and_TensorFlow_Concepts",
+    "path": "/home/skware/Desktop/ML/Hands_On_Machine_Learning_with_Scikit_Learn_and_TensorFlow_Concepts.pdf",
+    "pages": 564,
+    "words": 164582,
+    "chapters": [
+      {
+        "number": "8",
+        "title": "Dimensionality Reduction",
+        "page": 501,
+        "end": 508
+      },
+      {
+        "number": "12",
+        "title": "Distributing TensorFlow Across Devices and",
+        "page": 509,
+        "end": 512
+      },
+      {
+        "number": "14",
+        "title": "Recurrent Neural Networks",
+        "page": 513,
+        "end": 564
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "infinite-potential-insights-from-the-robot-insurgency-gregor",
+    "name": "Infinite Potential—Insights from the Robot Insurgency -- Gregory Smith, Benjamin Boudreaux, Michael J_ D_ Vermeer, -- 2025 -- eba66047c7192115d262e828c5cc60ca -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Infinite Potential—Insights from the Robot Insurgency -- Gregory Smith, Benjamin Boudreaux, Michael J_ D_ Vermeer, -- 2025 -- eba66047c7192115d262e828c5cc60ca -- Anna’s Archive.pdf",
+    "pages": 23,
+    "words": 8088,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "interplay-of-artificial-general-intelligence-with-quantum-c-",
+    "name": "Interplay of Artificial General Intelligence with Quantum -- C_ Kishor Kumar Reddy & Shenson Joseph & Herat Joshi & -- 1, 2025 -- Springer Nature -- isbn13 9783031879302 -- 73755a283bade7e5a354f3e44d9ce8dc -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Interplay of Artificial General Intelligence with Quantum -- C_ Kishor Kumar Reddy & Shenson Joseph & Herat Joshi & -- 1, 2025 -- Springer Nature -- isbn13 9783031879302 -- 73755a283bade7e5a354f3e44d9ce8dc -- Anna’s Archive.pdf",
+    "pages": 280,
+    "words": 162313,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "kali-linux-penetration-testing-bible",
+    "name": "Kali Linux Penetration Testing Bible",
+    "path": "/home/skware/Desktop/Hakin/Kali Linux Penetration Testing Bible.pdf",
+    "pages": 515,
+    "words": 112009,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "knowing-when-to-talk-and-when-to-listen-2",
+    "name": "Knowing-When-to-Talk—and-When-to-Listen-2",
+    "path": "/home/skware/Desktop/etc/Knowing-When-to-Talk—and-When-to-Listen-2.pdf",
+    "pages": 2,
+    "words": 248,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "lost-in-space-creative-writing-prompt",
+    "name": "Lost-in-Space-Creative-Writing-Prompt",
+    "path": "/home/skware/Desktop/etc/Lost-in-Space-Creative-Writing-Prompt.pdf",
+    "pages": 3,
+    "words": 119,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "machine-learning-for-absolute-beginners-1",
+    "name": "Machine Learning For Absolute Beginners-1",
+    "path": "/home/skware/Desktop/ML/Machine Learning For Absolute Beginners-1.pdf",
+    "pages": 128,
+    "words": 26097,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "mastering-blockchain-unlock-z-library",
+    "name": "Mastering Blockchain Unlock_ (Z-Library)",
+    "path": "/home/skware/Desktop/ML/Mastering Blockchain Unlock_ (Z-Library).pdf",
+    "pages": 284,
+    "words": 79806,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "mastering-blockchain-unlock-z-library",
+    "name": "Mastering Blockchain Unlock_ (Z-Library)",
+    "path": "/home/skware/Desktop/blck/Mastering Blockchain Unlock_ (Z-Library).pdf",
+    "pages": 284,
+    "words": 79806,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "mit6-042js15-textbook",
+    "name": "mit6_042js15_textbook",
+    "path": "/home/skware/Desktop/ML/mit6_042js15_textbook.pdf",
+    "pages": 920,
+    "words": 284299,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "modern-software-engineering-with-codex-implementing-derrick-",
+    "name": "Modern Software Engineering with Codex - Implementing -- Derrick M_ Newman -- New Edition, 2026 -- 8c453e470b1f397da5644c9395f447c0 -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Modern Software Engineering with Codex - Implementing -- Derrick M_ Newman -- New Edition, 2026 -- 8c453e470b1f397da5644c9395f447c0 -- Anna’s Archive.pdf",
+    "pages": 294,
+    "words": 44764,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "natural-language-cognitive-architecture-a-prototype-david-k-",
+    "name": "Natural Language Cognitive Architecture_ A Prototype -- David K_ Shapiro -- First Edition, 22, 2021, 2021 -- David Shapiro -- isbn13 9781668513118 -- 68ef2ce7214b846fa702371cc89ac5d0 -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Natural Language Cognitive Architecture_ A Prototype -- David K_ Shapiro -- First Edition, 22, 2021, 2021 -- David Shapiro -- isbn13 9781668513118 -- 68ef2ce7214b846fa702371cc89ac5d0 -- Anna’s Archive.epub",
+    "pages": 27,
+    "words": 48473,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 1,
+        "end": 1
+      },
+      {
+        "number": "2",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 2,
+        "end": 2
+      },
+      {
+        "number": "3",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 3,
+        "end": 3
+      },
+      {
+        "number": "4",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 4,
+        "end": 4
+      },
+      {
+        "number": "5",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 5,
+        "end": 5
+      },
+      {
+        "number": "6",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 6,
+        "end": 6
+      },
+      {
+        "number": "7",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 7,
+        "end": 7
+      },
+      {
+        "number": "8",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 8,
+        "end": 8
+      },
+      {
+        "number": "9",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 9,
+        "end": 9
+      },
+      {
+        "number": "10",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 10,
+        "end": 10
+      },
+      {
+        "number": "11",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 11,
+        "end": 11
+      },
+      {
+        "number": "12",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 12,
+        "end": 12
+      },
+      {
+        "number": "13",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 13,
+        "end": 13
+      },
+      {
+        "number": "14",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 14,
+        "end": 14
+      },
+      {
+        "number": "15",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 15,
+        "end": 15
+      },
+      {
+        "number": "16",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 16,
+        "end": 16
+      },
+      {
+        "number": "17",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 17,
+        "end": 17
+      },
+      {
+        "number": "18",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 18,
+        "end": 18
+      },
+      {
+        "number": "19",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 19,
+        "end": 19
+      },
+      {
+        "number": "20",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 20,
+        "end": 20
+      },
+      {
+        "number": "21",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 21,
+        "end": 21
+      },
+      {
+        "number": "22",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 22,
+        "end": 22
+      },
+      {
+        "number": "23",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 23,
+        "end": 23
+      },
+      {
+        "number": "24",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 24,
+        "end": 24
+      },
+      {
+        "number": "25",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 25,
+        "end": 25
+      },
+      {
+        "number": "26",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 26,
+        "end": 26
+      },
+      {
+        "number": "27",
+        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "page": 27,
+        "end": 27
+      }
+    ],
+    "unit": "sections"
+  },
+  {
+    "slug": "python-cheatsheet",
+    "name": "Python Cheatsheet",
+    "path": "/home/skware/Desktop/ML/Python Cheatsheet.pdf",
+    "pages": 2,
+    "words": 623,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "python-complete-notes",
+    "name": "Python complete notes🥇",
+    "path": "/home/skware/Desktop/ML/Python complete notes🥇.pdf",
+    "pages": 290,
+    "words": 60270,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "python-crash-course-ole-nielsen-en",
+    "name": "Python Crash Course – Ole Nielsen (en)",
+    "path": "/home/skware/Desktop/ML/Python Crash Course – Ole Nielsen (en).pdf",
+    "pages": 13,
+    "words": 2595,
+    "chapters": [
+      {
+        "number": "2",
+        "title": "Pipes",
+        "page": 4,
+        "end": 6
+      },
+      {
+        "number": "4",
+        "title": "Parallel Python",
+        "page": 7,
+        "end": 13
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "python-essential-cheatsheet",
+    "name": "Python Essential Cheatsheet",
+    "path": "/home/skware/Desktop/ML/Python Essential Cheatsheet.pdf",
+    "pages": 8,
+    "words": 0,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "python-for-large-language-models-2025",
+    "name": "Python For Large Language Models (2025)",
+    "path": "/home/skware/Desktop/ML/Python For Large Language Models (2025).pdf",
+    "pages": 250,
+    "words": 48064,
+    "chapters": [
+      {
+        "number": "17",
+        "title": "LLMs for Creative Writing",
+        "page": 5,
+        "end": 7
+      },
+      {
+        "number": "1",
+        "title": "​INTRODUCTION TO LARGE",
+        "page": 8,
+        "end": 22
+      },
+      {
+        "number": "1",
+        "title": "Python Syntax Overview",
+        "page": 23,
+        "end": 25
+      },
+      {
+        "number": "2",
+        "title": "Functions and Modules",
+        "page": 26,
+        "end": 32
+      },
+      {
+        "number": "3",
+        "title": "Semantics: Understanding the meaning of words and phrases in",
+        "page": 33,
+        "end": 33
+      },
+      {
+        "number": "2",
+        "title": "Subword Tokenization:",
+        "page": 34,
+        "end": 41
+      },
+      {
+        "number": "3",
+        "title": "PUT Request: Updating Data",
+        "page": 42,
+        "end": 47
+      },
+      {
+        "number": "1",
+        "title": "Reduced Training Time: One of the major advantages of pre-",
+        "page": 48,
+        "end": 56
+      },
+      {
+        "number": "3",
+        "title": "API Key Permissions:",
+        "page": 57,
+        "end": 81
+      },
+      {
+        "number": "11",
+        "title": "CUSTOMIZING LLMS FOR YOUR",
+        "page": 82,
+        "end": 82
+      },
+      {
+        "number": "3",
+        "title": "Cost Efficiency: Fine-tuning avoids the need to train a model",
+        "page": 83,
+        "end": 86
+      },
+      {
+        "number": "3",
+        "title": "Regularization: Use techniques like dropout or weight decay to",
+        "page": 87,
+        "end": 94
+      },
+      {
+        "number": "13",
+        "title": "DEVELOPING                   SEARCH",
+        "page": 95,
+        "end": 105
+      },
+      {
+        "number": "2",
+        "title": "Transformer Models: Modern transformer-based architectures,",
+        "page": 106,
+        "end": 109
+      },
+      {
+        "number": "3",
+        "title": "METEOR (Metric for Evaluation of Translation with",
+        "page": 110,
+        "end": 116
+      },
+      {
+        "number": "16",
+        "title": "LEVERAGING LLMS FOR CODE",
+        "page": 117,
+        "end": 118
+      },
+      {
+        "number": "2",
+        "title": "Web Development: They can create components for frontend",
+        "page": 119,
+        "end": 132
+      },
+      {
+        "number": "5",
+        "title": "Multimodal Capabilities: Advanced assistants can process",
+        "page": 133,
+        "end": 134
+      },
+      {
+        "number": "19",
+        "title": "DEVELOPING RECOMMENDATION",
+        "page": 135,
+        "end": 135
+      },
+      {
+        "number": "3",
+        "title": "Hybrid Systems:",
+        "page": 136,
+        "end": 142
+      },
+      {
+        "number": "20",
+        "title": "ADVANCED TOPICS IN LLMS",
+        "page": 143,
+        "end": 163
+      },
+      {
+        "number": "3",
+        "title": "Building and Testing the Image",
+        "page": 164,
+        "end": 164
+      },
+      {
+        "number": "5",
+        "title": "Optimizing Containers",
+        "page": 165,
+        "end": 168
+      },
+      {
+        "number": "6",
+        "title": "Automating Maintenance",
+        "page": 169,
+        "end": 171
+      },
+      {
+        "number": "2",
+        "title": "Select the Model: Choose an appropriate LLM based on your",
+        "page": 172,
+        "end": 175
+      },
+      {
+        "number": "3",
+        "title": "Performance Optimization: Optimize prompts, minimize",
+        "page": 176,
+        "end": 192
+      },
+      {
+        "number": "1",
+        "title": "Input Sanitization and Validation",
+        "page": 193,
+        "end": 198
+      },
+      {
+        "number": "5",
+        "title": "Data Consistency: Ensure that data flows consistently through",
+        "page": 199,
+        "end": 199
+      },
+      {
+        "number": "2",
+        "title": "BLEU Score (Bilingual Evaluation Understudy): The BLEU",
+        "page": 200,
+        "end": 200
+      },
+      {
+        "number": "2",
+        "title": "Human-in-the-Loop Evaluation: Especially in NLP tasks",
+        "page": 201,
+        "end": 219
+      },
+      {
+        "number": "7",
+        "title": "Deployment and Maintenance",
+        "page": 220,
+        "end": 222
+      },
+      {
+        "number": "32",
+        "title": "Visualizing AI Outputs",
+        "page": 223,
+        "end": 223
+      },
+      {
+        "number": "5",
+        "title": "Word Clouds: Summarize textual data by emphasizing",
+        "page": 224,
+        "end": 228
+      },
+      {
+        "number": "33",
+        "title": "FUTURE TRENDS IN LLMS",
+        "page": 229,
+        "end": 250
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "python-for-machine-learning",
+    "name": "Python for Machine Learning",
+    "path": "/home/skware/Desktop/ML/Python for Machine Learning.pdf",
+    "pages": 390,
+    "words": 58300,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "Mean Absolute Error (MAE)",
+        "page": 10,
+        "end": 13
+      },
+      {
+        "number": "6",
+        "title": "Feature Engineering",
+        "page": 14,
+        "end": 15
+      },
+      {
+        "number": "1",
+        "title": "Start with a Coarse Search:",
+        "page": 16,
+        "end": 16
+      },
+      {
+        "number": "3",
+        "title": "Hold-Out Validation Set:",
+        "page": 17,
+        "end": 19
+      },
+      {
+        "number": "1",
+        "title": "Computer Vision:",
+        "page": 20,
+        "end": 27
+      },
+      {
+        "number": "5",
+        "title": "Continuous Monitoring",
+        "page": 28,
+        "end": 29
+      },
+      {
+        "number": "9",
+        "title": "Alignment with Machine Learning Capabilities",
+        "page": 30,
+        "end": 34
+      },
+      {
+        "number": "10",
+        "title": "Peer Discussion Groups",
+        "page": 35,
+        "end": 35
+      },
+      {
+        "number": "4",
+        "title": "Natural Language Processing (NLP) Engineer",
+        "page": 36,
+        "end": 36
+      },
+      {
+        "number": "1",
+        "title": "Continuous Learning Is Essential",
+        "page": 37,
+        "end": 37
+      },
+      {
+        "number": "9",
+        "title": "Real-World Applications",
+        "page": 38,
+        "end": 64
+      },
+      {
+        "number": "1",
+        "title": "Machine Learning-Based Imputation: More advanced imputation",
+        "page": 65,
+        "end": 71
+      },
+      {
+        "number": "2",
+        "title": "Feature Engineering: Based on EDA insights, perform feature",
+        "page": 72,
+        "end": 83
+      },
+      {
+        "number": "4",
+        "title": "Support Vector Regression (SVR): SVR is a regression technique",
+        "page": 84,
+        "end": 140
+      },
+      {
+        "number": "5",
+        "title": "Noise Reduction",
+        "page": 141,
+        "end": 171
+      },
+      {
+        "number": "8",
+        "title": "Ensemble Learning",
+        "page": 172,
+        "end": 174
+      },
+      {
+        "number": "2",
+        "title": "Improved Generalization: Bagging often leads to better",
+        "page": 175,
+        "end": 218
+      },
+      {
+        "number": "2",
+        "title": "Text Summarization: These models are used to summarize long",
+        "page": 219,
+        "end": 225
+      },
+      {
+        "number": "11",
+        "title": "Computer Vision with Python",
+        "page": 226,
+        "end": 232
+      },
+      {
+        "number": "1",
+        "title": "Traditional Computer Vision Methods: These methods rely on",
+        "page": 233,
+        "end": 233
+      },
+      {
+        "number": "6",
+        "title": "Post-processing: Apply non-maximum suppression to remove",
+        "page": 234,
+        "end": 245
+      },
+      {
+        "number": "1",
+        "title": "Visualize the Components:",
+        "page": 246,
+        "end": 250
+      },
+      {
+        "number": "1",
+        "title": "Install the Prophet Library:",
+        "page": 251,
+        "end": 259
+      },
+      {
+        "number": "1",
+        "title": "Evaluation:",
+        "page": 260,
+        "end": 297
+      },
+      {
+        "number": "3",
+        "title": "Post-processing Techniques",
+        "page": 298,
+        "end": 310
+      },
+      {
+        "number": "7",
+        "title": "Post-Deployment Maintenance",
+        "page": 311,
+        "end": 312
+      },
+      {
+        "number": "4",
+        "title": "Ethical and Regulatory Considerations",
+        "page": 313,
+        "end": 315
+      },
+      {
+        "number": "4",
+        "title": "APIs: Access data through APIs (Application Programming",
+        "page": 316,
+        "end": 345
+      },
+      {
+        "number": "18",
+        "title": "Future Trends in Machine Learning",
+        "page": 346,
+        "end": 346
+      },
+      {
+        "number": "5",
+        "title": "AutoML and Democratization",
+        "page": 347,
+        "end": 358
+      },
+      {
+        "number": "2",
+        "title": "Algorithmic Accountability",
+        "page": 359,
+        "end": 367
+      },
+      {
+        "number": "5",
+        "title": "Blogs and Newsletters",
+        "page": 368,
+        "end": 373
+      },
+      {
+        "number": "5",
+        "title": "Computer Vision Engineer",
+        "page": 374,
+        "end": 376
+      },
+      {
+        "number": "20",
+        "title": "Conclusion and Beyond",
+        "page": 377,
+        "end": 388
+      },
+      {
+        "number": "6",
+        "title": "Natural Language Processing Advancements",
+        "page": 389,
+        "end": 389
+      },
+      {
+        "number": "13",
+        "title": "Continuous Learning",
+        "page": 390,
+        "end": 390
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "python-machine-learning-learn-python-in-a-week-and-master-co",
+    "name": "Python Machine Learning_ Learn Python in a Week and Master -- Computer Programming Academy -- 26d03ecbccb82df4b128a6257eefa279 -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Python Machine Learning_ Learn Python in a Week and Master -- Computer Programming Academy -- 26d03ecbccb82df4b128a6257eefa279 -- Anna’s Archive.epub",
+    "pages": 1,
+    "words": 31447,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "part0000",
+        "page": 1,
+        "end": 1
+      }
+    ],
+    "unit": "sections"
+  },
+  {
+    "slug": "rrsi-google",
+    "name": "RRSI-GOOGLE",
+    "path": "/home/skware/Desktop/ML/RRSI-GOOGLE.pdf",
+    "pages": 24,
+    "words": 11973,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "simple-writing-prompt-worksheet-17",
+    "name": "Simple-Writing-Prompt-Worksheet-17",
+    "path": "/home/skware/Desktop/ML/Simple-Writing-Prompt-Worksheet-17.pdf",
+    "pages": 1,
+    "words": 132,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "ssgenai-labs-week1",
+    "name": "ssgenai_labs_week1",
+    "path": "/home/skware/Desktop/ML/ssgenai_labs_week1.pdf",
+    "pages": 2,
+    "words": 188,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "ssgenai-labs-week2",
+    "name": "ssgenai_labs_week2",
+    "path": "/home/skware/Desktop/ML/ssgenai_labs_week2.pdf",
+    "pages": 2,
+    "words": 246,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "ssgenai-labs-week3",
+    "name": "ssgenai_labs_week3",
+    "path": "/home/skware/Desktop/ML/ssgenai_labs_week3.pdf",
+    "pages": 2,
+    "words": 317,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "ssgenai-labs-week4",
+    "name": "ssgenai_labs_week4",
+    "path": "/home/skware/Desktop/ML/ssgenai_labs_week4.pdf",
+    "pages": 2,
+    "words": 369,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "ssgenai-labs-week5",
+    "name": "ssgenai_labs_week5",
+    "path": "/home/skware/Desktop/ML/ssgenai_labs_week5.pdf",
+    "pages": 2,
+    "words": 393,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "ssgenai-labs-week6",
+    "name": "ssgenai_labs_week6",
+    "path": "/home/skware/Desktop/ML/ssgenai_labs_week6.pdf",
+    "pages": 2,
+    "words": 400,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "the-basics-of-hacking-and-p-z-library-sk-1lib-sk-z-lib-sk",
+    "name": "The Basics of Hacking and P_ (z-library.sk, 1lib.sk, z-lib.sk)",
+    "path": "/home/skware/Desktop/Hakin/The Basics of Hacking and P_ (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "pages": 318,
+    "words": 93471,
+    "chapters": [
+      {
+        "number": "2",
+        "title": "The Basics of Hacking and Penetration Testing",
+        "page": 13,
+        "end": 73
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "the-basics-of-hacking-and-p-z-library-sk-1lib-sk-z-lib-sk-1",
+    "name": "The Basics of Hacking and P_ (z-library.sk, 1lib.sk, z-lib.sk) (1)",
+    "path": "/home/skware/Desktop/Hakin/The Basics of Hacking and P_ (z-library.sk, 1lib.sk, z-lib.sk) (1).pdf",
+    "pages": 318,
+    "words": 93471,
+    "chapters": [
+      {
+        "number": "2",
+        "title": "The Basics of Hacking and Penetration Testing",
+        "page": 13,
+        "end": 73
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "the-psychology-of-cybersecu-z-library-sk-1lib-sk-z-lib-sk",
+    "name": "The Psychology of Cybersecu_ (z-library.sk, 1lib.sk, z-lib.sk)",
+    "path": "/home/skware/Desktop/Hakin/The Psychology of Cybersecu_ (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "pages": 185,
+    "words": 77700,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "Most cybercriminals are made,",
+        "page": 16,
+        "end": 16
+      },
+      {
+        "number": "4",
+        "title": "The Psychology of Cybersecurity",
+        "page": 17,
+        "end": 20
+      },
+      {
+        "number": "2",
+        "title": "Hackers",
+        "page": 21,
+        "end": 47
+      },
+      {
+        "number": "3",
+        "title": "How an attack is devised",
+        "page": 48,
+        "end": 57
+      },
+      {
+        "number": "4",
+        "title": "Special cases",
+        "page": 58,
+        "end": 85
+      },
+      {
+        "number": "5",
+        "title": "Operational cybersecurity",
+        "page": 86,
+        "end": 91
+      },
+      {
+        "number": "6",
+        "title": "Human fallacies and how to",
+        "page": 92,
+        "end": 97
+      },
+      {
+        "number": "7",
+        "title": "Operational resilience",
+        "page": 98,
+        "end": 106
+      },
+      {
+        "number": "8",
+        "title": "Organisational psychology",
+        "page": 107,
+        "end": 109
+      },
+      {
+        "number": "9",
+        "title": "Improving organisational",
+        "page": 110,
+        "end": 129
+      },
+      {
+        "number": "10",
+        "title": "Psychology applied",
+        "page": 130,
+        "end": 137
+      },
+      {
+        "number": "11",
+        "title": "How we take the bait",
+        "page": 138,
+        "end": 147
+      },
+      {
+        "number": "12",
+        "title": "Responsibilities of a CISO",
+        "page": 148,
+        "end": 158
+      },
+      {
+        "number": "13",
+        "title": "Psychological toll on CISOs",
+        "page": 159,
+        "end": 170
+      },
+      {
+        "number": "14",
+        "title": "Concluding remarks",
+        "page": 171,
+        "end": 185
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "toughest-interview-questions-pdf",
+    "name": "Toughest Interview Questions.pdf",
+    "path": "/home/skware/Desktop/ML/Toughest Interview Questions.pdf.pdf",
+    "pages": 39,
+    "words": 15776,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "traditional-vs-generative-a-z-library-sk-1lib-sk-z-lib-sk",
+    "name": "Traditional vs Generative A_ (z-library.sk, 1lib.sk, z-lib.sk)",
+    "path": "/home/skware/Desktop/Hakin/Traditional vs Generative A_ (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "pages": 316,
+    "words": 72701,
+    "chapters": [
+      {
+        "number": "2",
+        "title": "Traditional vs Generative AI Pentesting",
+        "page": 13,
+        "end": 73
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "unified-agentic-trust-and-governance-architecture",
+    "name": "Unified_Agentic_Trust_and_Governance_Architecture",
+    "path": "/home/skware/Desktop/ML/Unified_Agentic_Trust_and_Governance_Architecture.docx",
+    "pages": 65,
+    "words": 1737,
+    "chapters": [
+      {
+        "number": null,
+        "title": "1. Computational Overhead of Symbolic Formal Proofs",
+        "page": 31,
+        "end": 31
+      }
+    ],
+    "unit": "paragraphs"
+  }
+]

@@ -1,0 +1,265 @@
+[
+  {
+    "slug": "certified-ethical-hacker-ceh-study-guide-matt-walker",
+    "name": "Certified_Ethical_Hacker_CEH_Study_Guide_-_Matt_Walker",
+    "path": "/home/skware/Desktop/Hakin/Certified_Ethical_Hacker_CEH_Study_Guide_-_Matt_Walker.pdf",
+    "pages": 780,
+    "words": 181127,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "Getting Started:",
+        "page": 21,
+        "end": 78
+      },
+      {
+        "number": "2",
+        "title": "Information",
+        "page": 79,
+        "end": 123
+      },
+      {
+        "number": "3",
+        "title": "Scanning and",
+        "page": 124,
+        "end": 184
+      },
+      {
+        "number": "4",
+        "title": "Sniffing and Evasion",
+        "page": 192,
+        "end": 249
+      },
+      {
+        "number": "5",
+        "title": "Attacking a System",
+        "page": 250,
+        "end": 310
+      },
+      {
+        "number": "6",
+        "title": "Web-Based Hacking:",
+        "page": 313,
+        "end": 368
+      },
+      {
+        "number": "7",
+        "title": "Wireless Network",
+        "page": 369,
+        "end": 399
+      },
+      {
+        "number": "8",
+        "title": "Mobile",
+        "page": 400,
+        "end": 447
+      },
+      {
+        "number": "9",
+        "title": "Security in Cloud",
+        "page": 448,
+        "end": 475
+      },
+      {
+        "number": "10",
+        "title": "Trojans and Other",
+        "page": 476,
+        "end": 515
+      },
+      {
+        "number": "11",
+        "title": "Cryptography",
+        "page": 516,
+        "end": 542
+      },
+      {
+        "number": "3",
+        "title": "When the page information appears, as shown in the following",
+        "page": 543,
+        "end": 562
+      },
+      {
+        "number": "12",
+        "title": "Low Tech: Social",
+        "page": 563,
+        "end": 600
+      },
+      {
+        "number": "13",
+        "title": "Artificial",
+        "page": 601,
+        "end": 625
+      },
+      {
+        "number": "14",
+        "title": "The Pen Test:",
+        "page": 626,
+        "end": 652
+      },
+      {
+        "number": "37",
+        "title": "Which of the following is a recommended practice for malware",
+        "page": 653,
+        "end": 713
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "kali-linux-penetration-testing-bible",
+    "name": "Kali Linux Penetration Testing Bible",
+    "path": "/home/skware/Desktop/Hakin/Kali Linux Penetration Testing Bible.pdf",
+    "pages": 515,
+    "words": 112009,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "the-basics-of-hacking-and-p-z-library-sk-1lib-sk-z-lib-sk",
+    "name": "The Basics of Hacking and P_ (z-library.sk, 1lib.sk, z-lib.sk)",
+    "path": "/home/skware/Desktop/Hakin/The Basics of Hacking and P_ (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "pages": 318,
+    "words": 93471,
+    "chapters": [
+      {
+        "number": "2",
+        "title": "The Basics of Hacking and Penetration Testing",
+        "page": 13,
+        "end": 73
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "the-basics-of-hacking-and-p-z-library-sk-1lib-sk-z-lib-sk-1",
+    "name": "The Basics of Hacking and P_ (z-library.sk, 1lib.sk, z-lib.sk) (1)",
+    "path": "/home/skware/Desktop/Hakin/The Basics of Hacking and P_ (z-library.sk, 1lib.sk, z-lib.sk) (1).pdf",
+    "pages": 318,
+    "words": 93471,
+    "chapters": [
+      {
+        "number": "2",
+        "title": "The Basics of Hacking and Penetration Testing",
+        "page": 13,
+        "end": 73
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "the-psychology-of-cybersecu-z-library-sk-1lib-sk-z-lib-sk",
+    "name": "The Psychology of Cybersecu_ (z-library.sk, 1lib.sk, z-lib.sk)",
+    "path": "/home/skware/Desktop/Hakin/The Psychology of Cybersecu_ (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "pages": 185,
+    "words": 77700,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "Most cybercriminals are made,",
+        "page": 16,
+        "end": 16
+      },
+      {
+        "number": "4",
+        "title": "The Psychology of Cybersecurity",
+        "page": 17,
+        "end": 20
+      },
+      {
+        "number": "2",
+        "title": "Hackers",
+        "page": 21,
+        "end": 47
+      },
+      {
+        "number": "3",
+        "title": "How an attack is devised",
+        "page": 48,
+        "end": 57
+      },
+      {
+        "number": "4",
+        "title": "Special cases",
+        "page": 58,
+        "end": 85
+      },
+      {
+        "number": "5",
+        "title": "Operational cybersecurity",
+        "page": 86,
+        "end": 91
+      },
+      {
+        "number": "6",
+        "title": "Human fallacies and how to",
+        "page": 92,
+        "end": 97
+      },
+      {
+        "number": "7",
+        "title": "Operational resilience",
+        "page": 98,
+        "end": 106
+      },
+      {
+        "number": "8",
+        "title": "Organisational psychology",
+        "page": 107,
+        "end": 109
+      },
+      {
+        "number": "9",
+        "title": "Improving organisational",
+        "page": 110,
+        "end": 129
+      },
+      {
+        "number": "10",
+        "title": "Psychology applied",
+        "page": 130,
+        "end": 137
+      },
+      {
+        "number": "11",
+        "title": "How we take the bait",
+        "page": 138,
+        "end": 147
+      },
+      {
+        "number": "12",
+        "title": "Responsibilities of a CISO",
+        "page": 148,
+        "end": 158
+      },
+      {
+        "number": "13",
+        "title": "Psychological toll on CISOs",
+        "page": 159,
+        "end": 170
+      },
+      {
+        "number": "14",
+        "title": "Concluding remarks",
+        "page": 171,
+        "end": 185
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "traditional-vs-generative-a-z-library-sk-1lib-sk-z-lib-sk",
+    "name": "Traditional vs Generative A_ (z-library.sk, 1lib.sk, z-lib.sk)",
+    "path": "/home/skware/Desktop/Hakin/Traditional vs Generative A_ (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "pages": 316,
+    "words": 72701,
+    "chapters": [
+      {
+        "number": "2",
+        "title": "Traditional vs Generative AI Pentesting",
+        "page": 13,
+        "end": 73
+      }
+    ],
+    "unit": "pages"
+  }
+]

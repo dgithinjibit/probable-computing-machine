@@ -1,0 +1,204 @@
+{
+  "course": {
+    "id": "hakin-hybrid",
+    "book_slug": "hakin-hybrid",
+    "title": "Hacking Hybrid Course",
+    "short": "Hacking",
+    "lead": "Twelve ordered days through the security books on this laptop, each naming the exact pages, carrying a bite of the author's words, and ending at a runnable local exercise. Defensive scope only: you are learning to find and fix weaknesses, with authorization, on systems you own or are permitted to test.",
+    "method": "Same rhythm as the ML branch: **recall** → **read the author** → **practice** (run the exercise, predict output first) → **check**. Review days re-test earlier ideas at 1, 3, 7 and 21 lessons back. Nothing here authorizes testing a system you do not own or have written permission to test.",
+    "teacher_basis": "Fields follow the local SyncSenta teacher schema (outcome, prerequisite, expected misconception, assessment evidence) from `Sync-0.0.2/data/ai_curriculum.json`, adapted for an adult self-learner."
+  },
+  "books": [
+    {
+      "id": "basics",
+      "short": "The Basics of Hacking and Penetration Testing",
+      "author": "Wilhelm & Engebretson, 3rd ed. (Elsevier, 2026)",
+      "kind": "pdf",
+      "path": "/home/skware/Desktop/Hakin/The Basics of Hacking and P_ (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "map": "maps/the-basics-of-hacking-and-p-z-library-sk-1lib-sk-z-lib-sk.md",
+      "note": "Chapter 1 opens on physical page 24 (ToC printed page ix ends at page 23). Styles its headings as graphic numerals, so the auto map found nothing; page anchors came from `build_course.py locate`."
+    },
+    {
+      "id": "ceh",
+      "short": "CEH Study Guide",
+      "author": "Matt Walker",
+      "kind": "pdf",
+      "path": "/home/skware/Desktop/Hakin/Certified_Ethical_Hacker_CEH_Study_Guide_-_Matt_Walker.pdf",
+      "map": "maps/certified-ethical-hacker-ceh-study-guide-matt-walker.md",
+      "note": "Domain-shaped backbone. Chapters: 1 Getting started 21–78, 2 Information 79–123, 3 Scanning 124–184, 4 Sniffing/evasion 192–249, 5 Attacking a system 250–310, 6 Web 313–368, 7 Wireless 369–399, 8 Mobile 400–447, 9 Cloud 448–475, 10 Trojans 476–515, 11 Crypto 516–542, 12 Social engineering 563–600, 13 AI 601–625, 14 Pen test 626–652."
+    },
+    {
+      "id": "psy",
+      "short": "The Psychology of Cybersecurity",
+      "author": "z-lib copy",
+      "kind": "pdf",
+      "path": "/home/skware/Desktop/Hakin/The Psychology of Cybersecu_ (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "map": "maps/the-psychology-of-cybersecu-z-library-sk-1lib-sk-z-lib-sk.md",
+      "note": "The human half of the job: hackers 21–47, attack design 48–57, fallacies 92–97, resilience 98–106, taking the bait 138–147, CISO toll 159–170."
+    },
+    {
+      "id": "kali",
+      "short": "Kali Linux Penetration Testing Bible",
+      "author": "Roberto Ghibaut Llorente et al.",
+      "kind": "pdf",
+      "path": "/home/skware/Desktop/Hakin/Kali Linux Penetration Testing Bible.pdf",
+      "map": "maps/kali-linux-penetration-testing-bible.md",
+      "note": "515 pages of tooling. Headings were not machine-detectable, so use it as the lab reference a day points into, rather than a spine source."
+    }
+  ],
+  "days": [
+    {
+      "day": 1,
+      "track": "Concepts and ethics",
+      "book": "basics",
+      "from": 24,
+      "to": 38,
+      "title": "What a hacker actually does, and what the law says",
+      "idea": "Hacking is applying deep understanding of a system to an unintended purpose; the difference between crime and profession is written authorization and scope.",
+      "recall": "From memory, name the three roles (black hat, white hat, grey hat) and say which one you are training to be, and why scope documents exist.",
+      "misconception": "Believing permission is implied because a system is reachable, or because it is a test lab you found online.",
+      "practice": "Open `../security-exercises/exercises/00_scope/01_authorized_target.py`. It only accepts targets on an explicit allow-list and makes no network call — that guard **is** the lesson. Implement it, then run `python3 ../security-exercises/run_tests.py`.",
+      "check": "Your scope statement must name at least one asset that is explicitly OUT of scope. Evidence: the file path in your log.",
+      "gate": "Explain, without the page, why a scanner sweep of a neighbour's network is unlawful even when nothing is damaged."
+    },
+    {
+      "day": 2,
+      "track": "Concepts and ethics",
+      "book": "ceh",
+      "from": 21,
+      "to": 34,
+      "title": "The five phases of an attack, in order",
+      "idea": "Reconnaissance → scanning → gaining access → maintaining access → covering tracks; a penetration test follows the same order and stops where the contract stops.",
+      "prerequisites": "Day 1 scope statement.",
+      "practice": "No code today. Read `../security-exercises/README.md` and write one line in your log mapping each of the 13 exercises to the phase it belongs to. That table is your model of the phases.",
+      "check": "Day 1 recall (1 back). Write the five phases from memory before opening anything.",
+      "gate": "Given a fictional contract, say which of the five phases are permitted and which are not, with reasons."
+    },
+    {
+      "day": 3,
+      "track": "Reconnaissance",
+      "book": "ceh",
+      "from": 79,
+      "to": 92,
+      "title": "Information gathering before you touch a host",
+      "idea": "Most of what an attacker learns comes from public sources, certificate transparency, DNS and search engines — not from intrusion.",
+      "misconception": "Confusing reconnaissance with attack. Passive gathering touches nothing; that distinction is what makes it legal and what makes it ethical.",
+      "practice": "`../security-exercises/exercises/00_scope/09_scan_result_tally.py` — turn synthetic scan output into a tally using a rule **you** write down first, so the result is reproducible rather than vibes.",
+      "check": "Say the five phases in order from memory (Day 2), then list what passive gathering can learn about a domain without touching it.",
+      "gate": "List six passive sources you would check for a domain you own, and say what each can reveal."
+    },
+    {
+      "day": 4,
+      "track": "Scanning and enumeration",
+      "book": "ceh",
+      "from": 124,
+      "to": 140,
+      "title": "Scanning: what a port state actually means",
+      "idea": "Open, filtered and closed are statements about responses, not about services; enumeration turns a port into a version and a version into a known risk.",
+      "practice": "`../security-exercises/exercises/02_access/05_config_audit.py` — compare a synthetic service table against a policy of what should be exposed. Enumerate, then judge.",
+      "check": "Day 3 (1 back), Day 1 (3 back).",
+      "gate": "Explain to a non-technical owner why one open port can be unimportant and another can be urgent."
+    },
+    {
+      "day": 5,
+      "track": "Sniffing and evasion",
+      "book": "ceh",
+      "from": 192,
+      "to": 206,
+      "title": "Traffic on the wire, and how detection sees you",
+      "idea": "Cleartext protocols leak credentials; IDS/IPS signatures and anomaly baselines are what make noisy activity visible.",
+      "misconception": "Thinking encryption is optional on a network you control. It is the cheapest control you have.",
+      "practice": "`../security-exercises/exercises/01_detection/02_failed_login_summary.py` then `../security-exercises/exercises/01_detection/03_redact_secrets.py`. Redaction before collection: anything you capture is something you have to protect.",
+      "check": "Day 4 (1 back), Day 2 (3 back).",
+      "gate": "Name three protocols that must never run in cleartext, and the mitigation for each."
+    },
+    {
+      "day": 6,
+      "track": "Gaining access",
+      "book": "ceh",
+      "from": 250,
+      "to": 266,
+      "title": "Exploitation, payloads and the difference between proof and damage",
+      "idea": "Proof of concept means demonstrating reachability with minimal impact — a callback, a file read — not taking a service down.",
+      "prerequisites": "Days 2 and 4; a scope statement that names allowed actions.",
+      "practice": "`../security-exercises/exercises/02_access/04_role_check.py`. Predict which requests the allow-list rejects before you run it; the assertions encode the least-privilege rule.",
+      "check": "Day 5 (1 back), Day 3 (3 back), Day 1 (5 back — restate the law answer cold).",
+      "gate": "Write the sentence you would put in a report when you proved access but chose not to escalate."
+    },
+    {
+      "day": 7,
+      "track": "Web and app attacks",
+      "book": "ceh",
+      "from": 313,
+      "to": 328,
+      "title": "Web-based hacking: input you did not validate",
+      "idea": "Injection, broken authentication and unsafe redirects all trace back to trusting client-supplied data.",
+      "practice": "`../security-exercises/exercises/02_access/10_injection_guard.py` — allow-list plus parameterised query. Write the three inputs you think will break it, then let the test suite try.",
+      "check": "Day 6 (1 back), Day 4 (3 back).",
+      "gate": "Explain parameterised queries to someone who has only ever written string SQL."
+    },
+    {
+      "day": 8,
+      "track": "Review",
+      "kind": "review",
+      "book": "ceh",
+      "from": 369,
+      "to": 382,
+      "title": "Wireless, plus a hard review of Days 1–7",
+      "idea": "Wireless is another perimeter with its own failure modes: weak ciphers, captive portals, evil-twin networks.",
+      "practice": "No new exercise. Re-solve `09_scan_result_tally.py` and `10_injection_guard.py` from a blank file with the solutions closed. Log every mistake you repeat — those are next week's recall cards.",
+      "check": "Cold-write the one-sentence idea of Days 1–7. Only then open the pages. Anything missing becomes a day you repeat tomorrow.",
+      "gate": "90% of the recall prompts answered cold, or repeat this day instead of advancing."
+    },
+    {
+      "day": 9,
+      "track": "Cryptography",
+      "book": "ceh",
+      "from": 516,
+      "to": 530,
+      "title": "Cryptography you can actually reason about",
+      "idea": "Hashing proves integrity, symmetric encryption is fast for bulk data, asymmetric solves key distribution; hashing is not encryption.",
+      "misconception": "Believing 'encrypted' means safe regardless of how the keys are stored or rotated.",
+      "practice": "`../security-exercises/exercises/01_detection/11_hash_integrity.py` — hash a file, corrupt one byte, watch the verification fail. Then explain in your log why a hash is not encryption.",
+      "check": "Day 8 (1 back), Day 6 (3 back), Day 2 (7 back).",
+      "gate": "Explain to a friend why a leaked password database is dangerous even when hashed, and what raises the cost of cracking it."
+    },
+    {
+      "day": 10,
+      "track": "The human layer",
+      "book": "psy",
+      "from": 138,
+      "to": 147,
+      "title": "How we take the bait: social engineering on yourself",
+      "idea": "Urgency, authority and helpfulness bypass technical controls because they act on the person operating them.",
+      "practice": "`../security-exercises/exercises/03_response/07_phishing_signals.py`. Then write the three lure patterns you are personally most vulnerable to and the one control that would catch each.",
+      "check": "Day 9 (1 back), Day 7 (3 back), Day 3 (7 back).",
+      "gate": "Draft a message you would flag as suspicious, and annotate every signal that gave it away."
+    },
+    {
+      "day": 11,
+      "track": "Reporting",
+      "book": "ceh",
+      "from": 626,
+      "to": 640,
+      "title": "The pen test: turning findings into a decision",
+      "idea": "A report is triage: reproducible steps, honest severity with reasoning, and remediation someone can schedule.",
+      "practice": "`../security-exercises/exercises/04_reporting/12_severity_scoring.py` then `../security-exercises/exercises/04_reporting/13_render_report.py`. The renderer refuses to produce a report without authorization evidence — keep that behaviour.",
+      "check": "Day 10 (1 back), Day 8 (3 back), Day 4 (7 back).",
+      "gate": "Show the report to someone who did not run the test; if they cannot say what to fix first, rewrite it."
+    },
+    {
+      "day": 12,
+      "track": "Consolidation",
+      "kind": "project",
+      "book": "psy",
+      "from": 98,
+      "to": 106,
+      "title": "Operational resilience: defending what you just learned to attack",
+      "idea": "Resilience assumes breach. Detection, response and recovery are the skills that make an organisation safer than a list of patched CVEs.",
+      "practice": "`../security-exercises/exercises/03_response/06_triage_finding.py` then `../security-exercises/exercises/03_response/08_incident_checklist.py`. Build the runbook for one finding from Day 11: who you call, what you shut down, what you prove afterwards.",
+      "check": "Cold-write the ideas of Days 1–12. Anything missing returns to your retry queue. Then run the whole suite green.",
+      "gate": "Present a five-minute brief: one asset, one realistic attack path, three controls, one thing you would monitor tonight."
+    }
+  ]
+}
