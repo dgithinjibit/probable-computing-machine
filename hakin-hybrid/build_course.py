@@ -237,7 +237,15 @@ def noise(line: str) -> bool:
         return True
     if re.search(r"(all rights reserved|publisher|isbn|doi:|library of congress)", line, re.I):
         return True
+    # Publisher boilerplate wraps across lines, so each fragment needs its own rule:
+    # a line that starts with the copyright glyph or says "no part of this book" is
+    # never the author's argument, and it must not leak into a study bite.
+    if re.search(r"(©\s*copyright|copyright\s*©|no part of this (book|work)|prior written permission|reproduced in any form|posted, or reproduced)", line, re.I):
+        return True
     if len(line.split()) <= 1 and re.search(r"\d", line):
+        return True
+    # Figure and table captions are the publisher's layout, not the author's argument.
+    if re.match(r"^(figure|table|listing|exhibit)\s+[\divx]+([-.–]\d+)*\s*[:.\s]", line, re.I):
         return True
     return False
 

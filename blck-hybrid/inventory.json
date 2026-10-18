@@ -1,0 +1,223 @@
+[
+  {
+    "slug": "bitcoin-why-believe-in-it-ranger-ned",
+    "name": "Bitcoin & Why believe in it - Ranger Ned - ",
+    "path": "/home/skware/Desktop/blck/Bitcoin & Why believe in it - Ranger Ned - .pdf",
+    "pages": 7,
+    "words": 3591,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "bitcoin-and-cryptocurrencies-technologies-princeton-universi",
+    "name": "Bitcoin and Cryptocurrencies Technologies Princeton University Press",
+    "path": "/home/skware/Desktop/blck/Bitcoin and Cryptocurrencies Technologies Princeton University Press.pdf",
+    "pages": 26,
+    "words": 12371,
+    "chapters": [],
+    "unit": "pages"
+  },
+  {
+    "slug": "bitcoin-programming-konstantinos-karasavvas",
+    "name": "Bitcoin Programming Konstantinos Karasavvas",
+    "path": "/home/skware/Desktop/blck/Bitcoin Programming Konstantinos Karasavvas.pdf",
+    "pages": 96,
+    "words": 27511,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "How Bitcoin Works",
+        "page": 8,
+        "end": 29
+      },
+      {
+        "number": "3",
+        "title": "Forking in a nutshell",
+        "page": 30,
+        "end": 37
+      },
+      {
+        "number": "4",
+        "title": "Technical Fundamentals",
+        "page": 38,
+        "end": 42
+      },
+      {
+        "number": "5",
+        "title": "Keys and Addresses",
+        "page": 43,
+        "end": 92
+      },
+      {
+        "number": "8",
+        "title": "Advanced Topics",
+        "page": 93,
+        "end": 96
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "blockchain-the-comprehensiv-z-library",
+    "name": "Blockchain The Comprehensiv_ (Z-Library)",
+    "path": "/home/skware/Desktop/blck/Blockchain The Comprehensiv_ (Z-Library).pdf",
+    "pages": 1290,
+    "words": 230244,
+    "chapters": [
+      {
+        "number": "6",
+        "title": "Implementing a Peer-to-",
+        "page": 12,
+        "end": 19
+      },
+      {
+        "number": "14",
+        "title": "Understanding and",
+        "page": 20,
+        "end": 25
+      },
+      {
+        "number": "20",
+        "title": "Upgrading Your First",
+        "page": 26,
+        "end": 40
+      },
+      {
+        "number": "1",
+        "title": "Introduction",
+        "page": 41,
+        "end": 101
+      },
+      {
+        "number": "2",
+        "title": "The Basics: How",
+        "page": 113,
+        "end": 173
+      },
+      {
+        "number": "2",
+        "title": "The initialization process then returns the source code of",
+        "page": 268,
+        "end": 312
+      },
+      {
+        "number": "4",
+        "title": "Fundamentals of Creating",
+        "page": 313,
+        "end": 345
+      },
+      {
+        "number": "5",
+        "title": "Implementing a Web API",
+        "page": 346,
+        "end": 406
+      },
+      {
+        "number": "7",
+        "title": "Introducing Accounts and",
+        "page": 408,
+        "end": 435
+      },
+      {
+        "number": "8",
+        "title": "Implementing Verification",
+        "page": 436,
+        "end": 463
+      },
+      {
+        "number": "9",
+        "title": "Smart Contract",
+        "page": 464,
+        "end": 513
+      },
+      {
+        "number": "10",
+        "title": "Integrated Development",
+        "page": 514,
+        "end": 547
+      },
+      {
+        "number": "11",
+        "title": "An Introduction to",
+        "page": 548,
+        "end": 608
+      },
+      {
+        "number": "12",
+        "title": "Digging Deeper into",
+        "page": 622,
+        "end": 659
+      },
+      {
+        "number": "13",
+        "title": "Testing and Debugging",
+        "page": 660,
+        "end": 720
+      },
+      {
+        "number": "15",
+        "title": "Protecting and Securing",
+        "page": 739,
+        "end": 784
+      },
+      {
+        "number": "16",
+        "title": "Deploying and Managing",
+        "page": 785,
+        "end": 820
+      },
+      {
+        "number": "17",
+        "title": "Standards, Libraries, and",
+        "page": 821,
+        "end": 862
+      },
+      {
+        "number": "18",
+        "title": "Upgrading Smart",
+        "page": 863,
+        "end": 903
+      },
+      {
+        "number": "19",
+        "title": "Developing",
+        "page": 904,
+        "end": 964
+      },
+      {
+        "number": "21",
+        "title": "Reverse Engineering",
+        "page": 980,
+        "end": 989
+      },
+      {
+        "number": "41",
+        "title": "JUMPDEST",
+        "page": 990,
+        "end": 1015
+      },
+      {
+        "number": "22",
+        "title": "Additional Contract-",
+        "page": 1016,
+        "end": 1050
+      },
+      {
+        "number": "23",
+        "title": "Applying Blockchain",
+        "page": 1051,
+        "end": 1111
+      }
+    ],
+    "unit": "pages"
+  },
+  {
+    "slug": "mastering-blockchain-unlock-z-library",
+    "name": "Mastering Blockchain Unlock_ (Z-Library)",
+    "path": "/home/skware/Desktop/blck/Mastering Blockchain Unlock_ (Z-Library).pdf",
+    "pages": 284,
+    "words": 79806,
+    "chapters": [],
+    "unit": "pages"
+  }
+]

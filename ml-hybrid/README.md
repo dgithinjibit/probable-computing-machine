@@ -6,8 +6,12 @@ EPUBs into an **ordered day path** — each day names the book, the exact pages,
 the author's own words at bite size, one local exercise, and an automatic
 spaced review of the days you already completed.
 
-Currently built: **ML Hybrid Course** — 16 days from `~/Desktop/ML`.
-The same machinery makes the hacking, IoT, blockchain and Rust branches (below).
+Currently built: **ML Hybrid Course** — 16 days from `~/Desktop/ML`;
+**Hacking Hybrid Course** — 12 defensive days from `~/Desktop/Hakin`, in
+[`../hakin-hybrid/`](../hakin-hybrid/); and **Blockchain Hybrid Course** — 14 days from
+`~/Desktop/blck` wired into the Sui Move, Scrypto, Cairo and starklings courses, in
+[`../blck-hybrid/`](../blck-hybrid/). Education and robotics already have their own
+books, so the same engine is the only thing they would need to become day paths.
 
 ## Open it
 

@@ -84,9 +84,13 @@ function escapeHtml(value) {
   }[c]));
 }
 
-/* Curriculum text is authored in Markdown-lite: `code` spans show as code. */
+/* Curriculum text is authored in Markdown-lite: `code` spans show as code and
+   **bold** shows as bold. Nothing else from Markdown is supported, so curriculum
+   fields stay plain prose and the escaping above still protects against injection. */
 function md(value) {
-  return escapeHtml(value).replace(/`([^`]+)`/g, "<code>$1</code>");
+  return escapeHtml(value)
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/`([^`]+)`/g, "<code>$1</code>");
 }
 
 function recallBlock(lesson) {

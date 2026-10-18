@@ -1,8 +1,9 @@
 # This repository publishes only the hybrid book-course branches and the
-# exercises they point at. The rest of this local learning lab (vendored tools,
+# exercises and code courses they point at. The rest of this local learning lab (vendored tools,
 # other people's book sources, cloned course repos) stays out.
 /*
 !/ml-hybrid
 !/hakin-hybrid
+!/blck-hybrid
 !/security-exercises
 !/portal-index.md

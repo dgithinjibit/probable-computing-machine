@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Blockchain Hybrid Course · books split into days</title>
+    <link rel="stylesheet" href="hybrid-course.css">
+    <script src="hybrid-course.js" defer></script>
+  </head>
+  <body>
+    <main class="shell" id="course-root" data-course-id="blck-hybrid">
+      <header class="top">
+        <p class="eyebrow">Local Learning Lab · hybrid course</p>
+        <h1>Blockchain Hybrid Course</h1>
+        <p class="lead">Fourteen ordered days through the blockchain books on this laptop and the four code courses beside
+        them: <em>Mastering Blockchain</em>, <em>Bitcoin Programming</em>, the Princeton crypto chapter, the Ethereum and
+        Solidity reference, then Sui Move, Scrypto, Cairo and starklings. Each day names the exact pages, carries a bite of
+        the author's words, and ends at a file you can actually open.</p>
+        <p class="note">Nothing here needs the internet or a wallet. The chain toolchains are not installed on this
+        machine, so the days that would require them ask you to read real source and write down what you could not
+        verify instead. Do not move funds or generate keys to follow this course.</p>
+        <p class="resume" id="resume-banner">Loading your resume point…</p>
+      </header>
+
+      <section class="progress-panel" aria-label="Course progress">
+        <div class="progress-head">
+          <strong id="progress-label">Loading course…</strong>
+          <button id="reset-button" class="quiet" type="button">Reset course progress</button>
+        </div>
+        <progress id="progress-bar" value="0" max="14">0%</progress>
+        <p id="storage-message" class="message" role="status" aria-live="polite"></p>
+      </section>
+
+      <article id="lesson" class="lesson" aria-live="polite">
+        <p>Loading the curriculum…</p>
+      </article>
+
+      <nav class="controls" aria-label="Lesson navigation">
+        <button id="previous-button" type="button">← Previous</button>
+        <label for="day-select">Jump to a day you have reached</label>
+        <select id="day-select"></select>
+        <button id="next-button" type="button">Next →</button>
+        <button id="complete-button" type="button">Mark this lesson complete</button>
+        <span id="completion-status" class="completed" aria-live="polite"></span>
+      </nav>
+
+      <footer class="foot">
+        <p>Curriculum source of truth: <code>hybrid-curriculum.json</code>. Rebuild pages with
+        <code>python3 build_course.py build</code>. The code courses this branch points at live in
+        <a href="../sui-move-intro-course/">sui-move-intro-course</a>,
+        <a href="../scrypto-challenges/">../scrypto-challenges/</a>,
+        <a href="../starklings/">../starklings/</a> and <a href="../cairo-book/">../cairo-book/</a>.</p>
+        <p>Same engine as the <a href="../ml-hybrid/hybrid-course.html">ML</a> and
+        <a href="../hakin-hybrid/hybrid-course.html">hacking</a> branches.</p>
+      </footer>
+    </main>
+  </body>
+</html>
