@@ -1,0 +1,280 @@
+{
+  "course": {
+    "id": "ml-hybrid",
+    "book_slug": "ml-hybrid",
+    "title": "ML Hybrid Course",
+    "short": "ML",
+    "lead": "One ordered path through the books already on this laptop, split into day-sized lessons. Each day pulls the author's own words from a named page range, then points at a local exercise. You never re-open a book from page one: the day tells you the exact pages, and the recall block re-tests what you already completed.",
+    "method": "Kumon-style rhythm, borrowed from the local developer path: **recall** (5 min, from memory) → **read the author** (10–15 min, one bite) → **practice** (20–30 min, one local exercise) → **check** (5 min, run it and log the correction). Move on only when you can explain the idea without looking. Review days re-test earlier days at 1, 3, 7 and 21 lessons back, automatically.",
+    "teacher_basis": "Structure grafted from the local SyncSenta teacher curriculum (`Sync-0.0.2/data/ai_curriculum.json`): every sub-strand carries learning outcomes, prerequisites, expected misconceptions and assessment evidence. Those four fields are what the days below use as `idea`, `recall`, `misconception` and `check`. Not KICD/CBC-aligned; a personal adaptation."
+  },
+  "books": [
+    {
+      "id": "mlab",
+      "short": "ML for Absolute Beginners",
+      "author": "Oliver Theobald (2nd ed., 2017)",
+      "kind": "pdf",
+      "path": "/home/skware/Desktop/ML/Machine Learning For Absolute Beginners-1.pdf",
+      "map": "maps/machine-learning-for-absolute-beginners-1.md",
+      "note": "Plain-spoken first pass. Sections start: Intro 5, What is ML 8, Categories 15, Toolbox 22, Data scrubbing 32, Setting up data 41, Regression 46, Clustering 62, Bias & variance 72, Neural nets 78, Decision trees 89, Ensembles 98, Python model 101, Optimisation 114."
+    },
+    {
+      "id": "dml",
+      "short": "Designing Machine Learning",
+      "author": "Chip Huyen",
+      "kind": "pdf",
+      "path": "/home/skware/Desktop/ML/Designing Machine Learning_ (Z-Library).pdf",
+      "map": "maps/designing-machine-learning-z-library.md",
+      "note": "The production mindset book. Detected chapters: 1 ML (5–53), 2 Data engineering (54–98), 3 Training data (99–142), 4 Feature engineering (143–171), 5 Model development (172–232), 6 Deployment (261–316), 7 Why ML systems fail (317–339)."
+    },
+    {
+      "id": "homl",
+      "short": "Hands-On ML (Scikit-Learn & TensorFlow)",
+      "author": "Aurélien Géron",
+      "kind": "pdf",
+      "path": "/home/skware/Desktop/ML/Hands_On_Machine_Learning_with_Scikit_Learn_and_TensorFlow_Concepts.pdf",
+      "map": "maps/hands-on-machine-learning-with-scikit-learn-and-tensorflow-c.md",
+      "note": "Dense; chapter openings are printed as graphics, so the auto map caught only the tail. Use it as the deep-dive reference behind each concept day and page through by topic, not cover to cover."
+    },
+    {
+      "id": "pyml",
+      "short": "Python for Machine Learning",
+      "author": "Packt-style practitioner text",
+      "kind": "pdf",
+      "path": "/home/skware/Desktop/ML/Python for Machine Learning.pdf",
+      "map": "maps/python-for-machine-learning.md",
+      "note": "Topic-shaped: MAE 10–13, feature engineering 14–15, hold-out validation 17–19, imputation 65–71, SVR 84–140, ensembles 172–218, CV 226+."
+    },
+    {
+      "id": "dli",
+      "short": "Deep Learning Interviews",
+      "author": "Maxim Leta",
+      "kind": "pdf",
+      "path": "/home/skware/Desktop/ML/Deep Learning Interviews.pdf",
+      "map": "maps/deep-learning-interviews.md",
+      "note": "Question-driven rigour. Detected: 1 How to use 22–29, 2 Logistic regression 30–59, 3 Bayesian DL 60–103, 4 Information theory 104–139, 5 Calculus/autodiff 140–200, 6 Ensembles 204–223, 7 CNN features 224–245, 8 Deep learning 246–306, 9 Mock exam 360–377."
+    },
+    {
+      "id": "pyllm",
+      "short": "Python for Large Language Models",
+      "author": "2025 text",
+      "kind": "pdf",
+      "path": "/home/skware/Desktop/ML/Python For Large Language Models (2025).pdf",
+      "map": "maps/python-for-large-language-models-2025.md",
+      "note": "GenAI arm: LLM intro 8–22, tokenisation 34–41, APIs 42–81, fine-tuning 82–94, retrieval 95–109, evaluation 110–116."
+    },
+    {
+      "id": "mit42",
+      "short": "MIT 6.042 Mathematics of CS",
+      "author": "Meyer & Rainwater",
+      "kind": "pdf",
+      "path": "/home/skware/Desktop/ML/mit6_042js15_textbook.pdf",
+      "map": "maps/mit6-042js15-textbook.md",
+      "note": "920-page math reference for the probability and linear-algebra days. Reference only: never read cover to cover; jump in from a day that names it."
+    }
+  ],
+  "days": [
+    {
+      "day": 1,
+      "track": "ML foundations",
+      "book": "mlab",
+      "from": 5,
+      "to": 14,
+      "title": "What machine learning actually is",
+      "idea": "Machine learning is a program whose behaviour is shaped by data instead of by hand-written rules; the test of it is performance on unseen examples.",
+      "recall": "From memory, define machine learning in one sentence and give one example where you would NOT use it. If you cannot say the sentence, this day is a repeat day, not a reading day.",
+      "misconception": "Believing a model is intelligent because it produced an output. An output is a prediction, not a truth.",
+      "practice": "Open `../ml-exercises/README.md` and read the pathway list only. Then write, in your log, which of the 12 local exercises maps to each idea you expect to meet in this course. No code today.",
+      "check": "Say the definition out loud without the page open, then write one sentence on why unseen data matters. Both must exist in your log before marking complete.",
+      "gate": "Explain the difference between a rule-based program and a learned program using a non-tech example of your own."
+    },
+    {
+      "day": 2,
+      "track": "ML foundations",
+      "book": "mlab",
+      "from": 15,
+      "to": 21,
+      "title": "Supervised, unsupervised, reinforcement: the categories",
+      "idea": "The three families differ by what the learning signal is: labelled answers, unlabelled structure, or reward after acting.",
+      "misconception": "Calling anything 'AI' that is only if-else logic. Name the learning signal or it is not a category.",
+      "practice": "Take three apps you use daily (M-Pesa alerts, YouTube, SMS) and classify the learning signal in each. Write it down; this is the skill the recall blocks will re-test.",
+      "check": "Re-test Day 1 from memory before reading. If it faded, redo Day 1's gate first.",
+      "gate": "Give one worked example per category without looking, and say what the model would be wrong about in each."
+    },
+    {
+      "day": 3,
+      "track": "ML foundations",
+      "book": "mlab",
+      "from": 22,
+      "to": 31,
+      "title": "The ML toolbox: models as tools, not identities",
+      "idea": "A toolbox of model families (regression, trees, clustering, nets) chosen by the shape of data and the decision needed.",
+      "practice": "Do `../ml-exercises/exercises/00_fundamentals/01_split_data.py` (stdlib, offline). The point is train/test separation before any model exists.",
+      "check": "Run `python3 ../ml-exercises/run_tests.py` and read every line it prints, pass or fail.",
+      "gate": "Pick a tool for a problem you define yourself, and defend the pick against one alternative."
+    },
+    {
+      "day": 4,
+      "track": "Data work",
+      "book": "mlab",
+      "from": 32,
+      "to": 45,
+      "title": "Data scrubbing and setting up your data",
+      "idea": "Most of the work is making the data trustworthy: missing values, duplicates, wrong units, leakage.",
+      "misconception": "Cleaning after fitting. Anything computed from the whole dataset before the split leaks the test set into training.",
+      "practice": "`../ml-exercises/exercises/00_fundamentals/02_standardize.py`. Then deliberately corrupt one row and re-run to watch the failure.",
+      "check": "Day 3 recall (1 back) plus: name three leakage routes you have personally caused.",
+      "gate": "Clean a small messy CSV of your own and record each choice with a reason."
+    },
+    {
+      "day": 5,
+      "track": "Data work",
+      "book": "dml",
+      "from": 54,
+      "to": 66,
+      "title": "Data engineering, the way production does it",
+      "idea": "Training data is a pipeline with owners, schemas and versions, not a folder of files.",
+      "practice": "Sketch a data pipeline for one SyncSenta-style dataset on paper: source, transform, store, validate, serve. Mark where it breaks.",
+      "check": "Compare your sketch against the extracted text and name one stage you invented that the author warns about.",
+      "gate": "Explain schema drift to a non-engineer in three sentences."
+    },
+    {
+      "day": 6,
+      "track": "Classical ML",
+      "book": "mlab",
+      "from": 46,
+      "to": 61,
+      "title": "Regression analysis: fitting a line you can defend",
+      "idea": "Regression estimates a relationship; the fit quality is a claim about data, not a promise about the world.",
+      "prerequisites": "Day 4 data trustwork.",
+      "practice": "`../ml-exercises/exercises/01_models/04_fit_line.py` then `../ml-exercises/exercises/00_fundamentals/03_regression_metrics.py`.",
+      "check": "Day 5 recall (1 back) and Day 2 recall (3 back).",
+      "gate": "Report one metric in your own words, then say what it hides."
+    },
+    {
+      "day": 7,
+      "track": "Classical ML",
+      "book": "pyml",
+      "from": 84,
+      "to": 95,
+      "title": "Error metrics and validation sets that mean something",
+      "idea": "MAE, MSE and hold-out validation answer different questions; choose the metric from the cost of being wrong.",
+      "misconception": "Chasing accuracy on an imbalanced problem. 99% accuracy can be a useless model.",
+      "practice": "`../ml-exercises/exercises/01_models/05_confusion_counts.py`. Predict the numbers before running, then compare.",
+      "check": "Day 6 recall (1 back), Day 4 (3 back), Day 1 (back to the definition).",
+      "gate": "For a loan-approval problem, name the metric you would defend in a review and why."
+    },
+    {
+      "day": 8,
+      "track": "Review",
+      "kind": "review",
+      "book": "mlab",
+      "from": 72,
+      "to": 77,
+      "title": "Bias and variance — plus a hard review of Days 1–7",
+      "idea": "Underfitting misses structure; overfitting memorises noise. Complexity trades one error for the other.",
+      "practice": "No new exercise. Re-solve `01_split_data.py` and `03_regression_metrics.py` from a blank file, closed solutions. Log every mistake.",
+      "check": "Write the one-sentence idea of Days 1–7 from memory first; only then open the pages. Faded days get re-added to your queue.",
+      "gate": "90% of the recall prompts answered cold. If not, repeat this day tomorrow instead of advancing."
+    },
+    {
+      "day": 9,
+      "track": "Trees and ensembles",
+      "book": "mlab",
+      "from": 89,
+      "to": 100,
+      "title": "Decision trees and ensemble modelling",
+      "idea": "Trees split on features to make decisions explainable; bagging and boosting buy accuracy by averaging or correcting many trees.",
+      "practice": "`../ml-exercises/exercises/02_unsupervised/07_assign_centroid.py` is adjacent practice in nearest-neighbour thinking; then hand-draw a tree for a daily decision.",
+      "check": "Day 8 (1 back), Day 6 (3 back), Day 2 (7 back).",
+      "gate": "Explain why many weak learners beat one strong learner, with an analogy you would use with a student."
+    },
+    {
+      "day": 10,
+      "track": "Neural networks",
+      "book": "mlab",
+      "from": 78,
+      "to": 88,
+      "title": "Artificial neural networks without the mysticism",
+      "idea": "A network is weighted arithmetic plus a non-linearity, tuned by gradient descent; layers compose features.",
+      "misconception": "Thinking depth alone equals understanding. Depth is capacity, not comprehension.",
+      "practice": "`../ml-exercises/exercises/01_models/06_gradient_step.py`. Predict the next weight before running.",
+      "check": "Day 9 (1 back), Day 7 (3 back), Day 3 (7 back).",
+      "gate": "Walk one gradient step by hand on paper with numbers you choose."
+    },
+    {
+      "day": 11,
+      "track": "Neural networks",
+      "book": "dli",
+      "from": 30,
+      "to": 44,
+      "title": "Logistic regression, properly (interview depth)",
+      "idea": "Logistic regression is a linear score squashed into a probability; the decision threshold is a business choice.",
+      "prerequisites": "Days 6–7 metrics; Day 10 gradients.",
+      "practice": "Re-derive the sigmoid from the page without looking, then code it in the style of `../ml-exercises/exercises/01_models/05_confusion_counts.py`.",
+      "check": "Day 10 (1 back), Day 8 (3 back), Day 4 (7 back).",
+      "gate": "Answer two interview questions from this chapter in writing, closed book."
+    },
+    {
+      "day": 12,
+      "track": "Math support",
+      "book": "dli",
+      "from": 104,
+      "to": 118,
+      "title": "Information theory: entropy as surprise",
+      "idea": "Entropy measures average surprise; cross-entropy is the loss you pay when your predicted distribution differs from reality.",
+      "practice": "Compute entropy by hand for a two-outcome event at p=0.5, 0.9, 0.1. Then compute it in Python from scratch, no libraries.",
+      "check": "Day 11 (1 back), Day 9 (3 back), Day 5 (7 back).",
+      "gate": "Explain why cross-entropy punishes confident wrong answers harder than loss functions you already know."
+    },
+    {
+      "day": 13,
+      "track": "GenAI",
+      "book": "pyllm",
+      "from": 8,
+      "to": 22,
+      "title": "How large language models actually work",
+      "idea": "An LLM predicts the next token from context; training is expensive, inference is a search over probabilities.",
+      "practice": "`../ml-exercises/exercises/03_language_models/09_chunk_text.py`. Everything here is local strings, no API calls.",
+      "check": "Day 12 (1 back), Day 10 (3 back), Day 6 (7 back), Day 1 (21 back — the definition again).",
+      "gate": "Explain a hallucination using only next-token prediction, no hand-waving."
+    },
+    {
+      "day": 14,
+      "track": "GenAI",
+      "book": "pyllm",
+      "from": 95,
+      "to": 109,
+      "title": "Retrieval: chunking, embedding, ranking",
+      "idea": "Retrieval grounds generation in documents you chose; chunk quality and ranking decide what the model gets to see.",
+      "practice": "`../ml-exercises/exercises/03_language_models/10_rank_documents.py` plus `08_cosine_similarity.py`.",
+      "check": "Day 13 (1 back), Day 11 (3 back), Day 7 (7 back), Day 2 (21 back).",
+      "gate": "Given a wrong answer from a RAG setup, list the three places the fault could live."
+    },
+    {
+      "day": 15,
+      "track": "Responsible ML",
+      "book": "dml",
+      "from": 317,
+      "to": 336,
+      "title": "Why machine learning systems fail",
+      "idea": "Failures are usually pipeline, data and feedback-loop failures, not model-quality failures.",
+      "practice": "`../ml-exercises/exercises/04_responsible_ai/12_group_rates.py`. Note which group metric moves and why that matters.",
+      "check": "Day 14 (1 back), Day 12 (3 back), Day 8 (7 back — review day again), Day 3 (21 back).",
+      "gate": "Write a one-page post-mortem for a system that got silently worse, naming the monitoring you would have needed."
+    },
+    {
+      "day": 16,
+      "track": "Consolidation",
+      "kind": "project",
+      "book": "mlab",
+      "from": 101,
+      "to": 119,
+      "title": "Build and optimise one model end to end",
+      "idea": "You own the whole loop now: split, clean, fit, measure, explain, improve.",
+      "practice": "Write a single stdlib Python program that loads a small CSV you choose, splits it, fits the line from Day 6, and reports metrics from Day 7. No pandas. Then re-run `../ml-exercises/run_tests.py` and keep it green.",
+      "check": "Cold-write the one-sentence idea of Days 1–15. Anything you cannot write goes back into your queue as its own day.",
+      "gate": "Present the model in five minutes to an imaginary colleague, including one thing you would change with more data."
+    }
+  ]
+}
