@@ -11,4 +11,6 @@
 
 !(assertEqualToResult (adjacent kitchen) (hall pantry))
 !(assertEqualToResult (match &map (room $r) $r) (kitchen hall pantry))
-!(assertEqualToResult (adjacent hall) Empty)
+; "no results" is asserted against (), not against Empty: Empty as an expected
+; value is itself a type error on this build (verified 2026-10-19).
+!(assertEqualToResult (adjacent hall) ())

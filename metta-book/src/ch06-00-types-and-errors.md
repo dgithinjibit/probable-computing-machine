@@ -121,7 +121,7 @@ if any non-error result exists, errors are dropped; otherwise the errors come
 back. That asymmetry explains a real confusion: a nondeterministic call can
 *hide* an error among its good results. If one branch of your rover decision
 throws `BadArgType` and another succeeds, you will see only the success and
-conclude the bad branch never ran. Force the issue with `!(collapse $r (…))` and
+conclude the bad branch never ran. Force the issue with `!(collapse (…))` and
 look for an `Error` child in the tuple.
 
 **Grounded types come from the tokenizer and the host.** `Number` and `String`

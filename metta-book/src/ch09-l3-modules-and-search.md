@@ -76,7 +76,7 @@ several rules match the same call.
 ```metta
 (= (candidates) (superpose (1 2 3)))
 (= (search) (let $p (candidates) (if (fits? $p) $p Empty)))
-!(collapse $r (search))
+!(collapse (search))
 ```
 
 ## Semantics
@@ -154,7 +154,7 @@ Predict, then run, then write the reconciliation in the file.
 | # | you type | your prediction | actually printed |
 |---|---|---|---|
 | 1 | the `a-num`/`fits?`/`find` block above | | `3` |
-| 2 | `!(collapse $r (search))` | | a one-element tuple |
+| 2 | `!(collapse (search))` | | a one-element tuple |
 | 3 | `(= (a-num) 3)` added twice, then `!(a-num)` | | `3` repeated |
 | 4 | `!(import! &m nonexistent)` | | `Failed to resolve module top:nonexistent` |
 | 5 | `!(import! &m world)` from the wrong directory | | same error — this is the trap |

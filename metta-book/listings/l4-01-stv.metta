@@ -16,7 +16,9 @@
 !(and-stv 2 3 4 5)
 
 ; collapse gives a tuple; foldl-atom folds a tuple's CHILDREN (never a :: list).
-(= (strengths $a) (collapse $s (match &kb (Inheritance $a $b (stv $s $c)) $s)))
+; collapse takes ONE argument in 0.2.10: it is not a binder. `let` binds.
+(= (strength-of $a) (match &kb (Inheritance $a $b (stv $s $c)) $s))
+(= (strengths $a) (collapse (strength-of $a)))
 (= (max-of $t) (foldl-atom $t 0 $acc $e (if (< $acc $e) $e $acc)))
 !(strengths off-line)
 !(max-of (strengths off-line))

@@ -7,8 +7,11 @@
 
 (= (strength $a $b) (match &kb (Inheritance $a $b (stv $s $c)) $s))
 
-; strongest-out-of: collect the strengths into a tuple, fold to a max.
-(= (strengths $a) (collapse $s (match &kb (Inheritance $a $b (stv $s $c)) $s)))
+; strongest-out-of: collect the strengths into one tuple, fold it to a max.
+; collapse is NOT a binder on 0.2.10: it takes the whole nondeterministic call as
+; a single argument, so the query gets its own rule and collapse wraps the call.
+(= (strength-of $a) (match &kb (Inheritance $a $b (stv $s $c)) $s))
+(= (strengths $a) (collapse (strength-of $a)))
 (= (max-of $t) (foldl-atom $t 0.0 $acc $e (if (< $acc $e) $e $acc)))
 (= (believe $a) (max-of (strengths $a)))
 
@@ -26,5 +29,5 @@
 ; (2) The hole, on purpose. Comment out the "dark"/"off-line" add-atom line: the
 ; fold for (strengths "dark") then sees ONE element instead of two. Nothing
 ; raises. match with no results prints nothing, so the candidate set silently
-; shrinks. The diagnostic is !(collapse $s (strengths "dark")) — count the tuple's
+; shrinks. The diagnostic is !(collapse (strength-of "dark")) — count the tuple's
 ; children before you trust the max.

@@ -63,10 +63,18 @@ score bolted on:
 ```metta
 (= (action) (superpose (explore recharge wait)))
 (= (score $a) (match &drives (utility $a $u) $u))
-(= (best) (collapse $u (score (action))))
+(= (scores) (collapse (score (action))))
+(= (max-of $t) (foldl-atom $t 0 $acc $e (if (< $acc $e) $e $acc)))
+!(max-of (scores))
 ```
 
 `collapse` gives you the tuple; `foldl-atom` over tuple children picks the winner.
+Two disciplines that are not optional on 0.2.10, both verified the hard way in
+[L1 Unit 4](./ch05-00-evaluation-and-results.md): `collapse` is one-argument (it
+packs a result set, it does not bind a variable — `let` binds), and the tuple you
+hand to `foldl-atom` must arrive as a *bound variable*, because that parameter is
+`Atom`-typed and is passed un-evaluated. `(foldl-atom (collapse (score (action)))
+0 $acc $e …)` folds the call, not the hours, and answers with a `BadArgType`.
 Remember `foldl-atom` folds tuple children, not `::` lists, and takes
 five arguments (tuple, init, acc-var, elem-var, body).
 
@@ -159,7 +167,7 @@ than letting the result-set filter them out.
 | 1 | `!(strength-of (Inheritance a b (stv 0.7 0.8)))` | | `0.7` |
 | 2 | `!(and-stv 0.5 0.9 1.0 1.0)` | | `stv 0.5 0.9` |
 | 3 | `!(/ 1 3)` vs `!(/ 1.0 3.0)` | | `0` vs a float |
-| 4 | `!(collapse $u (score (action)))` with 3 actions, 2 utilities | | 3 or 2 elements? |
+| 4 | `!(collapse (score (action)))` with 3 actions, 2 utilities | | 3 or 2 elements? |
 | 5 | `!(min-atom 1.0 2.0)` | | `1.0` |
 | 6 | `!(my-abs -0.4)` | | `0.4` |
 | 7 | `!(random-int 1 6 &rng)` after `new-random-generator` | | one integer |

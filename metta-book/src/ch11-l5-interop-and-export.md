@@ -113,6 +113,42 @@ transducer, not a compiler, and you should call it that in your README until the
 day the target needs register allocation or scheduling, at which point the gap
 between the two words becomes the project.
 
+**What THRML actually is, as of today.** In Extropic's own repository the name
+expands to *Thermodynamic Hypergraphical Model Library*, and the surface is Python
+and JAX rather than assembly: `SpinNode` for one probabilistic bit, `Block` for a
+group of them, `IsingEBM(nodes, edges, biases, weights, beta)` for the energy
+function, `IsingSamplingProgram(model, free_blocks, clamped_blocks)` for what may
+update together, and a `SamplingSchedule(n_warmup, n_samples, steps_per_sample)`
+handed to `sample_states(...)` (Apache-2.0, `pip install thrml`, Python ≥ 3.10).
+Execution is block-Gibbs sampling; the library's own "compile" step only folds
+factor definitions into a compact global array form. Extropic's write-up on the
+silicon path describes stochastic kernels (Torx) → Thermalizers → "a directed
+graph of THRML models that maps directly onto our hardware", with a
+GPU-simulation API available now and Z1 hardware access scheduled for 2027.
+
+That changes what the bridge should emit: **not instructions, a graph
+description** — node ids, `[node node weight]` edges, a bias per node, a `beta`, a
+partition into free and clamped blocks, and a schedule. Every one of those is
+naturally an atom, which is the whole reason MeTTa is a decent front end for it:
+
+```metta
+(node n-7)
+(edge n-7 n-12 -1.0)
+(bias n-7 0.0)
+(block free (n-7 n-12))
+(param beta 1.0)
+```
+
+`lower` enumerates them the way [L3](./ch09-l3-modules-and-search.md) enumerates
+candidates, `json-encode` with deliberately *string* keys writes the file, and a
+thirty-line Python emitter rebuilds `IsingEBM(...)` from that JSON and calls
+`sample_states(...)`. MeTTa holds the model and the search; JAX holds the sampler.
+Two limits belong in the same README, stated before anyone asks: every number you
+can produce on your own machine is a *simulation* number, and the headline claim
+you will read upstream ("up to 10,000× over GPUs") comes from their papers and
+their own simulation comparisons, with the methodology not spelled out on the
+page — you may cite it, you may not repeat it as your measurement.
+
 **The genre exists, and it is small.** Public MeTTa transpilers to look at:
 `trueagi-io/metta-morph` (MeTTa → Chicken Scheme), `MesTTo/MeTTaScript`,
 `MesTTo/MeTTa-LSP`, and learner-grade Python emitters of the `metta_2_py` shape
@@ -154,11 +190,15 @@ and remember its working-directory rule when your bridge script starts importing
 
 Tasks:
 
-1. Write `(lower $expr)` that pattern-matches arithmetic atoms into
-   THRML-shaped tuples — say `(:mov r0 2)`, `(:mul r0 r0 $x)`, `(:add …)` — and
-   handles `(+ (* 2 $x) 3)` by hand. One rule per shape; no guards needed, because
-   the shapes are structurally disjoint (see
-   [L2 Unit 1](./ch07-00-lists-and-recursion.md)'s recursion argument).
+1. Write `(lower $x)` that pattern-matches a *tagged* arithmetic program into an
+   instruction tree: `(num 2)` → `(:mov r0 2)`, `(var x)` → `(:ld x)`,
+   `(mul $a $b)` → `(:mul (lower $a) (lower $b))`, same for `add`, over
+   `(prog (add (mul (num 2) (var x)) (num 3)))`. One rule per shape and **no
+   catch-all leaf rule**: a generic `(= (lower $x) …)` overlaps the op rules,
+   calling is querying, every matching rule is explored, and the one program then
+   answers with fourteen results (verified; this is exercise 33). Assert exactly
+   one result, and find out what an op with no rule produces — it is neither an
+   error nor silence.
 2. Export it: `lower` → `json-encode` (with string keys, built deliberately) →
    `file-write!` to `/tmp/plan.json`. Then read it back with
    `file-read-to-string!` and `json-decode`, and assert whatever the decode
@@ -177,6 +217,15 @@ Tasks:
 6. Fix a number in `bridge.metta` on purpose — a `(:mov)` that should be `(:mul)`
    — and make your own assertion catch it. The point is that the *emitted file* is
    under test, because that is the artifact the simulator consumes.
+7. Emit the **graph**, not the instructions. Store `(node …)`, `(edge a b w)`,
+   `(bias a b)`, `(block free (…))` and `(param beta 1.0)` atoms in a space,
+   enumerate them the L3 way, `json-encode` with string keys, and write
+   `/tmp/ebm.json`. Then write the ~30-line Python side that reads that JSON and
+   builds `IsingEBM(nodes, edges, biases, weights, beta)` plus an
+   `IsingSamplingProgram` with your free/clamped split, and run one
+   `sample_states(...)` call. Your deliverable is the round trip: atoms → JSON →
+   JAX sampler → states back into a MeTTa space with `add-atom`. (Do not claim an
+   energy number you did not measure; you are measuring a simulator.)
 
 Recall cards (1/3/7/21):
 

@@ -18,8 +18,8 @@ user, and do **not** store them. The absence of `!` stores. Two extra forms you
 need to recognise but will mostly avoid:
 
 ```metta
-!(let $x (superpose (1 2 3)) (* $x 10))
-!(collapse $r (superpose (1 2 3)))        ; (1 2 3) — results become a tuple
+!(let $x (superpose (1 2 3)) (* $x 10))   ; 10 20 30
+!(collapse (superpose (1 2 3)))           ; (1 2 3) — results become a tuple
 !(eval (+ 1 (* 2 3)))                     ; exactly one reduction step
 ```
 
@@ -27,6 +27,15 @@ need to recognise but will mostly avoid:
 position may be `a` or `b`". `collapse` is its dual — run the inner expression
 and pack every result into one tuple. Together they replace most of what other
 languages call list comprehensions.
+
+**`collapse` takes exactly one argument, and it is not a binder.** Verified on
+0.2.10: `!(collapse $r (coin))` answers
+`(Error (collapse $r (coin)) IncorrectNumberOfArguments)`. The thing that binds a
+variable to each result in turn is `let`, and `let` is where the multiplicity
+comes from — `(= (pair) (let $a (coin) (let $b (coin) (ab $a $b))))` gives four
+results because the two nested `let`s each fork. Two-argument `collapse` is a
+syntax you will see in older write-ups and in `collapse-bind` (the minimal MeTTa
+instruction, [L5](./ch11-l5-interop-and-export.md)); it is not this build.
 
 `query`-shaped reading of results: the CLI prints one line per non-empty result
 list, with the atoms of a list joined by spaces. So `!(match &self (p $x) $x)`
@@ -74,9 +83,28 @@ tuple**, not a `::` list:
 !(foldl-atom (1 2 3) 0 $acc $e (+ $acc $e))   ; 6
 ```
 
+**Bind the tuple before you fold it.** `(foldl-atom (collapse (all-hours)) 0
+$acc $e (+ $acc $e))` does not fold the hours. `foldl-atom`'s first position is an
+`Atom`-typed parameter, and the spec says a parameter typed `Atom` is passed
+*without evaluation* — that is exactly what `Atom` is for, "used for changing the
+order of evaluation". So the folder receives the un-reduced call and folds over
+its two children, `collapse` and `(all-hours)`; the real answer, verified on
+0.2.10, is `(Error (+ 0 collapse) (BadArgType 2 Number (-> Atom Atom)) ...)`.
+Write it through a `let` instead:
+
+```metta
+(= (total) (let $t (collapse (all-hours))
+              (foldl-atom $t 0 $acc $e (+ $acc $e))))
+```
+
+**A tuple's order is not a fact you can rely on.** The same four hour facts print
+`14 9 0 12` when queried and collapse into `(12 0 9 14)`. Verified on 0.2.10. So
+assert the *count* or the *sum* of a result set, or sort it, and never assert a
+tuple's element order unless you have checked that build.
+
 So the pipeline for "search, then aggregate" is
-`superpose`/rule-nondeterminism → `collapse` → `foldl-atom`/`map-atom`. That is
-the shape of every candidate-scoring rule you will write at
+`superpose`/rule-nondeterminism → `collapse` → `let` → `foldl-atom`/`map-atom`.
+That is the shape of every candidate-scoring rule you will write at
 [L4](./ch10-l4-uncertainty-and-agency.md).
 
 **Argument position vs body position.** The trap I hit in L0 and everyone hits
@@ -96,13 +124,24 @@ an evaluation request. Keep the two roles separate: top level for asking, inside
 for data. Verified consequence: `!&` is documented upstream as "evaluate and
 keep", but this build does not parse it — the line comes back as data.
 
-**Silence and `()` are different failures.** Query with no results prints
-nothing; a rule that returns `()` prints `()`; a rule that returns `Empty`
-prints nothing but for a different reason. When your rover step prints nothing,
-you need to know which of those three happened, and the answer is found by
-wrapping in `!(collapse $r …)` — `()`-tuple means "one, empty result", empty
-tuple means "no results at all". This one trick has saved me more time than any
-other in this book.
+**Silence and `()` are different failures.** A query with no results prints
+nothing; a rule that returns `()` prints `()`; a rule whose body evaluates to
+`Empty` prints nothing but for a different reason (and `Empty` inside a branch is
+what makes that branch vanish — verified: `(= (f $x) (if (== $x 1) Empty (:ok $x)))`
+answers `(:ok 2)` for `2` and prints nothing for `1`). When your rover step prints
+nothing you need to know which of these happened. Two moves, both verified on
+0.2.10:
+
+- wrap the call in `!(collapse …)` and look at the tuple. A query with no results
+  collapses to `()` — one result, the empty tuple — while a query with four
+  results collapses to a four-element tuple. Count children, do not read them.
+- assert "no results" with `!(assertEqualToResult (call) ())`. Putting `Empty`
+  there instead is itself an error on this build:
+  `(Error … Atom is not an ExpressionAtom)`.
+
+That second one is the trick that has saved me more time than any other in this
+book, and it is the only place where `Empty` and `()` are not both acceptable
+answers.
 
 ## Exercises
 
@@ -110,7 +149,7 @@ other in this book.
 |---|---|---|---|
 | 1 | `(= (bin) 0)` `(= (bin) 1)` then `!(bin)` | | `0 1` |
 | 2 | `!(pair (bin) (bin))` with `(= (pair $a $b) (ab $a $b))` | | 4 pairs |
-| 3 | `!(collapse $x (superpose (1 2 3)))` | | `(1 2 3)` |
+| 3 | `!(collapse (superpose (1 2 3)))` | | `(1 2 3)` |
 | 4 | `!(eval (+ 1 (* 2 3)))` | | one step, not 7 |
 | 5 | `!(foldl-atom (1 2 3) 0 $acc $e (+ $acc $e))` | | `6` |
 | 6 | `!(foldl-atom (:: 1 (:: 2 ())) 0 $acc $e (+ $acc $e))` | | wrong shape, see fact sheet |
@@ -122,8 +161,9 @@ Tasks:
 1. Enumerate the truth table of `and` over `(superpose (True False))` in both
    argument slots. Count the results, then `collapse` them into one tuple.
 2. Write `(= (pick $list) …)` that nondeterministically returns one element of a
-   `::` list, then use `collapse` to get them all as a tuple and `foldl-atom` to
-   sum the tuple. (No `sum-atom` in this build; write `+` folding yourself.)
+   `::` list, then use `collapse` to get them all as a tuple, bind that tuple with
+   `let`, and `foldl-atom` to sum it. (No `sum-atom` in this build; write `+`
+   folding yourself.)
 3. Take your `map.metta` from [Unit 2](./ch03-00-facts-spaces-queries.md) and
    write `!(reachable $a $b)` so that it returns *all* rooms reachable in ≤2
    hops, using two rules rather than a guard. Explain when duplicating results

@@ -54,9 +54,14 @@ back to your own `enumerate.metta` and decide which strategy yours actually is.
 Warren Abstract Machine in MeTTa — this is the strongest available evidence that
 unification, the binding trail, and choice points are writable as MeTTa data, and
 therefore the closest public thing to "a compiler front end exists in this
-language". `trueagi-io/PeTTa` (31★) is Prolog in MeTTa: the right companion
-reading for the moment you notice your same-head rules behaving like clauses and
-your `cut` missing. `trueagi-io/hyperon-moses` matters for one document:
+language". `trueagi-io/PeTTa` (31★, MIT) is a MeTTa *implementation written in Prolog* — not
+Prolog embedded in MeTTa — and it is the most useful thing on this list for
+debugging by proxy: when hyperon prints something you cannot explain, a second
+implementation of the same spec either agrees or disagrees, and disagreement is a
+bug report. It needs a Prolog runtime (SWI-Prolog) to run, its October-2026 issue
+tracker is about `import!` and type registration, and its reduction semantics are
+close enough to `metta-wam` that reading both is the fastest way to see which
+behaviours are language and which are interpreter choice. `trueagi-io/hyperon-moses` matters for one document:
 `docs/metta-port-highlevel-guide`, which describes porting a genetic-programming
 search engine into MeTTa. Your Q1 goal is "MOSES from scratch", so read that guide
 before designing, and note which parts of the port are search policy versus
@@ -102,3 +107,53 @@ problem, wrote spaces and rules, and shipped an answer — and each has the same
 weakness: almost no self-tests. Your capstone's `assert*` section is what puts you
 a level above the corpus you have just read, which is the actual point of the
 level ordering in this book.
+
+## What the ecosystem is actually asking for (checked 2026-10-19)
+
+Read this before you plan a job hunt around it, because the honest finding is a
+negative one: **there are no public MeTTa/Hyperon job postings to map against.**
+SingularityNET has no careers page; Fetch.ai's lists zero open roles; Extropic's
+listing widget never renders; the ASI Alliance page could not be fetched at all.
+TrueAGI's Addis Ababa line runs through iCog Labs, and the only public artifact
+found there is an April 2024 partnership announcement — over two years old, and not
+a hiring call. So treat "apply in Ethiopia" as a conversation you start, not a form
+you fill.
+
+What does exist is a hiring-shaped contribution surface, and it has three cores:
+
+1. **Interpreter core (Rust).** Open `hyperon-experimental` issues as of this
+   month are about substitution and the evaluated-expression flag, TrieKey
+   decoding, `import!` token export, and non-deterministic `match` — that last one
+   being precisely the semantics this book's fact sheet documents from the
+   *behaviour* side. `CONTRIBUTING.md` demands tests, minimal `unsafe`, and pinned
+   dependency versions. `MORK` and `FabricPC` carry the `good first issue` labels
+   right now.
+2. **Language, stdlib and tooling.** `PeTTa` (active this month, `import!` and type
+   registration), `metta-wam`, `metta-catalog`, and the question-shaped issues in
+   `metta-examples` — "most idiomatic filtering of tuples", "transitive closure
+   with `match`/`add-atom`" — which are MeTTa-language questions that a careful
+   learner can answer better than the book's own L1-L2 material currently does in
+   public. Tooling is the gap with the least competition and the clearest evidence
+   value: the most recent hire-visible artifact from an apparently Ethiopia-based
+   contributor is a VS Code "MeTTa Language Support" extension (Feb 2026), not a
+   research system.
+3. **Applied AGI.** `PLN`/`pln-experimental`, `chaining`, `hyperon-moses`,
+   `iCog-Labs-Dev/hyperon-openpsi`, and the embodied work. Money here moves through
+   grants rather than salaries: the August 2025 Deep Funding round for Hyperon
+   asked for six things — novel hardware architectures, neural-symbolic DNNs,
+   theoretical quantum models, concept blending in MeTTa, AGI motivation systems,
+   knowledge-graph tooling — and paid $20k–$175k for demos. The 2026 round keeps
+   MeTTa/Hyperon tracks at up to $100k per project. Check
+   [deep-projects.ai](https://deep-projects.ai/all-rfps/) for the live text; an
+   aggregator's copy is not the RFP.
+
+The bridge target itself, for the record:
+[extropic-ai/thrml](https://github.com/extropic-ai/thrml) (Apache-2.0) is the
+JAX-native Thermodynamic Hypergraphical Model Library — `SpinNode`, `Block`,
+`IsingEBM(nodes, edges, biases, weights, beta)`, `IsingSamplingProgram`,
+`SamplingSchedule`, `sample_states` — and
+[Extropic's own write-up](https://extropic.ai/writing/from-one-to-one-billion/)
+describes the hardware path as Torx kernels → Thermalizers → a graph of THRML
+models on silicon, with a GPU simulator API reachable today and Z1 hardware access
+scheduled for 2027. Its "up to 10,000× over GPUs" figure is theirs, from their
+papers and their simulations; cite it, do not repeat it as a measurement.

@@ -15,16 +15,30 @@
 !(cons-atom add (1 2))
 
 ; Lowering: pattern-match program shapes into a target shape. The source sits
-; behind (prog ...) so it stays inert.
-(prog (add (mul 2 x) 3))
-(= (lower (mul $a $b)) (:mul $a $b))
-(= (lower (add $a $b)) (:add $a $b))
-(= (lower $n) (:mov $n))
+; behind (prog ...) so it stays inert. Leaves carry their own tag (num/var)
+; BECAUSE the lowering must be deterministic: see the TRAP note at the bottom.
+(prog (add (mul (num 2) (var x)) (num 3)))
+(= (lower (num $v)) (:mov r0 $v))
+(= (lower (var $n)) (:ld $n))
+(= (lower (mul $a $b)) (:mul (lower $a) (lower $b)))
+(= (lower (add $a $b)) (:add (lower $a) (lower $b)))
 (= (compile) (match &self (prog $e) (lower $e)))
-!(compile)
+!(assertEqualToResult (compile)
+    ((:add (:mul (:mov r0 2) (:ld x)) (:mov r0 3))))
+
+; One program in, exactly one instruction tree out. That is the whole difference
+; between this file and a nondeterministic query.
 
 !(assertEqual (chain (double 3) $r (+ $r 1)) 7)
 !(assertEqualToResult (cdr-atom (1 2 3)) ((2 3)))
+
+; TRAP, verified 2026-10-19: give lower a catch-all leaf rule
+;     (= (lower $n) (:mov $n))
+; alongside the (mul ...) and (add ...) rules and (compile) answers with FOURTEEN
+; results for the one program above. Calling is querying, and every rule that
+; matches is explored, so overlapping patterns are not a style problem, they are
+; a multiplicity problem. A lowering is deterministic only when its patterns are
+; structurally disjoint -- which is why the leaves here are tagged.
 
 ; This is a transducer, not a compiler: shape in, shape out, no target semantics,
 ; no register or schedule decisions. The export half (json with STRING keys,

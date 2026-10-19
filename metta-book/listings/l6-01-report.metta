@@ -3,14 +3,20 @@
 ; Everything here is composition from L0 to L5; nothing is new syntax.
 
 ; --- the hour log ---
-(= (hours day-340) 14)
-(= (hours day-341) 9)
-(= (hours day-342) 0)
-(= (hours day-343) 12)
+; FACTS, not rules: match sees stored atoms, and (= (hours day-342) 14) is stored
+; as an = expression, so a rule-shaped log is invisible to (all-hours) and reports
+; silence instead of hours. Verified 2026-10-19.
+(hours day-340 14)
+(hours day-341 9)
+(hours day-342 0)
+(hours day-343 12)
 
 (= (all-hours) (match &self (hours $d $h) $h))
-(= (total) (foldl-atom (collapse $h (all-hours)) 0 $acc $e (+ $acc $e)))
-(= (days-count) (foldl-atom (collapse $d (match &self (hours $d $h) 1)) 0 $acc $e (+ $acc 1)))
+; foldl-atom's first position is Atom-typed, so it is handed UN_EVALUATED: bind the
+; collapse with `let` first, or you fold over the two children of the call itself.
+; Verified 2026-10-19 -- the wrong shape answers with (Error (+ 0 collapse) ...).
+(= (total) (let $t (collapse (all-hours)) (foldl-atom $t 0 $acc $e (+ $acc $e))))
+(= (days-count) (let $t (collapse (all-hours)) (foldl-atom $t 0 $acc $e (+ $acc 1))))
 
 !(total)
 !(days-count)

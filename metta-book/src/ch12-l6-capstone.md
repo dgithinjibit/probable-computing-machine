@@ -70,7 +70,7 @@ written into the wrong space so `match` returns silence
 ([L1 Unit 2](./ch03-00-facts-spaces-queries.md)), or a mutation firing twice
 because two rules share a head ([L4](./ch10-l4-uncertainty-and-agency.md)). The
 diagnostic move is always the same: print the *count* of results you expect before
-printing the results — `!(collapse $r (…))` and look at the tuple's size. Silence
+printing the results — `!(collapse (…))` and look at the tuple's size. Silence
 is ambiguous; a size is not.
 
 **State is a liability you should budget.** Every `new-state` in the file is a

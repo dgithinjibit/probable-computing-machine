@@ -6,6 +6,15 @@ semantics is the vendored spec at
 `~/Desktop/ex/exercises/hyperon-experimental/docs/metta.md` (tag v0.2.10), which
 matches the installed wheel (`python3.12 -m hyperon.metta --version` → 0.2.10).
 
+**Status, 2026-10-19.** All 33 solutions and all 17 listings have been executed on
+this build in one non-aborting sweep: 50 files, zero failures, zero `Error (` lines.
+Nine of them were wrong before that pass — the `collapse` binder syntax, a
+`foldl-atom` argument that was never evaluated, hour logs written as rules instead
+of facts, an `or-stv` assertion whose arithmetic I had not done, a file handle read
+back through the wrong mode, and a lowering that answered fourteen results for one
+program. Each correction is a bullet below, and each is a trap this book now warns
+you about with a real error message rather than a guess.
+
 ## Grammar (spec §Syntax)
 
 - `MET ::= { [ '!' [DELIM] ], ATOM, [DELIM] }` — `!` is legal only in front of a
@@ -92,7 +101,36 @@ matches the installed wheel (`python3.12 -m hyperon.metta --version` → 0.2.10)
   `@metta::json` → "Invalid module name format".
 - State: `!(bind! &counter (new-state 0))`, `get-state`, `change-state!`
   (paired with `!(nop …)`); a wrong-typed update is a type error.
-- `collapse` returns a tuple; `superpose` is the nondeterminism constructor;
+- `collapse` takes **one** argument and is not a binder:
+  `!(collapse $r (coin))` → `(Error … IncorrectNumberOfArguments)`; `let` is the
+  binder and the source of multiplicity (`(let $a (coin) (let $b (coin) (ab $a $b)))`
+  → 4 results, in heads-first order). `!(collapse (superpose (1 2 3)))` → `(1 2 3)`.
+- `foldl-atom`'s first position is `Atom`-typed, so it is passed **un-evaluated**.
+  `(foldl-atom (collapse (all-hours)) 0 $acc $e (+ $acc $e))` folds the *call* and
+  answers `(Error (+ 0 collapse) (BadArgType 2 Number (-> Atom Atom)) …)`. Bind the
+  tuple with `let` first.
+- Result order is not stable across forms: four hour facts query as `14 9 0 12` and
+  collapse to `(12 0 9 14)`. Assert sums, counts, or sorted tuples.
+- A query with no results collapses to `()` — one result, the empty tuple — while
+  the bare query prints nothing. "No results" is asserted with
+  `!(assertEqualToResult (call) ())`; putting `Empty` there is itself an error
+  (`Atom is not an ExpressionAtom`).
+- `Empty` returned from a branch makes that branch vanish silently:
+  `(= (f $x) (if (== $x 1) Empty (:ok $x)))` prints `(:ok 2)` for `2`, nothing for `1`.
+- A call that matches **no** rule is returned unreduced, not as an error and not as
+  silence. In a lowering this is the dangerous case: an op with no `lower` rule
+  ships a live `(lower …)` atom inside the target tree.
+- Data written as a rule is invisible to `match`: `(= (hours2 d) 11)` answers the
+  call `(hours2 d)` but `(match &self (hours2 $d $h) $h)` finds nothing, because the
+  stored atom's head is `=`. Write logs as facts (`(hours d 11)`) when something has
+  to enumerate them.
+- `fileio` has no `file-close!` on this build — the call is echoed unevaluated, not
+  an error. You cannot read back through a handle opened `"wc"` (`Bad file
+  descriptor`); open a second handle with `"r"` and read from that.
+- Overlapping patterns are a correctness bug, not a style problem: one program plus
+  a catch-all `lower` rule yields fourteen results where one was wanted
+  (disjoint, tagged leaf shapes give exactly one).
+- `superpose` is the nondeterminism constructor;
   multiple nondeterministic arguments combine (2 × 2 → 4 results).
 
 ## Published corpus (found 2026-10-19 via `gh`)
