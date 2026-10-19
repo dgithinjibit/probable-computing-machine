@@ -1,9 +1,23 @@
-# This repository publishes only the hybrid book-course branches and the
-# exercises and code courses they point at. The rest of this local learning lab (vendored tools,
-# other people's book sources, cloned course repos) stays out.
+# This repository publishes only the hybrid book-course branches, the MeTTa
+# course, and the exercises and code courses they point at. The rest of this
+# local learning lab (vendored tools, other people's book sources, cloned course
+# repos) stays out.
 /*
 !/ml-hybrid
 !/hakin-hybrid
 !/blck-hybrid
 !/security-exercises
+!/metta-book
+!/metta-course-exercises
 !/portal-index.md
+
+# metta-book publishes the book source, its listings and its offline checker.
+# The rendered site is generated, and grind.txt is a private two-year plan.
+metta-book/book/
+metta-book/grind.txt
+metta-book/listings/*.output
+
+# metta-exercises is a clone of XBennyX2/Exercises-Metta (a foreign origin and a
+# foreign licence). The local work layered on top of it is published from
+# metta-course-exercises instead, which this repo deliberately does not contain.
+metta-exercises/

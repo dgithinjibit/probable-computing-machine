@@ -1,0 +1,9 @@
+[book]
+authors = ["Offline Chain Exercises contributors"]
+language = "en"
+src = "src"
+title = "The MeTTa Language"
+description = "A hands-on introduction to MeTTa using runnable local examples."
+
+[build]
+create-missing = false
