@@ -1,10 +1,10 @@
 # ML Hybrid Course
 
-One ordered path through the books already on this laptop, split into day-sized lessons. Each day pulls the author's own words from a named page range, then points at a local exercise. You never re-open a book from page one: the day tells you the exact pages, and the recall block re-tests what you already completed. From Day 17 the same rhythm carries an AGI track: Togelius on what generality even means, the OpenCog architecture survey, context engineering, agentic coding, and a closing gate on governance as architecture.
+One ordered path from an empty Python prompt to AGI arguments, built out of the books and notes already on this laptop and split into day-sized lessons. Days 1-8 teach Python from nothing, Days 9-17 teach the mathematics from nothing, Days 18-33 build classical machine learning, Days 34-38 do it again in a practitioner's hands-on account, and Days 39-85 run the AGI track: Togelius on what generality even means, the OpenCog architecture survey, context engineering, agentic coding, edge deployment, a second pass on AGI theory, and a closing gate on governance as architecture. Each day names the book, the exact pages, the author's own words at bite size, one local exercise, and an automatic spaced review of the days you already completed. You never re-open a book from page one.
 
 ## How this course works
 
-Kumon-style rhythm, borrowed from the local developer path: **recall** (5 min, from memory) → **read the author** (10–15 min, one bite) → **practice** (20–30 min, one local exercise) → **check** (5 min, run it and log the correction). Move on only when you can explain the idea without looking. Review days re-test earlier days at 1, 3, 7 and 21 lessons back, automatically.
+Kumon-style rhythm, borrowed from the local developer path: **recall** (5 min, from memory) -> **read the author** (10-15 min, one bite) -> **practice** (20-30 min, one local exercise) -> **check** (5 min, run it and log the correction). Move on only when you can explain the idea without looking. Review re-tests earlier days at 1, 3, 7 and 21 lessons back, automatically. Structure grafted from the local SyncSenta teacher curriculum (`Sync-0.0.2/data/ai_curriculum.json`): every sub-strand carries learning outcomes, prerequisites, expected misconceptions and assessment evidence - those four fields are what the days below use as `idea`, `recall`, `misconception` and `check`. Not KICD/CBC-aligned; a personal adaptation.
 
 ## Spine order
 
@@ -35,5 +35,6 @@ Kumon-style rhythm, borrowed from the local developer path: **recall** (5 min, f
 25. _Python Machine Learning: Learn Python in a Week_ — Computer Programming Academy. See [map](maps/python-machine-learning-learn-python-in-a-week-and-master-co.md).
 26. _Toughest Interview Questions_ — anonymous job-interview handbook. See [map](maps/toughest-interview-questions-pdf.md).
 27. _Data Science With Rust: A Comprehensive Guide_ — unattributed practitioner text. See [map](maps/data-science-with-rust-a-comprehensive-guide-data-analysis-m.md).
+28. _Python Complete Notes (QuantInsti)_ — QuantInsti. See [map](maps/python-complete-notes.md).
 
 Start with the guided course page at `http://127.0.0.1:8000/ml-hybrid/hybrid-course.html` (run `./exercises/serve-site.sh` first); it opens on the first day you have not completed.

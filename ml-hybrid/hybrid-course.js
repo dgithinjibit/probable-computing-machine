@@ -24,6 +24,28 @@ let current = 1;
 let storageOk = true;
 let state = { completed: [], blanked: [], lastOpened: 1, version: 1 };
 
+// The spine grows by inserting days in front of existing ones, so an old tick mark
+// would otherwise land on a different lesson. The build records the old->new table in
+// the curriculum, and stored progress is translated through it exactly once.
+function migrate(saved) {
+  if (saved.progressShift || !spec || !spec.course || !spec.course.day_shift) return saved;
+  const map = spec.course.day_shift.map || {};
+  const move = (n) => (Number.isInteger(n) && map[n] !== undefined ? map[n] : n);
+  const shifted = {
+    ...saved,
+    completed: (Array.isArray(saved.completed) ? saved.completed : []).map(move),
+    blanked: (Array.isArray(saved.blanked) ? saved.blanked : []).map(move),
+    lastOpened: move(saved.lastOpened),
+    progressShift: spec.course.day_shift.applied,
+  };
+  try {
+    localStorage.setItem(storageKey(), JSON.stringify(shifted));
+  } catch (error) {
+    /* the translation still applies in memory for this visit */
+  }
+  return shifted;
+}
+
 function storageKey() {
   return spec ? spec.storageKey : `local-learning-lab.${courseMeta.courseId}.v1`;
 }
@@ -32,7 +54,7 @@ function loadState() {
   try {
     const raw = localStorage.getItem(storageKey());
     if (!raw) return;
-    const saved = JSON.parse(raw);
+    const saved = migrate(JSON.parse(raw));
     const total = lessons.length || Number.MAX_SAFE_INTEGER;
     const ok = (n) => Number.isInteger(n) && n >= 1 && n <= total;
     state = {

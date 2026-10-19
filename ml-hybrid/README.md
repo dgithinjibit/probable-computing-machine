@@ -6,24 +6,26 @@ EPUBs into an **ordered day path** — each day names the book, the exact pages,
 the author's own words at bite size, one local exercise, and an automatic
 spaced review of the days you already completed.
 
-Currently built: **ML Hybrid Course** — 63 days from `~/Desktop/ML` (Days 1-16 ML
-foundations, 17-29 AGI, 30-63 the rest of the folder);
+Currently built: **ML Hybrid Course** — 85 days from `~/Desktop/ML`, laid out as a
+zero-to-hero spine (Days 1-8 Python from nothing, 9-17 mathematics from nothing, 18-33
+ML foundations, 34-38 traditional ML in a practitioner's hands, 39-51 AGI, 52-85 the rest
+of the folder);
 **Hacking Hybrid Course** — 12 defensive days from `~/Desktop/Hakin`, in
 [`../hakin-hybrid/`](../hakin-hybrid/); and **Blockchain Hybrid Course** — 14 days from
 `~/Desktop/blck` wired into the Sui Move, Scrypto, Cairo and starklings courses, in
 [`../blck-hybrid/`](../blck-hybrid/). Education and robotics already have their own
 books, so the same engine is the only thing they would need to become day paths.
 
-### The AGI track (Days 17-29)
+### The AGI track (Days 39-51)
 
 Page anchors were located rather than guessed, because printed chapter numbers in these
 files do not line up with physical pages: Togelius is printed + 12 (ch1 p.13, ch2 p.23,
 ch3 p.43, ch4 p.63, ch5 p.79, ch6 p.93, ch7 p.113, ch8 p.139, ch9 p.155, ch10 p.165,
 ch11 p.177), the OpenCog architecture survey opens at physical p.93 of _Building Better
 Minds_, Rothman is printed + 27, and the Codex book opens its introduction at p.15.
-Day 29 reads a 1,737-word DOCX through the paragraph mode of `read_source_text`.
+Day 51 reads a 1,737-word DOCX through the paragraph mode of `read_source_text`.
 
-### The second expansion (Days 30-63)
+### The second expansion (Days 52-85)
 
 Fifteen more sources are registered, for 27 in the spine. The reason the remaining
 `~/Desktop/ML` books could not be taught before is now fixed in `build_course.py`:
@@ -32,13 +34,38 @@ and MOBI is decoded with a PalmDOC LZ77 reader that treats the book's bold headi
 section starts — so `§N` is a stable address in both formats, the way a page number is
 in a PDF. Anchors for every new day were verified against the extracted text before the
 day was written, and `make_bite` now trims at a sentence boundary, which is why the
-whole 63-day spine sits inside the 180-560 word band.
+whole 85-day spine sits inside the 180-560 word band.
 
 Material that is not a book does not get a day, because the spine has to stay a path.
 It gets a generated shelf page instead — Python references, the six Startup School lab
 lists, the two study-craft worksheets, your own `codes/` folder, and the cross-branch
 accounting — under [`src/shelf/`](src/shelf/). Every one of the 61 entries in
 `~/Desktop/ML` is now either a scheduled day, a shelf reference, or a named leftover.
+
+### The third expansion: the front of the spine (Days 1-17, 34-38)
+
+The course was not zero-to-hero: two registered books carried no days, and nothing
+taught Python or mathematics from nothing. `expand_prerequisites.py` ran once to fix
+that — it registered `pyqinst` (*Python complete notes*, QuantInsti, 290pp), inserted 8
+Python days and 9 mathematics days (MIT 6.042) ahead of the old Day 1, and placed 5
+*Hands-On ML* days after the old consolidation day, taking the spine to 85 days.
+
+Two things make that safe, and both are worth keeping if the spine grows again:
+
+- **Every authored cross-reference moves with its day.** The script rewrites `Day N`,
+  `Days A-B`, `Days A, B and C` and `day-NNN.md` filenames through the same old→new map
+  it uses to renumber, so a lesson cannot end up pointing at a neighbour's day.
+- **Stored progress follows the day, not the number.** The map is published as
+  `course.day_shift` inside the curriculum, and `hybrid-course.js` translates
+  `completed`, `blanked` and `lastOpened` through it exactly once (guarded by
+  `progressShift`). Tick marks taken on the 63-day spine still mean the same lesson on
+  the 85-day one.
+
+Three chapter maps are now hand-authored (`python-complete-notes`, `mit6-042js15-textbook`,
+`hands-on-machine-learning-…`) because the detector cannot see a title page that splits
+`Chapter N` from its title, or a two-up banner page. Write `<!-- hand-authored -->` on the
+second line of such a map and `inventory` will leave it alone instead of overwriting it with
+"no chapter openings detected".
 
 ## Open it
 
@@ -92,7 +119,9 @@ Append to `days` in `hybrid-curriculum.json`:
 
 Then `python3 build_course.py build`. Marked-complete progress is keyed by day
 number in the browser, so re-running the build never resets your progress.
-Deleting or renumbering a day does — append instead.
+Renumbering only stays honest if you do it through a `day_shift` map like the one in
+`expand_prerequisites.py` — insert the map first, then rebuild; a bare renumber would
+silently hand your old tick marks to different lessons.
 
 ## Where each field comes from
 
@@ -138,9 +167,11 @@ everything needed to rebuild the course against your own local books.
 
 - Text-layer PDFs only. A scanned book yields nothing until it is OCR'd; `plan`
   and `build` print `0 extracted words` for such a range instead of inventing text.
-- Chapter detection reads the first line of a page; books that print headings as
-  graphics (Géron's *Hands-On ML*) map poorly, so their days cite ranges you
-  found in `plan` or the ToC by hand.
+- Chapter detection reads the first line of a page. Books that set a heading across
+  two lines (QuantInsti's Python notes), print two-up banner pages (MIT 6.042), or
+  number their exercise lists like sections (Géron's *Hands-On ML*) map poorly to the
+  detector, so those three maps are hand-authored from the title pages and their days
+  cite ranges checked in `plan`.
 - Page ranges are physical PDF pages, which drift between editions. The footer of
   every lesson names the file it came from, so a wrong range is checkable.
 - Extracted passages are the authors' words, for your personal study. Do not

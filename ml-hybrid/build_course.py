@@ -434,6 +434,14 @@ def noise(line: str) -> bool:
         return True
     if len(line.split()) <= 1 and re.search(r"\d", line):
         return True
+    # Some scanned textbooks print a running head with the internal build stamp and
+    # the page number ("mcs" - 2015/5/18 - 1:43 - page 115 - #123). It is typesetting,
+    # not argument, and it lands on every page.
+    if re.search(r"—\s*page\s+\d+\s*—", line) or re.search(r"#\d+\s*$", line):
+        return True
+    # Dotted tables-of-contents lines ("5.5 Dictionaries . . . . 87") are addresses.
+    if re.search(r"\.\s*\.\s*\.\s*\.?\s*\d+\s*$", line):
+        return True
     # Figure and table captions are the publisher's layout, not the author's argument.
     if re.match(r"^(figure|table|listing|exhibit)\s+[\divx]+([-.–]\d+)*\s*[:.\s]", line, re.I):
         return True
@@ -560,6 +568,14 @@ def cmd_inventory(args: argparse.Namespace) -> None:
             words = sum(s["words"] for s in sections)
         unit = {"pdf": "pages", "docx": "paragraphs"}.get(path.suffix.lower().strip("."), "sections")
         slug = slugify(path.stem)
+        # A hand-authored map is better evidence than a detector: some publishers set the
+        # chapter number and title on separate lines, which `find_chapters` cannot see, so
+        # those openings are recorded by reading the pages. `<!-- hand-authored -->` keeps
+        # a later inventory run from overwriting that work with "no chapters detected".
+        target = MAPS_DIR / f"{slug}.md"
+        if target.exists() and "<!-- hand-authored -->" in target.read_text(encoding="utf-8")[:300]:
+            print(f"  keep {slug}.md (hand-authored)")
+            continue
         lines = [f"# {path.name}", "",
                  f"- file: `{path}`",
                  f"- extent: {total} {unit}, ~{words:,} words",
