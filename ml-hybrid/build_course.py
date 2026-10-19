@@ -22,6 +22,7 @@ import argparse
 import json
 import re
 import shutil
+import struct
 import subprocess
 import sys
 import zipfile
@@ -140,6 +141,9 @@ def find_chapters(pages: list[str], total_hint: int = 0) -> list[dict]:
     return found
 
 
+HEAD_MARK = "\x01"  # sentinel inserted before a heading so blobs can be split
+
+
 class _TextExtractor(HTMLParser):
     SKIP = {"script", "style", "head"}
 
@@ -153,6 +157,8 @@ class _TextExtractor(HTMLParser):
             self.skip_depth += 1
         if tag in {"p", "div", "h1", "h2", "h3", "li", "br"}:
             self.parts.append("\n")
+        if tag in {"h1", "h2", "h3"}:
+            self.parts.append(HEAD_MARK)
 
     def handle_endtag(self, tag):
         if tag in self.SKIP and self.skip_depth:
@@ -163,32 +169,221 @@ class _TextExtractor(HTMLParser):
             self.parts.append(data)
 
 
+def html_to_text(raw: str) -> str:
+    """Strip markup, keeping line breaks and heading markers."""
+    parser = _TextExtractor()
+    try:
+        parser.feed(raw)
+    except Exception:  # a truncated chapter still has usable text
+        pass
+    text = re.sub(r"[ \t]+", " ", "".join(parser.parts))
+    return "\n".join(line.strip() for line in text.splitlines() if line.strip())
+
+
+def split_units(text: str, hint: str = "", min_words: int = 120) -> list[dict]:
+    """Turn one long blob into chapter-sized units at its heading markers.
+
+    A single-file EPUB or MOBI has no section boundaries to point a day at, so the
+    headings are the only honest address. Fragments under `min_words` fold back into
+    the unit they came from, which keeps a stray `<h3>` from becoming a lesson.
+    """
+    chunks = [c.strip() for c in text.split(HEAD_MARK) if c.strip()]
+    units: list[dict] = []
+    for chunk in chunks:
+        words = len(chunk.split())
+        first = chunk.splitlines()[0][:70]
+        title = first if (words < min_words or len(first.split()) <= 9) else hint
+        if units and words < min_words:
+            units[-1]["text"] += "\n\n" + chunk
+            units[-1]["words"] += words
+        else:
+            units.append({"title": (title or hint or "chapter"), "text": chunk,
+                          "words": words})
+    return units
+
+
+def mobi_decompress(block: bytes, out: bytearray, shift: bool = False) -> None:
+    """PalmDOC LZ77 into a shared buffer.
+
+    The back-reference window deliberately spans records, because a 4096-byte text
+    record may point at text that ended in the record before it. Decompressing each
+    record on its own is what turns a book into question marks.
+
+    `shift` selects between the two documented readings of bytes 0x09-0x7F: the strict
+    PalmDOC rule (the byte minus 8) and the reading this library's file actually uses
+    (literal). `mobi_html` tries both and keeps whichever produced real text.
+    """
+    i = 0
+    while i < len(block):
+        c = block[i]
+        i += 1
+        if c == 0:
+            out.append(c)
+        elif c <= 8:
+            out += block[i:i + c]
+            i += c
+        elif c <= 0x7F:
+            out.append(c - 8 if shift else c)
+        elif c <= 0xBF:
+            if i >= len(block):
+                break
+            d = block[i]
+            i += 1
+            # Only the low 6 bits of the control byte belong to the pair, so the
+            # combined value is 14 bits: 11 for the distance, 3 for the length.
+            pair = ((c & 0x3F) << 8) | d
+            distance = (pair >> 3) & 0x7FF
+            length = (pair & 0x07) + 3
+            if distance == 0 or distance > len(out):
+                out += b" " * length
+                continue
+            start = len(out) - distance
+            for _ in range(length):
+                out.append(out[start])
+                start += 1
+        else:
+            # 0xC0-0xFF means "a space plus this byte with its high bit cleared",
+            # which is how a book full of `<p class=" gets to compress at all.
+            out.append(0x20)
+            out.append(c & 0x7F)
+
+
+def _text_score(body: bytes) -> float:
+    """Rough 'is this readable prose' score, used to pick a MOBI decoding."""
+    sample = body[:4000].decode("latin-1", "replace")
+    if not sample:
+        return 0.0
+    good = sum(1 for ch in sample if ch.isalnum() or ch in " \n<>/=\"'.,;:()!?-")
+    return good / len(sample)
+
+
+def mobi_html(path: Path) -> str:
+    """Decompressed XHTML text of a PalmDOC/MOBI book."""
+    data = path.read_bytes()
+    if data[60:68] != b"BOOKMOBI":
+        raise RuntimeError("not a BOOKMOBI file")
+    records = struct.unpack(">H", data[76:78])[0]
+    offsets = [struct.unpack(">I", data[78 + 8 * i:82 + 8 * i])[0] for i in range(records)]
+    ends = offsets[1:] + [len(data)]
+    head = data[offsets[0]:offsets[0] + 256]
+    compression = struct.unpack(">H", head[0:2])[0]
+    text_length = struct.unpack(">I", head[4:8])[0]
+    text_count = struct.unpack(">H", head[8:10])[0]
+    encoding = struct.unpack(">I", head[28:32])[0] if head[16:20] == b"MOBI" else 1252
+    body = bytearray()
+    for index in range(1, min(1 + text_count, records)):
+        block = data[offsets[index]:ends[index]].rstrip(b"\x00")
+        if compression == 2:
+            mobi_decompress(block, body)
+        else:
+            body += block
+    if compression == 2:
+        shifted = bytearray()
+        for index in range(1, min(1 + text_count, records)):
+            block = data[offsets[index]:ends[index]].rstrip(b"\x00")
+            mobi_decompress(block, shifted, shift=True)
+        if _text_score(shifted) > _text_score(body):
+            body = shifted
+    body = body[:text_length] if text_length else bytes(body)
+    return body.decode("utf-8" if encoding == 65001 else "cp1252", "replace")
+
+
+def epub_spine(archive: zipfile.ZipFile) -> list[str]:
+    """Reading order from the OPF spine, falling back to sorted file names.
+
+    Attribute order in `<item>` is not guaranteed, and some Packt files use UUID
+    names where alphabetical order is meaningless, so the spine is worth parsing
+    properly rather than guessing.
+    """
+    opf = [n for n in archive.namelist() if n.lower().endswith(".opf")]
+    if not opf:
+        return []
+    raw = archive.read(opf[0]).decode("utf-8", "replace")
+    base = opf[0].rsplit("/", 1)[0] + "/" if "/" in opf[0] else ""
+    hrefs = {}
+    for tag in re.findall(r"<item\b[^>]*>", raw):
+        item = re.search(r'id="([^"]+)"', tag)
+        href = re.search(r'href="([^"]+)"', tag)
+        if item and href:
+            hrefs[item.group(1)] = href.group(1)
+    candidates = {n.split("/")[-1].lower(): n for n in archive.namelist()
+                  if n.lower().endswith((".xhtml", ".html", ".htm"))}
+    order = []
+    for item in re.findall(r'<itemref[^>]*idref="([^"]+)"', raw):
+        href = hrefs.get(item)
+        if not href:
+            continue
+        match = candidates.get((base + href).split("/")[-1].lower())
+        if match:
+            order.append(match)
+    return order
+
+
 def epub_sections(path: Path) -> list[dict]:
-    """EPUB chapters as {title, index} sections (no physical pages)."""
+    """EPUB units a day can point at: one per chapter, split again if huge.
+
+    Returns {title, words, file, frag}. `frag` matters because a single-file EPUB
+    (common for self-published books) is one HTML part holding every chapter, so the
+    part name alone is not an address a lesson can cite.
+    """
+    units: list[dict] = []
     with zipfile.ZipFile(path) as archive:
         names = [n for n in archive.namelist()
                  if n.lower().endswith((".xhtml", ".html", ".htm"))]
-        sections = []
-        for name in sorted(names):
+        spine = [n for n in epub_spine(archive) if n in names]
+        for name in (spine or sorted(names)):
             try:
                 raw = archive.read(name).decode("utf-8", "replace")
             except Exception:
-                continue
-            parser = _TextExtractor()
-            try:
-                parser.feed(raw)
-            except Exception:
-                continue
-            text = re.sub(r"[ \t]+", " ", "".join(parser.parts))
-            text = "\n".join(line.strip() for line in text.splitlines() if line.strip())
-            if len(text.split()) < 30:
                 continue
             title = Path(name).stem.replace("_", " ")
             m = re.search(r"<title[^>]*>(.*?)</title>", raw, re.S | re.I)
             if m:
                 title = re.sub(r"\s+", " ", m.group(1)).strip()[:80] or title
-            sections.append({"title": title, "file": name, "words": len(text.split())})
-    return sections
+            text = html_to_text(raw)
+            if title.lower() in {"unknown", "untitled", "epub", ""} or len(title) < 3:
+                heads = re.findall(HEAD_MARK + r"([^\n]{3,70})", text)
+                if heads:
+                    title = heads[0].strip()
+                else:
+                    first = text.replace(HEAD_MARK, "").splitlines()
+                    lead = next((line.strip() for line in first if len(line.split()) >= 2), "")
+                    if 2 < len(lead) < 72:
+                        title = lead
+            words = len(re.sub(HEAD_MARK, " ", text).split())
+            if words < 30:
+                continue
+            if words > 4000:  # a whole book in one part: use its headings
+                for chunk in split_units(text, title):
+                    units.append({**chunk, "file": name})
+                continue
+            first = text.split(HEAD_MARK)
+            heading = re.sub(HEAD_MARK, "", first[1] if len(first) > 1 else "").splitlines()
+            units.append({"title": (heading[0][:70] if heading and len(heading[0]) < 71 else title),
+                          "text": text.replace(HEAD_MARK, "\n"),
+                          "file": name})
+    for index, unit in enumerate(units, start=1):
+        unit["frag"] = index
+        unit.setdefault("words", len(unit.get("text", "").split()))
+    return units
+
+
+def text_units(book: dict) -> list[dict]:
+    """Addressable units for a non-paginated source (EPUB part or MOBI heading)."""
+    path = Path(book["path"])
+    if not path.exists():
+        return []
+    if book["kind"] == "mobi":
+        raw = mobi_html(path)
+        # Many Mobipocket books mark a chapter with a bold paragraph instead of an
+        # <h1>, and those are the only headings worth splitting on here.
+        raw = re.sub(r'(<p[^>]*>)(\s*<b>\s*[^<]{3,70}?</b>)', r"\1" + HEAD_MARK + r"\2", raw)
+        units = split_units(html_to_text(raw), book.get("short", "chapter"))
+        for index, unit in enumerate(units, start=1):
+            unit["frag"] = index
+            unit.setdefault("words", len(unit["text"].split()))
+        return units
+    return epub_sections(path)
 
 
 def docx_paragraphs(path: Path) -> list[str]:
@@ -211,16 +406,11 @@ def read_source_text(book: dict, first: int | None, last: int | None,
         start = max(1, first or 1)
         stop = min(len(paras), last or start + 5)
         return "\n\n".join(paras[start - 1:stop])
-    if book["kind"] == "epub":
-        sections = epub_sections(path)
-        if section is None or not (1 <= section <= len(sections)):
+    if book["kind"] in {"epub", "mobi"}:
+        units = text_units(book)
+        if section is None or not (1 <= section <= len(units)):
             return ""
-        with zipfile.ZipFile(path) as archive:
-            raw = archive.read(sections[section - 1]["file"]).decode("utf-8", "replace")
-        parser = _TextExtractor()
-        parser.feed(raw)
-        text = re.sub(r"[ \t]+", " ", "".join(parser.parts))
-        return "\n".join(line.strip() for line in text.splitlines() if line.strip())
+        return units[section - 1]["text"]
     pages = pdf_pages(path, first, last, layout=False)
     return "\n".join(pages)
 
@@ -274,7 +464,29 @@ def make_bite(text: str, min_words: int = MIN_BITE_WORDS,
     words = 0
     for block in blocks:
         n = len(block.split())
+        if not out and n > max_words:
+            # Some EPUB chapters arrive as one unbroken block; trim by sentence.
+            tail, taken = [], 0
+            for sent in re.split(r"(?<=[.!?…])\s+", block):
+                if taken and words + taken + len(sent.split()) > max_words:
+                    break
+                tail.append(sent)
+                taken += len(sent.split())
+            return " ".join(tail) + " […continues in the full section]", taken
         if words and words + n > max_words:
+            # A whole section can be longer than a sitting. Keep the author's
+            # sentences and stop at a sentence boundary instead of a paragraph.
+            if words >= min_words:
+                tail, taken = [], 0
+                for sent in re.split(r"(?<=[.!?…])\s+", block):
+                    k = len(sent.split())
+                    if taken and words + taken + k > max_words:
+                        break
+                    tail.append(sent)
+                    taken += k
+                if taken:
+                    out.append(" ".join(tail))
+                    words += taken
             break
         out.append(block)
         words += n
@@ -310,7 +522,7 @@ def cmd_inventory(args: argparse.Namespace) -> None:
     skip = re.compile(args.skip or r"$^", re.I)
     keep = re.compile(args.filter, re.I) if args.filter else None
     files = sorted([p for p in library.iterdir()
-                    if p.suffix.lower() in {".pdf", ".epub", ".docx"}])
+                    if p.suffix.lower() in {".pdf", ".epub", ".docx", ".mobi"}])
     index = []
     for path in files:
         if skip.search(path.name) or (keep and not keep.search(path.name)):
@@ -338,7 +550,10 @@ def cmd_inventory(args: argparse.Namespace) -> None:
                 if re.match(r"^(Chapter\s+\d+|\d{1,2}[.\)]?\s+[A-Z][A-Za-z ]{3,50})$", para[:60]):
                     chapters.append({"number": None, "title": para[:70], "page": i, "end": i})
         else:
-            sections = epub_sections(path)
+            probe = {"path": str(path),
+                     "kind": path.suffix.lower().lstrip("."),
+                     "short": path.stem[:40]}
+            sections = text_units(probe)
             total = len(sections)
             chapters = [{"number": str(i), "title": s["title"], "page": i, "end": i}
                         for i, s in enumerate(sections, start=1)][:60]
@@ -397,9 +612,11 @@ def cmd_locate(args: argparse.Namespace) -> None:
                     if len(hits) >= 2:
                         break
             print(f"{title[:52]:<54} -> {hits or 'not found near page tops'}")
-    elif path.suffix.lower() == ".epub":
-        for i, section in enumerate(epub_sections(path)[:args.scan_pages], start=1):
-            print(f"§{i:<4} {section['title'][:70]}")
+    elif path.suffix.lower() in {".epub", ".mobi"}:
+        probe = {"path": str(path), "kind": path.suffix.lower().lstrip("."),
+                 "short": path.stem[:40]}
+        for i, unit in enumerate(text_units(probe)[:args.scan_pages], start=1):
+            print(f"§{i:<4} {unit['title'][:64]:<66} {unit['words']:>6}w")
     else:
         paras = docx_paragraphs(path)
         for i, para in enumerate(paras[:args.scan_pages], start=1):
@@ -429,6 +646,8 @@ def build_day_page(curriculum: dict, day: dict, by_number: dict[int, dict]) -> s
     unit = "¶" if book["kind"] == "docx" else ("§" if "section" in day else "pp.")
     if "section" in day:
         loc = f"§{day['section']}"
+    elif book["kind"] in {"epub", "mobi"}:
+        loc = "whole file"
     else:
         loc = f"{unit} {day['from']}–{day['to']}" if unit == "¶" else f"pp. {day['from']}–{day['to']}"
     recalled = [n for n in (day["day"] - o for o in RECALL_OFFSETS) if n >= 1]
@@ -513,8 +732,33 @@ def cmd_build(args: argparse.Namespace) -> None:
                f"`http://127.0.0.1:8000/{HERE.name}/hybrid-course.html`, served by "
                f"`./exercises/serve-site.sh`. It sits outside `src/`, so mdBook cannot link it.",
                "", f"- [Start here](index.md)", ""]
+    last_track = None
     for d in curriculum["days"]:
+        track = d.get("track")
+        if track and track != last_track:
+            summary += ["", f"## {track}", ""]
+            last_track = track
         summary.append(f"- [Day {d['day']}: {d['title']}](days/day-{d['day']:03d}.md)")
+    for section, folder, blurb in (
+            ("Reference shelf", "shelf",
+             "One-page handles on the material that is not a book: cheat sheets, loose "
+             "notes, lab lists, and the code already sitting in the library."),
+            # src/visuals is gitignored (third-party card images and their transcriptions
+            # stay on this machine), so it must not be linked from SUMMARY.md - mdBook
+            # would fail to build on a clone where the file does not exist.
+    ):
+        pages = sorted((SRC / folder).glob("*.md")) if (SRC / folder).is_dir() else []
+        if pages:
+            # mdBook's SUMMARY grammar accepts only headings and list items, so the
+            # blurb is an HTML comment rather than an italic paragraph.
+            summary += ["", f"## {section}", "", f"<!-- {blurb} -->", ""]
+            labels = []
+            for p in pages:
+                first = p.read_text(encoding="utf-8").lstrip().splitlines()
+                title = first[0][1:].strip() if first and first[0].startswith("# ") \
+                    else p.stem.replace("-", " ")
+                labels.append(f"- [{title}]({folder}/{p.name})")
+            summary += labels
     summary += ["", "## Book maps", ""]
     for book in curriculum["books"]:
         if Path(book["path"]).exists():

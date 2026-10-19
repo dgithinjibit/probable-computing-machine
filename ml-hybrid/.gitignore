@@ -7,3 +7,7 @@ src/days/
 hybrid-course-data.json
 __pycache__/
 *.pyc
+
+# Transcribed card deck and any copied images: local only.
+src/visuals/
+src/assets/

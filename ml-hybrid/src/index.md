@@ -20,5 +20,20 @@ Kumon-style rhythm, borrowed from the local developer path: **recall** (5 min, f
 10. _Context Engineering for Multi-Agent Systems_ — Denis Rothman (Packt, 2025). See [map](maps/context-engineering-for-multi-agent-systems-move-beyond-deni.md).
 11. _Modern Software Engineering with Codex_ — Derrick M. Newman (2026). See [map](maps/modern-software-engineering-with-codex-implementing-derrick-.md).
 12. _Unified Agentic Trust and Governance Architecture_ — no author line in the file. See [map](maps/unified-agentic-trust-and-governance-architecture.md).
+13. _Agents and Multi-Agent Systems (LNCS 1442)_ — Wobcke, Pagnucco & Zhang (eds.), Springer, 1998. See [map](maps/agents-and-multi-agent-systems-formalisms-methodologies-wobc.md).
+14. _RRSI: Regularized Recursive Self-Improvement of Agent Harnesses_ — Xia et al., Google Cloud AI Research, arXiv 2609.24972, 2026. See [map](maps/rrsi-google.md).
+15. _Infinite Potential: Insights from the Robot Insurgency_ — Smith, Boudreaux, Vermeer & Predd, RAND, 2025. See [map](maps/infinite-potential-insights-from-the-robot-insurgency-gregor.md).
+16. _Interplay of Artificial General Intelligence with Quantum Computing_ — Reddy, Joseph, Joshi, Ouaissa & Mohd Hanafiah (eds.), Springer, 2025. See [map](maps/interplay-of-artificial-general-intelligence-with-quantum-c-.md).
+17. _Generative AI: Navigating the Course to the Artificial_ — Martin Musiol (Apress, 2024). See [map](maps/generative-ai-navigating-the-course-to-the-artificial-martin.md).
+18. _Mastering Gemini AI Prompting for Google Workspace_ — Mauricio Vásquez (Aria Capri International, 2024). See [map](maps/mastering-gemini-artificial-intelligence-prompting-for-v-squ.md).
+19. _Hands-On AI for Beginners_ — Patrick D. Smith (Packt, 2018). See [map](maps/hands-on-artificial-intelligence-for-beginners-an-patrick-d-.md).
+20. _Hands-On Artificial Intelligence for Android_ — Vasco Correia Veloso (BPB Publications, 2022). See [map](maps/hands-on-artificial-intelligence-for-android-understand-vasc.md).
+21. _Hands-On Deep Learning for IoT_ — Karim & Razzaque (Packt, 2019). See [map](maps/hands-on-deep-learning-for-iot-train-neural-network-models-k.md).
+22. _Artificial Intelligence for Communications and Networks (AICON 2019)_ — Han, Ye & Meng (eds.), Springer, 2019. See [map](maps/artificial-intelligence-for-communications-and-networks-shua.md).
+23. _Artificial General Intelligence: Principles and Practices_ — Saravanan, Preethi, Sanober & Thillaiarasu (Wiley/Scrivener, 2026). See [map](maps/artificial-general-intelligence-principles-and-practices-t-s.md).
+24. _Natural Language Cognitive Architecture: A Prototype_ — David K. Shapiro (self-published, 2021). See [map](maps/natural-language-cognitive-architecture-a-prototype-david-k-.md).
+25. _Python Machine Learning: Learn Python in a Week_ — Computer Programming Academy. See [map](maps/python-machine-learning-learn-python-in-a-week-and-master-co.md).
+26. _Toughest Interview Questions_ — anonymous job-interview handbook. See [map](maps/toughest-interview-questions-pdf.md).
+27. _Data Science With Rust: A Comprehensive Guide_ — unattributed practitioner text. See [map](maps/data-science-with-rust-a-comprehensive-guide-data-analysis-m.md).
 
 Start with the guided course page at `http://127.0.0.1:8000/ml-hybrid/hybrid-course.html` (run `./exercises/serve-site.sh` first); it opens on the first day you have not completed.

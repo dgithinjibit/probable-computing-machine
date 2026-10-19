@@ -4,19 +4,46 @@
 
 - [Start here](index.md)
 
+
+## Concepts
+
 - [Day 1: Why the double spend was an economics problem, not a coding problem](days/day-001.md)
 - [Day 2: Cryptocurrency fundamentals: hashes, keys, and mining](days/day-002.md)
+
+## Foundations
+
 - [Day 3: The one primitive everything rests on: cryptographic hash functions](days/day-003.md)
+
+## Bitcoin in detail
+
 - [Day 4: How Bitcoin works, end to end](days/day-004.md)
 - [Day 5: Keys and addresses: the math you actually need](days/day-005.md)
+
+## Contracts
+
 - [Day 6: From payments to programmable state: what Ethereum changed](days/day-006.md)
 - [Day 7: Accounts, state and gas: the machine underneath the contract](days/day-007.md)
 - [Day 8: Your first contract: writing it, deploying it, calling it](days/day-008.md)
 - [Day 9: Smart contract structure: storage, ownership and upgradeability](days/day-009.md)
+
+## Assets
+
 - [Day 10: Tokenize everything: what an asset on a chain actually is](days/day-010.md)
+
+## DeFi
+
 - [Day 11: Decentralizing finance: composability and its failure modes](days/day-011.md)
+
+## Security
+
 - [Day 12: Protecting contracts: reentrancy, overflow, and the trust you cannot delete](days/day-012.md)
+
+## Privacy
+
 - [Day 13: Catch me if you can: pseudonymity, tracing and what is actually private](days/day-013.md)
+
+## Frontier and capstone
+
 - [Day 14: Other chains, verifiable compute, and the piece you will build](days/day-014.md)
 
 ## Book maps

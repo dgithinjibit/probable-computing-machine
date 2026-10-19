@@ -5,66 +5,66 @@
 
 ## Chapter map (detected openings, sections)
 
-- **1. Evaluating models** — sections 1
-- **2. IoT Security** — sections 2
-- **3. Example – Indoor localization with Wi-Fi fingerprinting** — sections 3
-- **4. Download the example code files** — sections 4
-- **5. IoT-based human physiological and psychological state detection** — sections 5
-- **6. Features extraction in ASR** — sections 6
-- **7. References** — sections 7
-- **8. Model performance (use case one)** — sections 8
-- **9. Implementing use case one** — sections 9
-- **10. Collecting IoT data in an industrial setting** — sections 10
-- **11. Deployment techniques** — sections 11
-- **12. Summary** — sections 12
-- **13. Speech/voice recognition for IoT** — sections 13
-- **14. Activation functions** — sections 14
-- **15. Data preprocessing** — sections 15
-- **16. Improving MAE with LSTM** — sections 16
-- **17. Hands-On Deep Learning for IoT** — sections 17
-- **18. Data preprocessing** — sections 18
-- **19. References** — sections 19
-- **20. About the reviewers** — sections 20
-- **21. To get the most out of this book** — sections 21
-- **22. Summary** — sections 22
-- **23. Weight and bias initialization** — sections 23
-- **24. Data collection** — sections 24
-- **25. IoT application domains** — sections 25
-- **26. Section 3: Advanced Aspects and Analytics in IoT** — sections 26
-- **27. Potential future solutions** — sections 27
-- **28. AE classifier** — sections 28
-- **29. Generative adversarial networks** — sections 29
-- **30. Use case two** — sections 30
-- **31. Predictive Maintenance for IoT** — sections 31
-- **32. Fingerprinting** — sections 32
-- **33. Implementing use case two** — sections 33
-- **34. Indoor Localization in IoT** — sections 34
-- **35. Neural network architectures** — sections 35
-- **36. Data exploration** — sections 36
-- **37. Capsule networks** — sections 37
-- **38. A soft introduction to ML** — sections 38
-- **39. Use case two** — sections 39
-- **40. DL for predicting RLU** — sections 40
-- **41. Reviews** — sections 41
-- **42. Inspecting failure modes** — sections 42
-- **43. Implementation of use case two** — sections 43
-- **44. References** — sections 44
-- **45. Use case one – remote management of chronic disease** — sections 45
-- **46. Collecting data for use case two** — sections 46
-- **47. General ML rule of thumb** — sections 47
-- **48. References** — sections 48
-- **49. Calculating cut-off times** — sections 49
-- **50. ANN and the human brain** — sections 50
-- **51. Use case one** — sections 51
-- **52. Exploratory analysis** — sections 52
-- **53. What this book covers** — sections 53
-- **54. Deep feature synthesis** — sections 54
-- **55. ML baselines** — sections 55
-- **56. Use case two** — sections 56
-- **57. Automated human emotion detection system** — sections 57
-- **58. Unsupervised learning** — sections 58
-- **59. Deep learning models for HAR and emotion detection** — sections 59
-- **60. Use case two** — sections 60
+- **1. Hands-On Deep Learning for IoT** — sections 1
+- **2. About Packt** — sections 2
+- **3. Why subscribe?** — sections 3
+- **4. About the authors** — sections 4
+- **5. About the reviewers** — sections 5
+- **6. Packt is searching for authors like you** — sections 6
+- **7. Table of Contents** — sections 7
+- **8. Preface** — sections 8
+- **9. Who this book is for** — sections 9
+- **10. What this book covers** — sections 10
+- **11. To get the most out of this book** — sections 11
+- **12. Download the example code files** — sections 12
+- **13. Conventions used** — sections 13
+- **14. Get in touch** — sections 14
+- **15. Reviews** — sections 15
+- **16. Section 1: IoT Ecosystems, Deep Learning Techniques, and Frameworks** — sections 16
+- **17. The End-to-End Life Cycle of the IoT** — sections 17
+- **18. The E2E life cycle of the IoT** — sections 18
+- **19. The three-layer E2E IoT life cycle** — sections 19
+- **20. The five-layer IoT E2E life cycle** — sections 20
+- **21. IoT system architectures** — sections 21
+- **22. IoT application domains** — sections 22
+- **23. The importance of analytics in IoT** — sections 23
+- **24. The motivation to use DL in IoT data analytics** — sections 24
+- **25. The key characteristics and requirements of IoT data** — sections 25
+- **26. Real-life examples of fast and streaming IoT data** — sections 26
+- **27. Real-life examples of IoT big data** — sections 27
+- **28. Summary** — sections 28
+- **29. Reference** — sections 29
+- **30. Deep Learning Architectures for IoT** — sections 30
+- **31. A soft introduction to ML** — sections 31
+- **32. Working principle of a learning algorithm** — sections 32
+- **33. General ML rule of thumb** — sections 33
+- **34. General issues in ML models** — sections 34
+- **35. ML tasks** — sections 35
+- **36. Supervised learning** — sections 36
+- **37. Unsupervised learning** — sections 37
+- **38. Reinforcement learning** — sections 38
+- **39. Learning types with applications** — sections 39
+- **40. Delving into DL** — sections 40
+- **41. How did DL take ML to the next level?** — sections 41
+- **42. Artificial neural networks** — sections 42
+- **43. ANN and the human brain** — sections 43
+- **44. A brief history of ANNs** — sections 44
+- **45. How does an ANN learn?** — sections 45
+- **46. Training a neural network** — sections 46
+- **47. Weight and bias initialization** — sections 47
+- **48. Activation functions** — sections 48
+- **49. Neural network architectures** — sections 49
+- **50. Deep neural networks** — sections 50
+- **51. Autoencoders** — sections 51
+- **52. Convolutional neural networks** — sections 52
+- **53. Recurrent neural networks** — sections 53
+- **54. Emergent architectures** — sections 54
+- **55. Residual neural networks** — sections 55
+- **56. Generative adversarial networks** — sections 56
+- **57. Capsule networks** — sections 57
+- **58. Neural networks for clustering analysis** — sections 58
+- **59. DL frameworks and cloud platforms for IoT** — sections 59
+- **60. Summary** — sections 60
 
 ## Opening bite
 

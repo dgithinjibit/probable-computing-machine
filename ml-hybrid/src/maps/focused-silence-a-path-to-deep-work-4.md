@@ -1,6 +1,6 @@
 # Focused-Silence-A-Path-to-Deep-Work-4.pdf
 
-- file: `/home/skware/Desktop/etc/Focused-Silence-A-Path-to-Deep-Work-4.pdf`
+- file: `/home/skware/Desktop/ML/Focused-Silence-A-Path-to-Deep-Work-4.pdf`
 - extent: 2 pages, ~361 words
 
 ## Chapter map (detected openings, pages)

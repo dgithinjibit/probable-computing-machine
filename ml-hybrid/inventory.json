@@ -28,12 +28,12 @@
     "slug": "artificial-general-intelligence-principles-and-practices-t-s",
     "name": "Artificial General Intelligence_ Principles and Practices -- T_ Saravanan & P_ Preethi & Sumaya Sanober & N_ Thillaiarasu -- 1, 2026 -- isbn13 9781394422678 -- 0c1010dd0a4ab7e5f959a88ecb3aeea4 -- Anna’s Archive",
     "path": "/home/skware/Desktop/ML/Artificial General Intelligence_ Principles and Practices -- T_ Saravanan & P_ Preethi & Sumaya Sanober & N_ Thillaiarasu -- 1, 2026 -- isbn13 9781394422678 -- 0c1010dd0a4ab7e5f959a88ecb3aeea4 -- Anna’s Archive.epub",
-    "pages": 27,
+    "pages": 307,
     "words": 124344,
     "chapters": [
       {
         "number": "1",
-        "title": "Artificial General Intelligence",
+        "title": "Table of Contents",
         "page": 1,
         "end": 1
       },
@@ -57,141 +57,339 @@
       },
       {
         "number": "5",
-        "title": "Artificial General Intelligence",
+        "title": "Series Preface",
         "page": 5,
         "end": 5
       },
       {
         "number": "6",
-        "title": "Artificial General Intelligence",
+        "title": "Preface",
         "page": 6,
         "end": 6
       },
       {
         "number": "7",
-        "title": "Artificial General Intelligence",
+        "title": "1",
         "page": 7,
         "end": 7
       },
       {
         "number": "8",
-        "title": "Artificial General Intelligence",
+        "title": "Abstract",
         "page": 8,
         "end": 8
       },
       {
         "number": "9",
-        "title": "Artificial General Intelligence",
+        "title": "1.1 Introduction",
         "page": 9,
         "end": 9
       },
       {
         "number": "10",
-        "title": "Artificial General Intelligence",
+        "title": "1.2.1 The Fragmented Landscape of Existing AGI Definitions",
         "page": 10,
         "end": 10
       },
       {
         "number": "11",
-        "title": "Artificial General Intelligence",
+        "title": "1.2.2 Cognitive Foundations: Insights from Natural Intelligence",
         "page": 11,
         "end": 11
       },
       {
         "number": "12",
-        "title": "Artificial General Intelligence",
+        "title": "1.2.3 Theoretical Frameworks: Formalizing Intelligence",
         "page": 12,
         "end": 12
       },
       {
         "number": "13",
-        "title": "Artificial General Intelligence",
+        "title": "1.2.4 Bridging Attempts and the Unification Imperative",
         "page": 13,
         "end": 13
       },
       {
         "number": "14",
-        "title": "Artificial General Intelligence",
+        "title": "1.3 Proposed Methodology",
         "page": 14,
         "end": 14
       },
       {
         "number": "15",
-        "title": "Artificial General Intelligence",
+        "title": "1.3.1 Cognitive Architecture Modeling for AGI Foundations",
         "page": 15,
         "end": 15
       },
       {
         "number": "16",
-        "title": "Artificial General Intelligence",
+        "title": "1.3.2 Learning and Adaptation through Meta-Cognitive Feedback",
         "page": 16,
         "end": 16
       },
       {
         "number": "17",
-        "title": "Artificial General Intelligence",
+        "title": "1.3.3 Theoretical Integration Using Algorithmic Information and Goal M",
         "page": 17,
         "end": 17
       },
       {
         "number": "18",
-        "title": "Artificial General Intelligence",
+        "title": "1.4 Evaluation of the Unified AGI Framework",
         "page": 18,
         "end": 18
       },
       {
         "number": "19",
-        "title": "Artificial General Intelligence",
+        "title": "1.5 Conclusion",
         "page": 19,
         "end": 19
       },
       {
         "number": "20",
-        "title": "Artificial General Intelligence",
+        "title": "Bibliography",
         "page": 20,
         "end": 20
       },
       {
         "number": "21",
-        "title": "Artificial General Intelligence",
+        "title": "2",
         "page": 21,
         "end": 21
       },
       {
         "number": "22",
-        "title": "Artificial General Intelligence",
+        "title": "Abstract",
         "page": 22,
         "end": 22
       },
       {
         "number": "23",
-        "title": "Artificial General Intelligence",
+        "title": "2.1 Introduction",
         "page": 23,
         "end": 23
       },
       {
         "number": "24",
-        "title": "Artificial General Intelligence",
+        "title": "2.1.1 Formal Frameworks for Intelligence: Beyond Heuristic Approaches",
         "page": 24,
         "end": 24
       },
       {
         "number": "25",
-        "title": "Artificial General Intelligence",
+        "title": "2.1.2 Unification Theories of Cognition: Bridging Symbolic, Neural, an",
         "page": 25,
         "end": 25
       },
       {
         "number": "26",
-        "title": "Artificial General Intelligence",
+        "title": "2.2.1 Solomonoff Induction and Algorithmic Learning Theory in AGI",
         "page": 26,
         "end": 26
       },
       {
         "number": "27",
-        "title": "Artificial General Intelligence",
+        "title": "2.2.2 Bayesian Inference and Probabilistic Cognitive Architectures",
         "page": 27,
         "end": 27
+      },
+      {
+        "number": "28",
+        "title": "2.2.3 Computational Rationality and Decision-Theoretic AGI Models",
+        "page": 28,
+        "end": 28
+      },
+      {
+        "number": "29",
+        "title": "2.2.4 Formal Epistemology, Logic, and Safety in Theoretical AGI",
+        "page": 29,
+        "end": 29
+      },
+      {
+        "number": "30",
+        "title": "2.3.1 Formal Architecture Design: Building AGI on Mathematical Foundat",
+        "page": 30,
+        "end": 30
+      },
+      {
+        "number": "31",
+        "title": "2.3.2 Theory-Guided Learning Frameworks: From Data Efficiency to Gener",
+        "page": 31,
+        "end": 31
+      },
+      {
+        "number": "32",
+        "title": "2.3.3 Verification and Alignment Protocols: Ensuring Safety and Interp",
+        "page": 32,
+        "end": 32
+      },
+      {
+        "number": "33",
+        "title": "2.4.1 Evaluating Data Efficiency via Solomonoff-Inspired Compression L",
+        "page": 33,
+        "end": 33
+      },
+      {
+        "number": "34",
+        "title": "2.4.2 Performance of Bayesian Meta-Learning in Uncertain Environments",
+        "page": 34,
+        "end": 34
+      },
+      {
+        "number": "35",
+        "title": "2.4.3 RMR Enhances Planning and Efficiency",
+        "page": 35,
+        "end": 35
+      },
+      {
+        "number": "36",
+        "title": "2.4.4 Safety and Interpretability Gains from Formal Logic-Based Contro",
+        "page": 36,
+        "end": 36
+      },
+      {
+        "number": "37",
+        "title": "2.5 Conclusion",
+        "page": 37,
+        "end": 37
+      },
+      {
+        "number": "38",
+        "title": "References",
+        "page": 38,
+        "end": 38
+      },
+      {
+        "number": "39",
+        "title": "3",
+        "page": 39,
+        "end": 39
+      },
+      {
+        "number": "40",
+        "title": "Abstract",
+        "page": 40,
+        "end": 40
+      },
+      {
+        "number": "41",
+        "title": "3.1.1 Cognitive Processing: Logic-Driven Inference versus Pattern-Driv",
+        "page": 41,
+        "end": 41
+      },
+      {
+        "number": "42",
+        "title": "3.1.2 Knowledge Representation: Explicit Symbols versus Distributed Em",
+        "page": 42,
+        "end": 42
+      },
+      {
+        "number": "43",
+        "title": "3.2.1 Symbolic Cognitive Architectures in AGI",
+        "page": 43,
+        "end": 43
+      },
+      {
+        "number": "44",
+        "title": "3.2.2 Neural Architectures as Cognitive Models",
+        "page": 44,
+        "end": 44
+      },
+      {
+        "number": "45",
+        "title": "3.2.3 Hybrid and Neurosymbolic Approaches",
+        "page": 45,
+        "end": 45
+      },
+      {
+        "number": "46",
+        "title": "3.2.4 Evaluation Metrics and Benchmarks for AGI Cognition",
+        "page": 46,
+        "end": 46
+      },
+      {
+        "number": "47",
+        "title": "3.3.1 Neurosymbolic Integration for Transparent Reasoning",
+        "page": 47,
+        "end": 47
+      },
+      {
+        "number": "48",
+        "title": "3.3.2 Meta-Learning for Adaptive Generalization",
+        "page": 48,
+        "end": 48
+      },
+      {
+        "number": "49",
+        "title": "3.3.3 Interactive Learning for Continuous Knowledge Refinement",
+        "page": 49,
+        "end": 49
+      },
+      {
+        "number": "50",
+        "title": "3.4.1 Performance on Symbolic Reasoning Tasks",
+        "page": 50,
+        "end": 50
+      },
+      {
+        "number": "51",
+        "title": "3.4.3 Interpretability and Explanation Quality",
+        "page": 51,
+        "end": 51
+      },
+      {
+        "number": "52",
+        "title": "3.4.4 Lifelong and Transfer Learning Performance",
+        "page": 52,
+        "end": 52
+      },
+      {
+        "number": "53",
+        "title": "3.5 Conclusion",
+        "page": 53,
+        "end": 53
+      },
+      {
+        "number": "54",
+        "title": "References",
+        "page": 54,
+        "end": 54
+      },
+      {
+        "number": "55",
+        "title": "4",
+        "page": 55,
+        "end": 55
+      },
+      {
+        "number": "56",
+        "title": "Abstract",
+        "page": 56,
+        "end": 56
+      },
+      {
+        "number": "57",
+        "title": "4.1 Introduction",
+        "page": 57,
+        "end": 57
+      },
+      {
+        "number": "58",
+        "title": "Artificial General Intelligence",
+        "page": 58,
+        "end": 58
+      },
+      {
+        "number": "59",
+        "title": "4.1.2 Core Challenges in Engineering Human-Like Cognition: Scalability",
+        "page": 59,
+        "end": 59
+      },
+      {
+        "number": "60",
+        "title": "4.2.1 Symbolic versus Connectionist Paradigms: The Foundational Schism",
+        "page": 60,
+        "end": 60
       }
     ],
     "unit": "sections"
@@ -782,19 +980,19 @@
     "chapters": [
       {
         "number": "1",
-        "title": "Unknown",
+        "title": "FIRST EDITION 2022",
         "page": 1,
         "end": 1
       },
       {
         "number": "2",
-        "title": "Unknown",
+        "title": "About the Author",
         "page": 2,
         "end": 2
       },
       {
         "number": "3",
-        "title": "Unknown",
+        "title": "About the Reviewers",
         "page": 3,
         "end": 3
       },
@@ -812,7 +1010,7 @@
       },
       {
         "number": "6",
-        "title": "Unknown",
+        "title": "Code Bundle and Coloured Images",
         "page": 6,
         "end": 6
       },
@@ -824,7 +1022,7 @@
       },
       {
         "number": "8",
-        "title": "Unknown",
+        "title": "Table of Contents",
         "page": 8,
         "end": 8
       },
@@ -836,7 +1034,7 @@
       },
       {
         "number": "10",
-        "title": "Unknown",
+        "title": "We cover the following topics in this chapter:",
         "page": 10,
         "end": 10
       },
@@ -848,61 +1046,61 @@
       },
       {
         "number": "12",
-        "title": "Unknown",
+        "title": "Setting up Android Studio",
         "page": 12,
         "end": 12
       },
       {
         "number": "13",
-        "title": "Unknown",
+        "title": "Creating a simple Android application",
         "page": 13,
         "end": 13
       },
       {
         "number": "14",
-        "title": "Unknown",
+        "title": "Android project structure",
         "page": 14,
         "end": 14
       },
       {
         "number": "15",
-        "title": "Unknown",
+        "title": "Running the application",
         "page": 15,
         "end": 15
       },
       {
         "number": "16",
-        "title": "Unknown",
+        "title": "Using an Android emulator",
         "page": 16,
         "end": 16
       },
       {
         "number": "17",
-        "title": "Unknown",
+        "title": "Using a real device",
         "page": 17,
         "end": 17
       },
       {
         "number": "18",
-        "title": "Unknown",
+        "title": "The Android application lifecycle",
         "page": 18,
         "end": 18
       },
       {
         "number": "19",
-        "title": "Unknown",
+        "title": "Android application resources",
         "page": 19,
         "end": 19
       },
       {
         "number": "20",
-        "title": "Unknown",
+        "title": "Resource qualifiers",
         "page": 20,
         "end": 20
       },
       {
         "number": "21",
-        "title": "Unknown",
+        "title": "Identifying resources in application code",
         "page": 21,
         "end": 21
       },
@@ -914,43 +1112,43 @@
       },
       {
         "number": "23",
-        "title": "Unknown",
+        "title": "The Android application manifest",
         "page": 23,
         "end": 23
       },
       {
         "number": "24",
-        "title": "Unknown",
+        "title": "Application permissions",
         "page": 24,
         "end": 24
       },
       {
         "number": "25",
-        "title": "Unknown",
+        "title": "Describing the features required by the application",
         "page": 25,
         "end": 25
       },
       {
         "number": "26",
-        "title": "Unknown",
+        "title": "Applying the Model-View-Controller pattern",
         "page": 26,
         "end": 26
       },
       {
         "number": "27",
-        "title": "Unknown",
+        "title": "An alternative to MVC is the Model-View-Presenter",
         "page": 27,
         "end": 27
       },
       {
         "number": "28",
-        "title": "Unknown",
+        "title": "Data binding allows a new pattern – Model-View-ViewModel",
         "page": 28,
         "end": 28
       },
       {
         "number": "29",
-        "title": "Unknown",
+        "title": "Which pattern should be used?",
         "page": 29,
         "end": 29
       },
@@ -968,7 +1166,7 @@
       },
       {
         "number": "32",
-        "title": "Unknown",
+        "title": "We cover the following topics in this chapter:",
         "page": 32,
         "end": 32
       },
@@ -980,109 +1178,109 @@
       },
       {
         "number": "34",
-        "title": "Unknown",
+        "title": "User events",
         "page": 34,
         "end": 34
       },
       {
         "number": "35",
-        "title": "Unknown",
+        "title": "Modifying the layout of an activity",
         "page": 35,
         "end": 35
       },
       {
         "number": "36",
-        "title": "Unknown",
+        "title": "Using the Android Studio layout editor",
         "page": 36,
         "end": 36
       },
       {
         "number": "37",
-        "title": "Unknown",
+        "title": "The ConstraintLayout",
         "page": 37,
         "end": 37
       },
       {
         "number": "38",
-        "title": "Unknown",
+        "title": "Placing a new component on the layout",
         "page": 38,
         "end": 38
       },
       {
         "number": "39",
-        "title": "Unknown",
+        "title": "Using string resources in components",
         "page": 39,
         "end": 39
       },
       {
         "number": "40",
-        "title": "Unknown",
+        "title": "Changing the component identifier",
         "page": 40,
         "end": 40
       },
       {
         "number": "41",
-        "title": "Unknown",
+        "title": "The XML version of the button",
         "page": 41,
         "end": 41
       },
       {
         "number": "42",
-        "title": "Unknown",
+        "title": "Registering to receive events",
         "page": 42,
         "end": 42
       },
       {
         "number": "43",
-        "title": "Unknown",
+        "title": "Reacting to the event",
         "page": 43,
         "end": 43
       },
       {
         "number": "44",
-        "title": "Unknown",
+        "title": "Adding an activity to our application",
         "page": 44,
         "end": 44
       },
       {
         "number": "45",
-        "title": "Unknown",
+        "title": "Intents in Android applications",
         "page": 45,
         "end": 45
       },
       {
         "number": "46",
-        "title": "Unknown",
+        "title": "Creating an intent",
         "page": 46,
         "end": 46
       },
       {
         "number": "47",
-        "title": "Unknown",
+        "title": "Showing our about activity with an intent",
         "page": 47,
         "end": 47
       },
       {
         "number": "48",
-        "title": "Unknown",
+        "title": "Returning a value from the target activity",
         "page": 48,
         "end": 48
       },
       {
         "number": "49",
-        "title": "Unknown",
+        "title": "Using Intents across Android applications",
         "page": 49,
         "end": 49
       },
       {
         "number": "50",
-        "title": "Unknown",
+        "title": "Intent filters in the application manifest",
         "page": 50,
         "end": 50
       },
       {
         "number": "51",
-        "title": "Unknown",
+        "title": "Starting another application with an implicit intent",
         "page": 51,
         "end": 51
       },
@@ -1100,7 +1298,7 @@
       },
       {
         "number": "54",
-        "title": "Unknown",
+        "title": "We cover the following topics in this chapter:",
         "page": 54,
         "end": 54
       },
@@ -1112,19 +1310,19 @@
       },
       {
         "number": "56",
-        "title": "Unknown",
+        "title": "A first glance at the Kotlin language",
         "page": 56,
         "end": 56
       },
       {
         "number": "57",
-        "title": "Unknown",
+        "title": "Fundamentals of the Kotlin language",
         "page": 57,
         "end": 57
       },
       {
         "number": "58",
-        "title": "Unknown",
+        "title": "Kotlin code files may start with a package declaration, like Java.",
         "page": 58,
         "end": 58
       },
@@ -1136,7 +1334,7 @@
       },
       {
         "number": "60",
-        "title": "Unknown",
+        "title": "Data types",
         "page": 60,
         "end": 60
       }
@@ -1161,361 +1359,361 @@
     "chapters": [
       {
         "number": "1",
-        "title": "Evaluating models",
+        "title": "Hands-On Deep Learning for IoT",
         "page": 1,
         "end": 1
       },
       {
         "number": "2",
-        "title": "IoT Security",
+        "title": "About Packt",
         "page": 2,
         "end": 2
       },
       {
         "number": "3",
-        "title": "Example – Indoor localization with Wi-Fi fingerprinting",
+        "title": "Why subscribe?",
         "page": 3,
         "end": 3
       },
       {
         "number": "4",
-        "title": "Download the example code files",
+        "title": "About the authors",
         "page": 4,
         "end": 4
       },
       {
         "number": "5",
-        "title": "IoT-based human physiological and psychological state detection",
+        "title": "About the reviewers",
         "page": 5,
         "end": 5
       },
       {
         "number": "6",
-        "title": "Features extraction in ASR",
+        "title": "Packt is searching for authors like you",
         "page": 6,
         "end": 6
       },
       {
         "number": "7",
-        "title": "References",
+        "title": "Table of Contents",
         "page": 7,
         "end": 7
       },
       {
         "number": "8",
-        "title": "Model performance (use case one)",
+        "title": "Preface",
         "page": 8,
         "end": 8
       },
       {
         "number": "9",
-        "title": "Implementing use case one",
+        "title": "Who this book is for",
         "page": 9,
         "end": 9
       },
       {
         "number": "10",
-        "title": "Collecting IoT data in an industrial setting",
+        "title": "What this book covers",
         "page": 10,
         "end": 10
       },
       {
         "number": "11",
-        "title": "Deployment techniques",
+        "title": "To get the most out of this book",
         "page": 11,
         "end": 11
       },
       {
         "number": "12",
-        "title": "Summary",
+        "title": "Download the example code files",
         "page": 12,
         "end": 12
       },
       {
         "number": "13",
-        "title": "Speech/voice recognition for IoT",
+        "title": "Conventions used",
         "page": 13,
         "end": 13
       },
       {
         "number": "14",
-        "title": "Activation functions",
+        "title": "Get in touch",
         "page": 14,
         "end": 14
       },
       {
         "number": "15",
-        "title": "Data preprocessing",
+        "title": "Reviews",
         "page": 15,
         "end": 15
       },
       {
         "number": "16",
-        "title": "Improving MAE with LSTM",
+        "title": "Section 1: IoT Ecosystems, Deep Learning Techniques, and Frameworks",
         "page": 16,
         "end": 16
       },
       {
         "number": "17",
-        "title": "Hands-On Deep Learning for IoT",
+        "title": "The End-to-End Life Cycle of the IoT",
         "page": 17,
         "end": 17
       },
       {
         "number": "18",
-        "title": "Data preprocessing",
+        "title": "The E2E life cycle of the IoT",
         "page": 18,
         "end": 18
       },
       {
         "number": "19",
-        "title": "References",
+        "title": "The three-layer E2E IoT life cycle",
         "page": 19,
         "end": 19
       },
       {
         "number": "20",
-        "title": "About the reviewers",
+        "title": "The five-layer IoT E2E life cycle",
         "page": 20,
         "end": 20
       },
       {
         "number": "21",
-        "title": "To get the most out of this book",
+        "title": "IoT system architectures",
         "page": 21,
         "end": 21
       },
       {
         "number": "22",
-        "title": "Summary",
+        "title": "IoT application domains",
         "page": 22,
         "end": 22
       },
       {
         "number": "23",
-        "title": "Weight and bias initialization",
+        "title": "The importance of analytics in IoT",
         "page": 23,
         "end": 23
       },
       {
         "number": "24",
-        "title": "Data collection",
+        "title": "The motivation to use DL in IoT data analytics",
         "page": 24,
         "end": 24
       },
       {
         "number": "25",
-        "title": "IoT application domains",
+        "title": "The key characteristics and requirements of IoT data",
         "page": 25,
         "end": 25
       },
       {
         "number": "26",
-        "title": "Section 3: Advanced Aspects and Analytics in IoT",
+        "title": "Real-life examples of fast and streaming IoT data",
         "page": 26,
         "end": 26
       },
       {
         "number": "27",
-        "title": "Potential future solutions",
+        "title": "Real-life examples of IoT big data",
         "page": 27,
         "end": 27
       },
       {
         "number": "28",
-        "title": "AE classifier",
+        "title": "Summary",
         "page": 28,
         "end": 28
       },
       {
         "number": "29",
-        "title": "Generative adversarial networks",
+        "title": "Reference",
         "page": 29,
         "end": 29
       },
       {
         "number": "30",
-        "title": "Use case two",
+        "title": "Deep Learning Architectures for IoT",
         "page": 30,
         "end": 30
       },
       {
         "number": "31",
-        "title": "Predictive Maintenance for IoT",
+        "title": "A soft introduction to ML",
         "page": 31,
         "end": 31
       },
       {
         "number": "32",
-        "title": "Fingerprinting",
+        "title": "Working principle of a learning algorithm",
         "page": 32,
         "end": 32
       },
       {
         "number": "33",
-        "title": "Implementing use case two",
+        "title": "General ML rule of thumb",
         "page": 33,
         "end": 33
       },
       {
         "number": "34",
-        "title": "Indoor Localization in IoT",
+        "title": "General issues in ML models",
         "page": 34,
         "end": 34
       },
       {
         "number": "35",
-        "title": "Neural network architectures",
+        "title": "ML tasks",
         "page": 35,
         "end": 35
       },
       {
         "number": "36",
-        "title": "Data exploration",
+        "title": "Supervised learning",
         "page": 36,
         "end": 36
       },
       {
         "number": "37",
-        "title": "Capsule networks",
+        "title": "Unsupervised learning",
         "page": 37,
         "end": 37
       },
       {
         "number": "38",
-        "title": "A soft introduction to ML",
+        "title": "Reinforcement learning",
         "page": 38,
         "end": 38
       },
       {
         "number": "39",
-        "title": "Use case two",
+        "title": "Learning types with applications",
         "page": 39,
         "end": 39
       },
       {
         "number": "40",
-        "title": "DL for predicting RLU",
+        "title": "Delving into DL",
         "page": 40,
         "end": 40
       },
       {
         "number": "41",
-        "title": "Reviews",
+        "title": "How did DL take ML to the next level?",
         "page": 41,
         "end": 41
       },
       {
         "number": "42",
-        "title": "Inspecting failure modes",
+        "title": "Artificial neural networks",
         "page": 42,
         "end": 42
       },
       {
         "number": "43",
-        "title": "Implementation of use case two",
+        "title": "ANN and the human brain",
         "page": 43,
         "end": 43
       },
       {
         "number": "44",
-        "title": "References",
+        "title": "A brief history of ANNs",
         "page": 44,
         "end": 44
       },
       {
         "number": "45",
-        "title": "Use case one – remote management of chronic disease",
+        "title": "How does an ANN learn?",
         "page": 45,
         "end": 45
       },
       {
         "number": "46",
-        "title": "Collecting data for use case two",
+        "title": "Training a neural network",
         "page": 46,
         "end": 46
       },
       {
         "number": "47",
-        "title": "General ML rule of thumb",
+        "title": "Weight and bias initialization",
         "page": 47,
         "end": 47
       },
       {
         "number": "48",
-        "title": "References",
+        "title": "Activation functions",
         "page": 48,
         "end": 48
       },
       {
         "number": "49",
-        "title": "Calculating cut-off times",
+        "title": "Neural network architectures",
         "page": 49,
         "end": 49
       },
       {
         "number": "50",
-        "title": "ANN and the human brain",
+        "title": "Deep neural networks",
         "page": 50,
         "end": 50
       },
       {
         "number": "51",
-        "title": "Use case one",
+        "title": "Autoencoders",
         "page": 51,
         "end": 51
       },
       {
         "number": "52",
-        "title": "Exploratory analysis",
+        "title": "Convolutional neural networks",
         "page": 52,
         "end": 52
       },
       {
         "number": "53",
-        "title": "What this book covers",
+        "title": "Recurrent neural networks",
         "page": 53,
         "end": 53
       },
       {
         "number": "54",
-        "title": "Deep feature synthesis",
+        "title": "Emergent architectures",
         "page": 54,
         "end": 54
       },
       {
         "number": "55",
-        "title": "ML baselines",
+        "title": "Residual neural networks",
         "page": 55,
         "end": 55
       },
       {
         "number": "56",
-        "title": "Use case two",
+        "title": "Generative adversarial networks",
         "page": 56,
         "end": 56
       },
       {
         "number": "57",
-        "title": "Automated human emotion detection system",
+        "title": "Capsule networks",
         "page": 57,
         "end": 57
       },
       {
         "number": "58",
-        "title": "Unsupervised learning",
+        "title": "Neural networks for clustering analysis",
         "page": 58,
         "end": 58
       },
       {
         "number": "59",
-        "title": "Deep learning models for HAR and emotion detection",
+        "title": "DL frameworks and cloud platforms for IoT",
         "page": 59,
         "end": 59
       },
       {
         "number": "60",
-        "title": "Use case two",
+        "title": "Summary",
         "page": 60,
         "end": 60
       }
@@ -1623,6 +1821,256 @@
     "unit": "pages"
   },
   {
+    "slug": "mastering-gemini-artificial-intelligence-prompting-for-v-squ",
+    "name": "Mastering Gemini Artificial Intelligence Prompting for -- Vásquez, Mauricio -- 2024 -- Aria Capri International Inc_ -- isbn13 9781998402328 -- d08f8a0067afaff5a0952142c8a5a054 -- Anna’s Archive",
+    "path": "/home/skware/Desktop/ML/Mastering Gemini Artificial Intelligence Prompting for -- Vásquez, Mauricio -- 2024 -- Aria Capri International Inc_ -- isbn13 9781998402328 -- d08f8a0067afaff5a0952142c8a5a054 -- Anna’s Archive.mobi",
+    "pages": 40,
+    "words": 15046,
+    "chapters": [
+      {
+        "number": "1",
+        "title": "Mastering Gemini",
+        "page": 1,
+        "end": 1
+      },
+      {
+        "number": "2",
+        "title": "Effective Prompt Crafting in Gemini for Google Workspace",
+        "page": 2,
+        "end": 2
+      },
+      {
+        "number": "3",
+        "title": "Mastering Gemini Artificial Intelligence",
+        "page": 3,
+        "end": 3
+      },
+      {
+        "number": "4",
+        "title": "Mastering Gemini Artificial Intelligence",
+        "page": 4,
+        "end": 4
+      },
+      {
+        "number": "5",
+        "title": "How to Utilize This Prompt Guide",
+        "page": 5,
+        "end": 5
+      },
+      {
+        "number": "6",
+        "title": "Exploring Gemini Features",
+        "page": 6,
+        "end": 6
+      },
+      {
+        "number": "7",
+        "title": "Prompt Integration for Customer Service",
+        "page": 7,
+        "end": 7
+      },
+      {
+        "number": "8",
+        "title": "Use Case: Standardizing Communication Frameworks",
+        "page": 8,
+        "end": 8
+      },
+      {
+        "number": "9",
+        "title": "Use Case: Improve customer service",
+        "page": 9,
+        "end": 9
+      },
+      {
+        "number": "10",
+        "title": "Use case: Enable customer self-service",
+        "page": 10,
+        "end": 10
+      },
+      {
+        "number": "11",
+        "title": "Use Case: Voice of the customer research",
+        "page": 11,
+        "end": 11
+      },
+      {
+        "number": "12",
+        "title": "Use case: Engage with customers",
+        "page": 12,
+        "end": 12
+      },
+      {
+        "number": "13",
+        "title": "Use case: Prepare for client meetings",
+        "page": 13,
+        "end": 13
+      },
+      {
+        "number": "14",
+        "title": "Getting Started",
+        "page": 14,
+        "end": 14
+      },
+      {
+        "number": "15",
+        "title": "Use case: Preparing for the town hall meeting",
+        "page": 15,
+        "end": 15
+      },
+      {
+        "number": "16",
+        "title": "Use case: Brainstorm content and thought leadership",
+        "page": 16,
+        "end": 16
+      },
+      {
+        "number": "17",
+        "title": "Use case: Summarize emerging technology trends",
+        "page": 17,
+        "end": 17
+      },
+      {
+        "number": "18",
+        "title": "Use case: Develop technical communications",
+        "page": 18,
+        "end": 18
+      },
+      {
+        "number": "19",
+        "title": "Use case: Demonstrate employee appreciation",
+        "page": 19,
+        "end": 19
+      },
+      {
+        "number": "20",
+        "title": "Use case: Develop a competitive analysis",
+        "page": 20,
+        "end": 20
+      },
+      {
+        "number": "21",
+        "title": "Use case: Conduct fundraising and investor relations",
+        "page": 21,
+        "end": 21
+      },
+      {
+        "number": "22",
+        "title": "Use case: Manage time off policies and tracking",
+        "page": 22,
+        "end": 22
+      },
+      {
+        "number": "23",
+        "title": "Getting Started",
+        "page": 23,
+        "end": 23
+      },
+      {
+        "number": "24",
+        "title": "Use case: Manage the recruiting process",
+        "page": 24,
+        "end": 24
+      },
+      {
+        "number": "25",
+        "title": "Use case: Manage the interview process",
+        "page": 25,
+        "end": 25
+      },
+      {
+        "number": "26",
+        "title": "Use case: Candidate communication",
+        "page": 26,
+        "end": 26
+      },
+      {
+        "number": "27",
+        "title": "Use case: Onboard employees",
+        "page": 27,
+        "end": 27
+      },
+      {
+        "number": "28",
+        "title": "Getting Started",
+        "page": 28,
+        "end": 28
+      },
+      {
+        "number": "29",
+        "title": "Mastering Gemini Artificial Intelligence",
+        "page": 29,
+        "end": 29
+      },
+      {
+        "number": "30",
+        "title": "Use case: Report on project status",
+        "page": 30,
+        "end": 30
+      },
+      {
+        "number": "31",
+        "title": "Use case: Create a project retrospective",
+        "page": 31,
+        "end": 31
+      },
+      {
+        "number": "32",
+        "title": "Use case: Develop an issue tracker and related communications",
+        "page": 32,
+        "end": 32
+      },
+      {
+        "number": "33",
+        "title": "Getting Started",
+        "page": 33,
+        "end": 33
+      },
+      {
+        "number": "34",
+        "title": "Use case: Develop customer relationships",
+        "page": 34,
+        "end": 34
+      },
+      {
+        "number": "35",
+        "title": "Use case: Support the sales team",
+        "page": 35,
+        "end": 35
+      },
+      {
+        "number": "36",
+        "title": "Use case: Coach and train the sales team",
+        "page": 36,
+        "end": 36
+      },
+      {
+        "number": "37",
+        "title": "Use case: Build customer relationships",
+        "page": 37,
+        "end": 37
+      },
+      {
+        "number": "38",
+        "title": "Use case: Prepare for new customer calls",
+        "page": 38,
+        "end": 38
+      },
+      {
+        "number": "39",
+        "title": "Business Development Manager",
+        "page": 39,
+        "end": 39
+      },
+      {
+        "number": "40",
+        "title": "Use case: Generate personalized customer onboarding materials",
+        "page": 40,
+        "end": 40
+      }
+    ],
+    "unit": "sections"
+  },
+  {
     "slug": "mit6-042js15-textbook",
     "name": "mit6_042js15_textbook",
     "path": "/home/skware/Desktop/ML/mit6_042js15_textbook.pdf",
@@ -1644,7 +2092,7 @@
     "slug": "natural-language-cognitive-architecture-a-prototype-david-k-",
     "name": "Natural Language Cognitive Architecture_ A Prototype -- David K_ Shapiro -- First Edition, 22, 2021, 2021 -- David Shapiro -- isbn13 9781668513118 -- 68ef2ce7214b846fa702371cc89ac5d0 -- Anna’s Archive",
     "path": "/home/skware/Desktop/ML/Natural Language Cognitive Architecture_ A Prototype -- David K_ Shapiro -- First Edition, 22, 2021, 2021 -- David Shapiro -- isbn13 9781668513118 -- 68ef2ce7214b846fa702371cc89ac5d0 -- Anna’s Archive.epub",
-    "pages": 27,
+    "pages": 50,
     "words": 48473,
     "chapters": [
       {
@@ -1667,147 +2115,285 @@
       },
       {
         "number": "4",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Introduction",
         "page": 4,
         "end": 4
       },
       {
         "number": "5",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Part 1 – Overview",
         "page": 5,
         "end": 5
       },
       {
         "number": "6",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 1 – Transformers",
         "page": 6,
         "end": 6
       },
       {
         "number": "7",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 2 – Cognitive Architectures",
         "page": 7,
         "end": 7
       },
       {
         "number": "8",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 3 – NLCA Overview",
         "page": 8,
         "end": 8
       },
       {
         "number": "9",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Part 2 – NLCA Components",
         "page": 9,
         "end": 9
       },
       {
         "number": "10",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 4 – Outer Loop",
         "page": 10,
         "end": 10
       },
       {
         "number": "11",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 5 – Shared Database",
         "page": 11,
         "end": 11
       },
       {
         "number": "12",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 6 – Context",
         "page": 12,
         "end": 12
       },
       {
         "number": "13",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 7 – Corpus",
         "page": 13,
         "end": 13
       },
       {
         "number": "14",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Theory",
         "page": 14,
         "end": 14
       },
       {
         "number": "15",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "What is in a corpus?",
         "page": 15,
         "end": 15
       },
       {
         "number": "16",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "How is a corpus compiled?",
         "page": 16,
         "end": 16
       },
       {
         "number": "17",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Less is More",
         "page": 17,
         "end": 17
       },
       {
         "number": "18",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Summarization is Critical",
         "page": 18,
         "end": 18
       },
       {
         "number": "19",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Ask the Right Questions",
         "page": 19,
         "end": 19
       },
       {
         "number": "20",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Constitution of the Self",
         "page": 20,
         "end": 20
       },
       {
         "number": "21",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Finished Corpus",
         "page": 21,
         "end": 21
       },
       {
         "number": "22",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 8 – Output",
         "page": 22,
         "end": 22
       },
       {
         "number": "23",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 9 – Inner Loop",
         "page": 23,
         "end": 23
       },
       {
         "number": "24",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Part 3 – Deeper Dive",
         "page": 24,
         "end": 24
       },
       {
         "number": "25",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 10 – Core Objective Functions",
         "page": 25,
         "end": 25
       },
       {
         "number": "26",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 11 – Constitution",
         "page": 26,
         "end": 26
       },
       {
         "number": "27",
-        "title": "Natural_Language_Cognitive_Architecture_v7",
+        "title": "Chapter 12 – General Intelligence",
         "page": 27,
         "end": 27
+      },
+      {
+        "number": "28",
+        "title": "Chapter 13 – Implementation",
+        "page": 28,
+        "end": 28
+      },
+      {
+        "number": "29",
+        "title": "Chapter 14 – Commercial Applications",
+        "page": 29,
+        "end": 29
+      },
+      {
+        "number": "30",
+        "title": "Chapter 15 – Socioeconomic Implications",
+        "page": 30,
+        "end": 30
+      },
+      {
+        "number": "31",
+        "title": "Chapter 16 – Conclusion",
+        "page": 31,
+        "end": 31
+      },
+      {
+        "number": "32",
+        "title": "Appendices",
+        "page": 32,
+        "end": 32
+      },
+      {
+        "number": "33",
+        "title": "Appendix B – NLCA Prompts",
+        "page": 33,
+        "end": 33
+      },
+      {
+        "number": "34",
+        "title": "Action Generator 2",
+        "page": 34,
+        "end": 34
+      },
+      {
+        "number": "35",
+        "title": "Core Objective Function 1",
+        "page": 35,
+        "end": 35
+      },
+      {
+        "number": "36",
+        "title": "Core Objective Function 2",
+        "page": 36,
+        "end": 36
+      },
+      {
+        "number": "37",
+        "title": "Core Objective Function 3",
+        "page": 37,
+        "end": 37
+      },
+      {
+        "number": "38",
+        "title": "Action Iterator",
+        "page": 38,
+        "end": 38
+      },
+      {
+        "number": "39",
+        "title": "Keyword Extractor",
+        "page": 39,
+        "end": 39
+      },
+      {
+        "number": "40",
+        "title": "Search Query Generator",
+        "page": 40,
+        "end": 40
+      },
+      {
+        "number": "41",
+        "title": "Question Generator 2",
+        "page": 41,
+        "end": 41
+      },
+      {
+        "number": "42",
+        "title": "Next Speaker",
+        "page": 42,
+        "end": 42
+      },
+      {
+        "number": "43",
+        "title": "Intent",
+        "page": 43,
+        "end": 43
+      },
+      {
+        "number": "44",
+        "title": "Sentiment (Mood)",
+        "page": 44,
+        "end": 44
+      },
+      {
+        "number": "45",
+        "title": "Chat Summary",
+        "page": 45,
+        "end": 45
+      },
+      {
+        "number": "46",
+        "title": "Censorship",
+        "page": 46,
+        "end": 46
+      },
+      {
+        "number": "47",
+        "title": "Constitution",
+        "page": 47,
+        "end": 47
+      },
+      {
+        "number": "48",
+        "title": "Output",
+        "page": 48,
+        "end": 48
+      },
+      {
+        "number": "49",
+        "title": "Appendix C – NLCA Chats",
+        "page": 49,
+        "end": 49
+      },
+      {
+        "number": "50",
+        "title": "Bibliography",
+        "page": 50,
+        "end": 50
       }
     ],
     "unit": "sections"
@@ -2305,14 +2891,290 @@
     "slug": "python-machine-learning-learn-python-in-a-week-and-master-co",
     "name": "Python Machine Learning_ Learn Python in a Week and Master -- Computer Programming Academy -- 26d03ecbccb82df4b128a6257eefa279 -- Anna’s Archive",
     "path": "/home/skware/Desktop/ML/Python Machine Learning_ Learn Python in a Week and Master -- Computer Programming Academy -- 26d03ecbccb82df4b128a6257eefa279 -- Anna’s Archive.epub",
-    "pages": 1,
+    "pages": 47,
     "words": 31447,
     "chapters": [
       {
         "number": "1",
-        "title": "part0000",
+        "title": "PYTHON MACHINE LEARNING",
         "page": 1,
         "end": 1
+      },
+      {
+        "number": "2",
+        "title": "Introduction",
+        "page": 2,
+        "end": 2
+      },
+      {
+        "number": "3",
+        "title": "Day 1: Introduction to Machine Learning",
+        "page": 3,
+        "end": 3
+      },
+      {
+        "number": "4",
+        "title": "Core concepts of machine learning",
+        "page": 4,
+        "end": 4
+      },
+      {
+        "number": "5",
+        "title": "Basic machine learning terminologies",
+        "page": 5,
+        "end": 5
+      },
+      {
+        "number": "6",
+        "title": "Importance of machine learning",
+        "page": 6,
+        "end": 6
+      },
+      {
+        "number": "7",
+        "title": "Review Quiz",
+        "page": 7,
+        "end": 7
+      },
+      {
+        "number": "8",
+        "title": "Rule-based systems",
+        "page": 8,
+        "end": 8
+      },
+      {
+        "number": "9",
+        "title": "Case-Based Reasoning",
+        "page": 9,
+        "end": 9
+      },
+      {
+        "number": "10",
+        "title": "Artificial Neural Networks (ANN)",
+        "page": 10,
+        "end": 10
+      },
+      {
+        "number": "11",
+        "title": "Genetic Algorithms",
+        "page": 11,
+        "end": 11
+      },
+      {
+        "number": "12",
+        "title": "Cellular Automata",
+        "page": 12,
+        "end": 12
+      },
+      {
+        "number": "13",
+        "title": "Fuzzy Systems",
+        "page": 13,
+        "end": 13
+      },
+      {
+        "number": "14",
+        "title": "Multi-Agent Systems",
+        "page": 14,
+        "end": 14
+      },
+      {
+        "number": "15",
+        "title": "Swarm Intelligence",
+        "page": 15,
+        "end": 15
+      },
+      {
+        "number": "16",
+        "title": "Reinforcement Learning",
+        "page": 16,
+        "end": 16
+      },
+      {
+        "number": "17",
+        "title": "Hybrid systems",
+        "page": 17,
+        "end": 17
+      },
+      {
+        "number": "18",
+        "title": "Statistics",
+        "page": 18,
+        "end": 18
+      },
+      {
+        "number": "19",
+        "title": "Probabilistic Programming",
+        "page": 19,
+        "end": 19
+      },
+      {
+        "number": "20",
+        "title": "Review Quiz",
+        "page": 20,
+        "end": 20
+      },
+      {
+        "number": "21",
+        "title": "Day 3: Supervised Machine Learning Algorithms",
+        "page": 21,
+        "end": 21
+      },
+      {
+        "number": "22",
+        "title": "Regression",
+        "page": 22,
+        "end": 22
+      },
+      {
+        "number": "23",
+        "title": "Classification",
+        "page": 23,
+        "end": 23
+      },
+      {
+        "number": "24",
+        "title": "Ensemble Methods",
+        "page": 24,
+        "end": 24
+      },
+      {
+        "number": "25",
+        "title": "Review Quiz",
+        "page": 25,
+        "end": 25
+      },
+      {
+        "number": "26",
+        "title": "Day 4: Unsupervised Machine Learning Algorithms",
+        "page": 26,
+        "end": 26
+      },
+      {
+        "number": "27",
+        "title": "Clustering",
+        "page": 27,
+        "end": 27
+      },
+      {
+        "number": "28",
+        "title": "Dimensionality Reduction",
+        "page": 28,
+        "end": 28
+      },
+      {
+        "number": "29",
+        "title": "Transfer Learning",
+        "page": 29,
+        "end": 29
+      },
+      {
+        "number": "30",
+        "title": "Natural Language Processing",
+        "page": 30,
+        "end": 30
+      },
+      {
+        "number": "31",
+        "title": "Word Embedding",
+        "page": 31,
+        "end": 31
+      },
+      {
+        "number": "32",
+        "title": "Apriori machine learning algorithm",
+        "page": 32,
+        "end": 32
+      },
+      {
+        "number": "33",
+        "title": "Review Quiz",
+        "page": 33,
+        "end": 33
+      },
+      {
+        "number": "34",
+        "title": "Overview Data Preprocessing",
+        "page": 34,
+        "end": 34
+      },
+      {
+        "number": "35",
+        "title": "Steps of Data Pre-processing",
+        "page": 35,
+        "end": 35
+      },
+      {
+        "number": "36",
+        "title": "Day 6: Machine Learning Libraries",
+        "page": 36,
+        "end": 36
+      },
+      {
+        "number": "37",
+        "title": "Prerequisites for application of Scikit-Learn library",
+        "page": 37,
+        "end": 37
+      },
+      {
+        "number": "38",
+        "title": "Application of machine learning using Scikit-Learn library",
+        "page": 38,
+        "end": 38
+      },
+      {
+        "number": "39",
+        "title": "Creating Training and Test subsets",
+        "page": 39,
+        "end": 39
+      },
+      {
+        "number": "40",
+        "title": "Building the Machine Learning Model",
+        "page": 40,
+        "end": 40
+      },
+      {
+        "number": "41",
+        "title": "Day 7: Neural Network Training With Tensorflow",
+        "page": 41,
+        "end": 41
+      },
+      {
+        "number": "42",
+        "title": "Fundamentals of Neural Network",
+        "page": 42,
+        "end": 42
+      },
+      {
+        "number": "43",
+        "title": "Training a Neural Network using TensorFlow",
+        "page": 43,
+        "end": 43
+      },
+      {
+        "number": "44",
+        "title": "Extra content",
+        "page": 44,
+        "end": 44
+      },
+      {
+        "number": "45",
+        "title": "Python Programming: An hands-on introduction to computer programming a",
+        "page": 45,
+        "end": 45
+      },
+      {
+        "number": "46",
+        "title": "part0000",
+        "page": 46,
+        "end": 46
+      },
+      {
+        "number": "47",
+        "title": "Conclusion",
+        "page": 47,
+        "end": 47
       }
     ],
     "unit": "sections"

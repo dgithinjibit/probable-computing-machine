@@ -6,7 +6,8 @@ EPUBs into an **ordered day path** — each day names the book, the exact pages,
 the author's own words at bite size, one local exercise, and an automatic
 spaced review of the days you already completed.
 
-Currently built: **ML Hybrid Course** — 29 days from `~/Desktop/ML` (16 ML foundations + 13 AGI);
+Currently built: **ML Hybrid Course** — 63 days from `~/Desktop/ML` (Days 1-16 ML
+foundations, 17-29 AGI, 30-63 the rest of the folder);
 **Hacking Hybrid Course** — 12 defensive days from `~/Desktop/Hakin`, in
 [`../hakin-hybrid/`](../hakin-hybrid/); and **Blockchain Hybrid Course** — 14 days from
 `~/Desktop/blck` wired into the Sui Move, Scrypto, Cairo and starklings courses, in
@@ -20,9 +21,24 @@ files do not line up with physical pages: Togelius is printed + 12 (ch1 p.13, ch
 ch3 p.43, ch4 p.63, ch5 p.79, ch6 p.93, ch7 p.113, ch8 p.139, ch9 p.155, ch10 p.165,
 ch11 p.177), the OpenCog architecture survey opens at physical p.93 of _Building Better
 Minds_, Rothman is printed + 27, and the Codex book opens its introduction at p.15.
-Day 29 reads a 1,737-word DOCX through the paragraph mode of `read_source_text`, which is
-how the five EPUBs in `~/Desktop/ML` would also be taught - still untested for section
-mode, so no EPUB day exists yet.
+Day 29 reads a 1,737-word DOCX through the paragraph mode of `read_source_text`.
+
+### The second expansion (Days 30-63)
+
+Fifteen more sources are registered, for 27 in the spine. The reason the remaining
+`~/Desktop/ML` books could not be taught before is now fixed in `build_course.py`:
+EPUBs are read in spine order and split into addressable units by their own headings,
+and MOBI is decoded with a PalmDOC LZ77 reader that treats the book's bold headings as
+section starts — so `§N` is a stable address in both formats, the way a page number is
+in a PDF. Anchors for every new day were verified against the extracted text before the
+day was written, and `make_bite` now trims at a sentence boundary, which is why the
+whole 63-day spine sits inside the 180-560 word band.
+
+Material that is not a book does not get a day, because the spine has to stay a path.
+It gets a generated shelf page instead — Python references, the six Startup School lab
+lists, the two study-craft worksheets, your own `codes/` folder, and the cross-branch
+accounting — under [`src/shelf/`](src/shelf/). Every one of the 61 entries in
+`~/Desktop/ML` is now either a scheduled day, a shelf reference, or a named leftover.
 
 ## Open it
 
