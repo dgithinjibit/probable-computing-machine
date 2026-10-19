@@ -1,0 +1,10 @@
+(: count-occurrences (-> $t (List $t) Number))
+(= (count-occurrences $value ()) 0)
+(= (count-occurrences $value (:: $head $tail))
+    (if (== $value $head)
+        (+ 1 (count-occurrences $value $tail))
+        (count-occurrences $value $tail)))
+
+!(assertEqual (count-occurrences 2 (:: 2 (:: 1 (:: 2 ())))) 2)
+!(assertEqual (count-occurrences 5 (:: 2 (:: 1 ()))) 0)
+!(assertEqual (count-occurrences 1 ()) 0)

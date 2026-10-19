@@ -1,0 +1,11 @@
+(: minimum (-> (List Number) Number))
+(: minimum-from (-> (List Number) Number Number))
+(= (minimum (:: $head $tail)) (minimum-from $tail $head))
+(= (minimum-from () $best) $best)
+(= (minimum-from (:: $head $tail) $best)
+    (if (< $head $best)
+        (minimum-from $tail $head)
+        (minimum-from $tail $best)))
+
+!(assertEqual (minimum (:: 4 (:: -2 (:: 7 ())))) -2)
+!(assertEqual (minimum (:: 8 ())) 8)

@@ -86,7 +86,7 @@ Everything runnable is in [`listings/`](../listings/), named by level
 fails on any error atom, so a chapter cannot silently drift from the machine.
 
 The write-it-yourself problems and their solutions are in the neighbouring
-[`metta-exercises/`](../metta-exercises/) track. The AGI reading that motivates
+[`metta-course-exercises/`](../metta-course-exercises/) track. The AGI reading that motivates
 the PSI and PLN parts of L4 lives in the
 [ML hybrid course](../ml-hybrid/hybrid-course.html), Days 39-51; this book is
 the part where you implement it instead of reading about it.

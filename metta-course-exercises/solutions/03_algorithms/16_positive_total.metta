@@ -1,0 +1,10 @@
+(: positive-total (-> (List Number) Number))
+(= (positive-total ()) 0)
+(= (positive-total (:: $head $tail))
+    (if (> $head 0)
+        (+ $head (positive-total $tail))
+        (positive-total $tail)))
+
+!(assertEqual (positive-total ()) 0)
+!(assertEqual (positive-total (:: -2 (:: 4 (:: 3 ())))) 7)
+!(assertEqual (positive-total (:: -5 (:: 0 ()))) 0)
