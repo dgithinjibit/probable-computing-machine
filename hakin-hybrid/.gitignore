@@ -7,3 +7,7 @@ src/days/
 hybrid-course-data.json
 __pycache__/
 *.pyc
+
+# Foreign clone (dgithinjibit/90DaysOfCyberSecurity, fork of farhanashrafdev, MIT).
+# Vendored for reference only: never pushed from here, never a submodule.
+90DaysOfCyberSecurity/

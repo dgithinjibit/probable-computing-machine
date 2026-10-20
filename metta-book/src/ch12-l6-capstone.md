@@ -164,6 +164,13 @@ hero as this book defines it: not "knows everything", but "ships a thing that
 proves its own claims and can explain, to a stranger, why each part is where it
 is".
 
+Then there is one more chapter, and it is not more syntax.
+[L7 — Program search: the MOSES shape](./ch13-l7-moses.md) takes the enumeration
+machinery from [L3](./ch09-l3-modules-and-search.md) and points it at a truth table:
+normal forms, demes, per-row fitness, and a complexity penalty that makes a wrong
+answer beat a right one. It is the first chapter in this book where the program you
+are searching for is written in the same language as the search.
+
 After that there is no next chapter, only the corpus in
 [Appendix: the public MeTTa corpus](./appendix-10-sources.md) and the two things
 your plan says matter more than reading — teaching it to someone, and defending a

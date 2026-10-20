@@ -108,6 +108,23 @@ weakness: almost no self-tests. Your capstone's `assert*` section is what puts y
 a level above the corpus you have just read, which is the actual point of the
 level ordering in this book.
 
+**L7 — program search, and what the MOSES literature actually hands you.** Read
+`trueagi-io/hyperon-moses`'s `docs/metta-port-highlevel-guide` first; it is four
+tricks and a vocabulary (Elegant Normal Form, deme, plateau, `GoodFit`) rather than a
+tutorial, and [L7](./ch13-l7-moses.md) is the chapter that turns it into a running
+file. Then its `boolean-reduction/rules.metta` — **AGPL-3.0, read it, paste none of
+it** — where you will find the portability wall recorded in the
+[fact sheet](./appendix-01-verified-facts.md): those rules call `member`, `case` and
+`get-metatype`, and on 0.2.10 `member` does not exist, so upstream's rule list is a
+design to imitate, not a file to import. For the dependent-typed framing of the same
+search, `trueagi-io/chaining` → `experimental/evolutionary-programming` represents a
+fit program as an inhabitant of `(Σ (-> Bool Bool Bool) (Fit 0.7))` and uses DeBruijn
+indices plus unicode-quoted operators to stop spontaneous reduction — the two
+problems [L7](./ch13-l7-moses.md)'s tagged constructors solve a duller way. For
+"someone my level shipped this", `ekrama040-byte/metta_knapsack_geneticAlgorithm-`
+(from the L6 list) is the closest public analogue: a GA in MeTTa, search over encoded
+candidates, same fitness questions, no normal form.
+
 ## What the ecosystem is actually asking for (checked 2026-10-19)
 
 Read this before you plan a job hunt around it, because the honest finding is a

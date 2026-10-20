@@ -133,6 +133,42 @@ you about with a real error message rather than a guess.
 - `superpose` is the nondeterminism constructor;
   multiple nondeterministic arguments combine (2 × 2 → 4 results).
 
+## Confirmed on this build (2026-10-20, 0.2.10, L7 / program search)
+
+- `case` exists and is **first-match**. Its clauses must be grouped as ONE tuple of
+  `(pattern result)` pairs: `(case $x ((pat1 res1) (pat2 res2)))`. Writing the second
+  clause outside that tuple is `IncorrectNumberOfArguments`. A `case` with no
+  matching clause evaluates to `()`, not to an error and not to silence.
+- `bool-and`, `bool-or`, `bool-not` and `member` do **not** exist: each call is
+  returned unreduced. Write `or-bool`/`not-bool` out of `if`, and dedup with a named
+  space instead of `member`. Consequence for the vendored upstream:
+  `hyperon-moses`'s `boolean-reduction/rules.metta` uses `case`, `get-metatype` and
+  `member`, so it does not run unmodified on 0.2.10.
+- `println!` takes exactly one argument here; `!(println! "x" 1)` is
+  `IncorrectNumberOfArguments`.
+- A `let` whose bound expression does not reduce binds **the expression itself**.
+  `(= (f $x) (let $y (leaf $x) (g $y)))` with no rule for `(leaf (foo))` prints
+  `(g (leaf (foo)))`. In a recursive normal form this is the silent failure: forget a
+  leaf rule and every downstream comparison receives an un-reduced atom.
+- `foldl-atom` requires its tuple to be `let`-bound. Passing `(collapse ...)` inline
+  gives `(BadArgType 2 Number (-> Atom Atom))` nested inside a second `BadArgType`.
+- `assertEqualToResult` expectations double once more per `collapse`: `(nf X)` asserts
+  as `((c-and (var-x) (var-y)))`, `(collapse (nf X))` as `(((c-and (var-x)
+  (var-y))))`, because `collapse` returns one tuple rather than N results.
+- Overlapping rule heads are a tool, not only a bug: `(grow $p)` matching the same
+  expression as `(grow (c-and $p $q))` is how a deme gets five neighbours. The test
+  is whether the query is supposed to have one answer (overlap is a bug) or all the
+  answers (overlap is the mechanism).
+- A match pattern that ignores its own variable is a filter that does not filter:
+  `(match &seen (s $q) 1)` counts everything in the space, so a dedup guard written
+  that way keeps exactly one atom. No error is printed.
+- A `&seen` space stores normalized atoms, so querying it with a mirror form
+  (`(c-and (var-y) (var-x))`) correctly returns 0. Canonicalize on the way in and on
+  the way out, or the count means nothing.
+- One leaf of the candidate language is the **expression** `(var-x)`, not the symbol
+  `var-x`. `(cand (var-x))` stores a one-element expression, and rules, patterns and
+  assertion expectations all have to agree about that or `==` silently never fires.
+
 ## Published corpus (found 2026-10-19 via `gh`)
 
 `trueagi-io/metta-examples` (SICP ch1-2, aunt-kg kinship graph, collatz,

@@ -6,7 +6,7 @@ with you answering questions about the language. This one ends with artifacts
 other people can run and a number they can reproduce, because that is the only
 currency in the field you are aiming at.
 
-Seven levels, each defined by one artifact and one gate:
+Eight levels, each defined by one artifact and one gate:
 
 | Level | Name | The artifact you finish with |
 |---|---|---|
@@ -17,8 +17,9 @@ Seven levels, each defined by one artifact and one gate:
 | L4 | Uncertainty and agency | STV reasoning over beliefs, plus demand-driven motive selection |
 | L5 | The bridge | An AtomSpace in, another representation out: JSON export, and a MeTTa interpreter written in MeTTa |
 | L6 | Public proof | `rover.metta` that runs offline, a logged hour count, and a claim with a measurement |
+| L7 | Program search | A MOSES-shaped search over a truth table: normal form, deme, per-row fitness, and a score you cannot trust |
 
-Every unit inside L1-L6 has the same three parts, in this order.
+Every unit inside L1-L7 has the same three parts, in this order.
 
 **Syntax** — what the grammar permits you to write, and what it refuses. Short,
 mechanical, checkable.

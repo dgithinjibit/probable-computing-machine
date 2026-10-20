@@ -36,6 +36,10 @@
 
 - [The capstone: a rover that reports](./ch12-l6-capstone.md)
 
+## L7 — Program search
+
+- [Program search: the MOSES shape](./ch13-l7-moses.md)
+
 ## Reference
 
 - [Appendix: offline workflow](./appendix-00-offline-workflow.md)

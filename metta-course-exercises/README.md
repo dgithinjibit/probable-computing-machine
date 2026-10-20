@@ -58,11 +58,15 @@ for the combined portal instructions.
 | 27 | [Find the program by rules](exercises/07_nondeterminism/27_search_by_rules.metta) | [Modules and search](../metta-book/src/ch09-l3-modules-and-search.md) | Enumeration + guard + `Empty` as a search filter |
 | 28 | [Modules, by hand](exercises/08_modules_search/README.md) | [Modules and search](../metta-book/src/ch09-l3-modules-and-search.md) | Manual lab: `import!`, module `&self`, no upward dependencies |
 | 29 | [Cross-check with PeTTa](exercises/09_uncertainty/29_peTTa_crosscheck.metta) | [Appendix: Offline Workflow](../metta-book/src/appendix-00-offline-workflow.md) | Manual lab: same program, two implementations, is it language or build? |
-| 30 | [Strength and confidence](exercises/09_uncertainty/30_stv_arithmetic.metta) | [Uncertainty and agency](../metta-book/src/ch10-l4-uncertainty-and-agency.md) | Writing `stv` composition yourself, property assertions || 31 | [A belief space with one hole](exercises/09_uncertainty/31_belief_space.metta) | [Uncertainty and agency](../metta-book/src/ch10-l4-uncertainty-and-agency.md) | `match` over grounded tails, `collapse` + `foldl-atom`, silent shrink |
+| 30 | [Strength and confidence](exercises/09_uncertainty/30_stv_arithmetic.metta) | [Uncertainty and agency](../metta-book/src/ch10-l4-uncertainty-and-agency.md) | Writing `stv` composition yourself, property assertions |
+| 31 | [A belief space with one hole](exercises/09_uncertainty/31_belief_space.metta) | [Uncertainty and agency](../metta-book/src/ch10-l4-uncertainty-and-agency.md) | `match` over grounded tails, `collapse` + `foldl-atom`, silent shrink |
 | 32 | [Getting data in and out](exercises/10_interop_export/32_json_roundtrip.metta) | [Interop and the export bridge](../metta-book/src/ch11-l5-interop-and-export.md) | Bare `json`/`fileio` imports, string keys, round trip |
 | 33 | [Lower a program](exercises/10_interop_export/33_lower_a_program.metta) | [Interop and the export bridge](../metta-book/src/ch11-l5-interop-and-export.md) | Programs as data, disjoint patterns, one answer per program, transducer vs compiler |
 | 34 | [The hour log](exercises/11_capstone/34_hour_log.metta) | [The capstone](../metta-book/src/ch12-l6-capstone.md) | Facts vs rules (a rule-shaped log is invisible to `match`), tuple folds through `let`, integer truncation |
 | 35 | [The review deck](exercises/11_capstone/35_review_deck.metta) | every level | Cards as atoms, 1/3/7/21 stepping, guarded gap arithmetic |
+| 36 | [Fitness is a vector](exercises/12_program_search/36_fitness_vector.metta) | [Program search: the MOSES shape](../metta-book/src/ch13-l7-moses.md) | Per-row failure sets, `dominates` vs `better`, and why a Pareto front is not a ranking |
+| 37 | [Canonical shapes](exercises/12_program_search/37_canonical_shapes.metta) | [Program search: the MOSES shape](../metta-book/src/ch13-l7-moses.md) | Absorption with one head, idempotence, behaviour preservation, `case` dispatch |
+| 38 | [Grow, cross, dedup](exercises/12_program_search/38_grow_cross_dedup.metta) | [Program search: the MOSES shape](../metta-book/src/ch13-l7-moses.md) | Deliberate head overlap for enumeration, order-free counts, a dedup guard that actually filters |
 
 ## Two manual labs: 28 and 29
 
