@@ -57,21 +57,48 @@ for the combined portal instructions.
 | 26 | [Two coins, four results](exercises/07_nondeterminism/26_coin_pair.metta) | [Evaluation and results](../metta-book/src/ch05-00-evaluation-and-results.md) | Same-head rules, multiplication of results, `collapse` |
 | 27 | [Find the program by rules](exercises/07_nondeterminism/27_search_by_rules.metta) | [Modules and search](../metta-book/src/ch09-l3-modules-and-search.md) | Enumeration + guard + `Empty` as a search filter |
 | 28 | [Modules, by hand](exercises/08_modules_search/README.md) | [Modules and search](../metta-book/src/ch09-l3-modules-and-search.md) | Manual lab: `import!`, module `&self`, no upward dependencies |
-| 30 | [Strength and confidence](exercises/09_uncertainty/30_stv_arithmetic.metta) | [Uncertainty and agency](../metta-book/src/ch10-l4-uncertainty-and-agency.md) | Writing `stv` composition yourself, property assertions |
-| 31 | [A belief space with one hole](exercises/09_uncertainty/31_belief_space.metta) | [Uncertainty and agency](../metta-book/src/ch10-l4-uncertainty-and-agency.md) | `match` over grounded tails, `collapse` + `foldl-atom`, silent shrink |
+| 29 | [Cross-check with PeTTa](exercises/09_uncertainty/29_peTTa_crosscheck.metta) | [Appendix: Offline Workflow](../metta-book/src/appendix-00-offline-workflow.md) | Manual lab: same program, two implementations, is it language or build? |
+| 30 | [Strength and confidence](exercises/09_uncertainty/30_stv_arithmetic.metta) | [Uncertainty and agency](../metta-book/src/ch10-l4-uncertainty-and-agency.md) | Writing `stv` composition yourself, property assertions || 31 | [A belief space with one hole](exercises/09_uncertainty/31_belief_space.metta) | [Uncertainty and agency](../metta-book/src/ch10-l4-uncertainty-and-agency.md) | `match` over grounded tails, `collapse` + `foldl-atom`, silent shrink |
 | 32 | [Getting data in and out](exercises/10_interop_export/32_json_roundtrip.metta) | [Interop and the export bridge](../metta-book/src/ch11-l5-interop-and-export.md) | Bare `json`/`fileio` imports, string keys, round trip |
-| 33 | [Lower a program](exercises/10_interop_export/33_lower_a_program.metta) | [Interop and the export bridge](../metta-book/src/ch11-l5-interop-and-export.md) | Programs as data, shape rewriting, transducer vs compiler |
-| 34 | [The hour log](exercises/11_capstone/34_hour_log.metta) | [The capstone](../metta-book/src/ch12-l6-capstone.md) | Query your own rules, tuple folds, integer truncation |
+| 33 | [Lower a program](exercises/10_interop_export/33_lower_a_program.metta) | [Interop and the export bridge](../metta-book/src/ch11-l5-interop-and-export.md) | Programs as data, disjoint patterns, one answer per program, transducer vs compiler |
+| 34 | [The hour log](exercises/11_capstone/34_hour_log.metta) | [The capstone](../metta-book/src/ch12-l6-capstone.md) | Facts vs rules (a rule-shaped log is invisible to `match`), tuple folds through `let`, integer truncation |
 | 35 | [The review deck](exercises/11_capstone/35_review_deck.metta) | every level | Cards as atoms, 1/3/7/21 stepping, guarded gap arithmetic |
 
-## Exercise 28 is a manual lab
+## Two manual labs: 28 and 29
 
-`import!` resolves a module name against the **current working directory**, so a
-module exercise cannot be checked from an arbitrary directory — which is exactly
-the property the lab teaches. `check-solutions.sh` therefore skips
-`exercises/08_modules_search/`; follow its README and run it from inside that
-directory, then run it again from `/tmp` and read the
-`Failed to resolve module top:world` error it gives you.
+Neither has a solution file, and neither is checked by `check-solutions.sh`, for
+the same reason: what they teach cannot be verified from an arbitrary directory or
+by one interpreter alone.
+
+**28 — modules.** `import!` resolves a module name against the **current working
+directory**, so a module exercise cannot be checked from wherever the script
+happens to run — which is exactly the property the lab teaches. Follow
+[`exercises/08_modules_search/README.md`](exercises/08_modules_search/README.md),
+run it from inside that directory, then run it again from `/tmp` and read the
+`Failed to resolve module top:world` error it gives you. (If you run
+`user.metta` from this folder by accident, that error is the expected output, not a
+bug in the exercise.)
+
+**29 — a second implementation.** `exercises/09_uncertainty/29_peTTa_crosscheck.metta`
+is a comparison lab between this build (hyperon 0.2.10) and
+[`~/Desktop/ex/exercises/peTTa`](../peTTa), which is MeTTa written in Prolog. It
+needs SWI-Prolog ≥ 9.3 before it can run, so it is a Friday-afternoon lab rather
+than a Tuesday-evening one.
+
+## Two kinds of red, and why both are fine
+
+Run a starter file and you will see one of two things. Exercises 3–23 keep their
+`assert*` calls **live**, so an unsolved file fails loudly with
+`Got: (positive 4)` — the call, unreduced, because you have not written the rule
+yet. That is the intended starting state: red before green, and the shape of the
+failure is itself a lesson (an unmatched call is returned as data, not as an
+error). Exercises 24–35 keep their assertions **commented**, so an unsolved file is
+silent and the green arrives when you uncomment. Pick the style you are working in
+before you decide whether a red is progress or a mistake.
+
+The solutions, all 33 of them, are verified green on this build:
+`bash metta-course-exercises/check-solutions.sh` → "All MeTTa exercise solutions
+passed", most recently 2026-10-19, after nine of them were fixed.
 
 ## Challenge practice
 
