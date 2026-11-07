@@ -96,6 +96,19 @@ function firstIncomplete() {
   return lessons.length ? lessons[lessons.length - 1].day : 1;
 }
 
+// Where you stopped is not the same as the first gap in the whole spine. A
+// learner who marked the middle blocks complete used to be dumped back on Day 1
+// because earlier days were unmarked — which reads as "start over", the exact
+// feeling this course exists to remove. Resume forward from the last opened day;
+// only fall back to the global first gap when everything ahead is already done.
+function firstIncompleteFrom(day) {
+  const done = doneSet();
+  for (const lesson of lessons) {
+    if (lesson.day >= day && !done.has(lesson.day)) return lesson.day;
+  }
+  return firstIncomplete();
+}
+
 function byDay(day) {
   return lessons.find((lesson) => lesson.day === day);
 }
@@ -159,9 +172,13 @@ function render() {
   els.label.textContent = count === total
     ? `Course complete · all ${total} lessons marked`
     : `${count} of ${total} lessons complete · now on Day ${lesson.day}`;
+  const earlierGaps = lessons.filter((l) => l.day < lesson.day && !done.has(l.day)).length;
   els.resume.textContent = done.size
-    ? `Resume point: Day ${lesson.day} — ${lesson.title}. `
-      + `${done.size} lesson${done.size === 1 ? "" : "s"} already yours.`
+    ? `Next unmarked lesson: Day ${lesson.day} — ${lesson.title}. `
+      + `${count} of ${total} already yours`
+      + (earlierGaps
+        ? `; ${earlierGaps} earlier day${earlierGaps === 1 ? "" : "s"} still unmarked — jump back from the day list whenever you want.`
+        : ".")
     : `Start here: Day ${lesson.day} — ${lesson.title}. Nothing marked complete yet.`;
 
   const source = lesson.source
@@ -195,7 +212,7 @@ function wire() {
   els.complete.addEventListener("click", () => {
     if (!state.completed.includes(current)) state.completed.push(current);
     state.blanked = state.blanked.filter((day) => day !== current);
-    const nextDay = firstIncomplete();
+    const nextDay = firstIncompleteFrom(current);
     if (nextDay !== current) current = nextDay;
     saveState();
     render();
@@ -246,11 +263,21 @@ async function boot() {
     return;
   }
   lessons = spec.lessons;
+  // The header is data, not markup: a hardcoded lead went stale when the spine
+  // grew from 29 days to 85, and the first thing a learner read was a lie.
+  // Whatever the curriculum says is what the page says.
+  const meta = spec.course || {};
+  const heading = document.querySelector("#course-root h1");
+  const lead = document.querySelector("#course-root .lead");
+  if (meta.title && heading) heading.textContent = meta.title;
+  if (meta.title) document.title = `${meta.title} · books split into days`;
+  if (meta.lead && lead) lead.textContent = meta.lead;
+  els.bar.max = lessons.length;
   els.select.innerHTML = lessons.map((l) => `<option value="${l.day}">Day ${l.day}: ${escapeHtml(l.title)}</option>`).join("");
   loadState();
-  // Resume: the last page you opened, unless you had already finished it.
+  // Resume: the last page you opened, or the next unmarked day from there.
   current = byDay(state.lastOpened) ? state.lastOpened : firstIncomplete();
-  if (doneSet().has(current)) current = firstIncomplete();
+  if (doneSet().has(current)) current = firstIncompleteFrom(current);
   wire();
   render();
   say("Progress is saved in this browser on this device.");
