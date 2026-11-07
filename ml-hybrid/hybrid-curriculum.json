@@ -263,7 +263,7 @@
       "short": "Hands-On Deep Learning for IoT",
       "author": "Karim & Razzaque (Packt, 2019)",
       "kind": "epub",
-      "path": "/home/skware/Desktop/ML/Hands-On Deep Learning for IoT _ Train Neural Network Models -- Karim, Md_ Rezaul; Razzaque, Mohammad Abdur -- Packt Publishing, Birmingham, 2019 -- isbn13 9781789616064 -- 9eb464a9230fb72e00ae7e4b2cf3c73a -- Anna’s Archive.epub",
+      "path": "/home/skware/Desktop/ML/Dip laning for IoT/Hands-On Deep Learning for IoT _ Train Neural Network Models -- Karim, Md_ Rezaul; Razzaque, Mohammad Abdur -- Packt Publishing, Birmingham, 2019 -- isbn13 9781789616064 -- 9eb464a9230fb72e00ae7e4b2cf3c73a -- Anna’s Archive.epub",
       "map": "maps/hands-on-deep-learning-for-iot-train-neural-network-models-k.md",
       "note": "EPUB with UUID file names; the OPF spine is the only sane ordering, which is why text_units reads it."
     },
@@ -281,7 +281,7 @@
       "short": "Artificial General Intelligence: Principles and Practices",
       "author": "Saravanan, Preethi, Sanober & Thillaiarasu (Wiley/Scrivener, 2026)",
       "kind": "epub",
-      "path": "/home/skware/Desktop/ML/Artificial General Intelligence_ Principles and Practices -- T_ Saravanan & P_ Preethi & Sumaya Sanober & N_ Thillaiarasu -- 1, 2026 -- isbn13 9781394422678 -- 0c1010dd0a4ab7e5f959a88ecb3aeea4 -- Anna’s Archive.epub",
+      "path": "/home/skware/Desktop/ML/cos/Artificial General Intelligence_ Principles and Practices -- T_ Saravanan & P_ Preethi & Sumaya Sanober & N_ Thillaiarasu -- 1, 2026 -- isbn13 9781394422678 -- 0c1010dd0a4ab7e5f959a88ecb3aeea4 -- Anna’s Archive.epub",
       "map": "maps/artificial-general-intelligence-principles-and-practices-t-s.md",
       "note": "The AGI textbook the MIT Press Essential Knowledge day could not be: 19 chapters, section-numbered addresses, heavy on formal frameworks."
     },
@@ -595,7 +595,8 @@
       "misconception": "Calling anything 'AI' that is only if-else logic. Name the learning signal or it is not a category.",
       "practice": "Take three apps you use daily (M-Pesa alerts, YouTube, SMS) and classify the learning signal in each. Write it down; this is the skill the recall blocks will re-test.",
       "check": "Re-test Day 18 from memory before reading. If it faded, redo Day 18's gate first.",
-      "gate": "Give one worked example per category without looking, and say what the model would be wrong about in each."
+      "gate": "Give one worked example per category without looking, and say what the model would be wrong about in each.",
+      "recall": "From memory: Day 18's one-sentence definition of machine learning, and one example where you would NOT use it."
     },
     {
       "day": 20,
@@ -607,7 +608,9 @@
       "idea": "A toolbox of model families (regression, trees, clustering, nets) chosen by the shape of data and the decision needed.",
       "practice": "Do `../ml-exercises/exercises/00_fundamentals/01_split_data.py` (stdlib, offline). The point is train/test separation before any model exists.",
       "check": "Run `python3 ../ml-exercises/run_tests.py` and read every line it prints, pass or fail.",
-      "gate": "Pick a tool for a problem you define yourself, and defend the pick against one alternative."
+      "gate": "Pick a tool for a problem you define yourself, and defend the pick against one alternative.",
+      "recall": "From memory: name the three learning signals from Day 19 and give one problem for each.",
+      "misconception": "Choosing a model by name recognition. The shape of the data and the decision you must make pick the tool; 'neural net' is not an answer to 'why'."
     },
     {
       "day": 21,
@@ -620,7 +623,8 @@
       "misconception": "Cleaning after fitting. Anything computed from the whole dataset before the split leaks the test set into training.",
       "practice": "`../ml-exercises/exercises/00_fundamentals/02_standardize.py`. Then deliberately corrupt one row and re-run to watch the failure.",
       "check": "Day 20 recall (1 back) plus: name three leakage routes you have personally caused.",
-      "gate": "Clean a small messy CSV of your own and record each choice with a reason."
+      "gate": "Clean a small messy CSV of your own and record each choice with a reason.",
+      "recall": "From memory: Day 20's rule for picking a tool, and the two questions you ask before you pick."
     },
     {
       "day": 22,
@@ -632,7 +636,9 @@
       "idea": "Training data is a pipeline with owners, schemas and versions, not a folder of files.",
       "practice": "Sketch a data pipeline for one SyncSenta-style dataset on paper: source, transform, store, validate, serve. Mark where it breaks.",
       "check": "Compare your sketch against the extracted text and name one stage you invented that the author warns about.",
-      "gate": "Explain schema drift to a non-engineer in three sentences."
+      "gate": "Explain schema drift to a non-engineer in three sentences.",
+      "recall": "From memory: Day 21's leakage routes, and which one you have personally caused.",
+      "misconception": "Treating training data as a folder of files. Without a schema, an owner and a version, yesterday's model can be neither reproduced nor debugged."
     },
     {
       "day": 23,
@@ -645,7 +651,9 @@
       "prerequisites": "Day 21 data trustwork.",
       "practice": "`../ml-exercises/exercises/01_models/04_fit_line.py` then `../ml-exercises/exercises/00_fundamentals/03_regression_metrics.py`.",
       "check": "Day 22 recall (1 back) and Day 19 recall (3 back).",
-      "gate": "Report one metric in your own words, then say what it hides."
+      "gate": "Report one metric in your own words, then say what it hides.",
+      "recall": "From memory: Day 22's pipeline stages in order, and Day 19's three categories.",
+      "misconception": "Reading a good fit as a promise about the world. A fit is a claim about the data you happened to collect."
     },
     {
       "day": 24,
@@ -658,7 +666,8 @@
       "misconception": "Chasing accuracy on an imbalanced problem. 99% accuracy can be a useless model.",
       "practice": "`../ml-exercises/exercises/01_models/05_confusion_counts.py`. Predict the numbers before running, then compare.",
       "check": "Day 23 recall (1 back), Day 21 (3 back), Day 18 (back to the definition).",
-      "gate": "For a loan-approval problem, name the metric you would defend in a review and why."
+      "gate": "For a loan-approval problem, name the metric you would defend in a review and why.",
+      "recall": "From memory: Day 23's claim about what a fit quality is, and Day 21's rule about what must happen before the split."
     },
     {
       "day": 25,
@@ -671,7 +680,9 @@
       "idea": "Underfitting misses structure; overfitting memorises noise. Complexity trades one error for the other.",
       "practice": "No new exercise. Re-solve `01_split_data.py` and `03_regression_metrics.py` from a blank file, closed solutions. Log every mistake.",
       "check": "Write the one-sentence idea of Days 18–24 from memory first; only then open the pages. Faded days get re-added to your queue.",
-      "gate": "90% of the recall prompts answered cold. If not, repeat this day tomorrow instead of advancing."
+      "gate": "90% of the recall prompts answered cold. If not, repeat this day tomorrow instead of advancing.",
+      "recall": "From memory: the one-sentence idea of Days 18-24, in order, without opening a page.",
+      "misconception": "Fixing overfitting by adding features, or underfitting by training longer. Both move the wrong side of the trade."
     },
     {
       "day": 26,
@@ -683,7 +694,9 @@
       "idea": "Trees split on features to make decisions explainable; bagging and boosting buy accuracy by averaging or correcting many trees.",
       "practice": "`../ml-exercises/exercises/02_unsupervised/07_assign_centroid.py` is adjacent practice in nearest-neighbour thinking; then hand-draw a tree for a daily decision.",
       "check": "Day 25 (1 back), Day 23 (3 back), Day 19 (7 back).",
-      "gate": "Explain why many weak learners beat one strong learner, with an analogy you would use with a student."
+      "gate": "Explain why many weak learners beat one strong learner, with an analogy you would use with a student.",
+      "recall": "From memory: Day 25's bias-variance trade, and which side a deep unpruned tree sits on.",
+      "misconception": "That an ensemble is one strong model. It is many weak ones whose errors disagree, and the disagreement is the whole point."
     },
     {
       "day": 27,
@@ -696,7 +709,8 @@
       "misconception": "Thinking depth alone equals understanding. Depth is capacity, not comprehension.",
       "practice": "`../ml-exercises/exercises/01_models/06_gradient_step.py`. Predict the next weight before running.",
       "check": "Day 26 (1 back), Day 24 (3 back), Day 20 (7 back).",
-      "gate": "Walk one gradient step by hand on paper with numbers you choose."
+      "gate": "Walk one gradient step by hand on paper with numbers you choose.",
+      "recall": "From memory: Day 26's reason many weak learners beat one strong learner, and Day 24's rule for choosing a metric."
     },
     {
       "day": 28,
@@ -709,7 +723,9 @@
       "prerequisites": "Days 23–24 metrics; Day 27 gradients.",
       "practice": "Re-derive the sigmoid from the page without looking, then code it in the style of `../ml-exercises/exercises/01_models/05_confusion_counts.py`.",
       "check": "Day 27 (1 back), Day 25 (3 back), Day 21 (7 back).",
-      "gate": "Answer two interview questions from this chapter in writing, closed book."
+      "gate": "Answer two interview questions from this chapter in writing, closed book.",
+      "recall": "From memory: Day 27's three parts of a network, and Day 25's definition of overfitting.",
+      "misconception": "Treating 0.5 as the decision threshold because it is the default. The threshold is a business choice about the cost of each kind of error."
     },
     {
       "day": 29,
@@ -721,7 +737,9 @@
       "idea": "Entropy measures average surprise; cross-entropy is the loss you pay when your predicted distribution differs from reality.",
       "practice": "Compute entropy by hand for a two-outcome event at p=0.5, 0.9, 0.1. Then compute it in Python from scratch, no libraries.",
       "check": "Day 28 (1 back), Day 26 (3 back), Day 22 (7 back).",
-      "gate": "Explain why cross-entropy punishes confident wrong answers harder than loss functions you already know."
+      "gate": "Explain why cross-entropy punishes confident wrong answers harder than loss functions you already know.",
+      "recall": "From memory: Day 28's squashing function and what its output means, and Day 26's ensemble idea.",
+      "misconception": "Reading entropy as disorder in the data. It is average surprise under a distribution - a property of your model's beliefs, not of the file."
     },
     {
       "day": 30,
@@ -733,7 +751,9 @@
       "idea": "An LLM predicts the next token from context; training is expensive, inference is a search over probabilities.",
       "practice": "`../ml-exercises/exercises/03_language_models/09_chunk_text.py`. Everything here is local strings, no API calls.",
       "check": "Day 29 (1 back), Day 27 (3 back), Day 23 (7 back), Day 18 (21 back — the definition again).",
-      "gate": "Explain a hallucination using only next-token prediction, no hand-waving."
+      "gate": "Explain a hallucination using only next-token prediction, no hand-waving.",
+      "recall": "From memory: Day 29's cross-entropy loss, and Day 27's gradient step.",
+      "misconception": "That an LLM looks up an answer. It predicts the next token; a fluent sentence is not a retrieved fact."
     },
     {
       "day": 31,
@@ -745,7 +765,9 @@
       "idea": "Retrieval grounds generation in documents you chose; chunk quality and ranking decide what the model gets to see.",
       "practice": "`../ml-exercises/exercises/03_language_models/10_rank_documents.py` plus `08_cosine_similarity.py`.",
       "check": "Day 30 (1 back), Day 28 (3 back), Day 24 (7 back), Day 19 (21 back).",
-      "gate": "Given a wrong answer from a RAG setup, list the three places the fault could live."
+      "gate": "Given a wrong answer from a RAG setup, list the three places the fault could live.",
+      "recall": "From memory: Day 30's next-token claim and what a hallucination is under it, plus Day 28's threshold idea.",
+      "misconception": "Blaming the model for a wrong RAG answer. The fault usually lives in the chunking, the embedding or the ranking, before generation starts."
     },
     {
       "day": 32,
@@ -757,7 +779,9 @@
       "idea": "Failures are usually pipeline, data and feedback-loop failures, not model-quality failures.",
       "practice": "`../ml-exercises/exercises/04_responsible_ai/12_group_rates.py`. Note which group metric moves and why that matters.",
       "check": "Day 31 (1 back), Day 29 (3 back), Day 25 (7 back — review day again), Day 20 (21 back).",
-      "gate": "Write a one-page post-mortem for a system that got silently worse, naming the monitoring you would have needed."
+      "gate": "Write a one-page post-mortem for a system that got silently worse, naming the monitoring you would have needed.",
+      "recall": "From memory: Day 31's three places a retrieval fault can live, and Day 29's loss.",
+      "misconception": "Assuming a silent degradation is a model-quality problem. It is usually the pipeline, the data, or a feedback loop the model created itself."
     },
     {
       "day": 33,
@@ -770,7 +794,9 @@
       "idea": "You own the whole loop now: split, clean, fit, measure, explain, improve.",
       "practice": "Write a single stdlib Python program that loads a small CSV you choose, splits it, fits the line from Day 23, and reports metrics from Day 24. No pandas. Then re-run `../ml-exercises/run_tests.py` and keep it green.",
       "check": "Cold-write the one-sentence idea of Days 18–32. Anything you cannot write goes back into your queue as its own day.",
-      "gate": "Present the model in five minutes to an imaginary colleague, including one thing you would change with more data."
+      "gate": "Present the model in five minutes to an imaginary colleague, including one thing you would change with more data.",
+      "recall": "From memory: the one-sentence idea of Days 18-32. Anything you cannot write goes back into your queue as its own day.",
+      "misconception": "Stopping at 'it scores well'. The loop is not yours until you can split, clean, fit, measure, explain and improve without looking."
     },
     {
       "day": 34,
